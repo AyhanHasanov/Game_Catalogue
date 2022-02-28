@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_Catalogue", "Game_Catalogue\Game_Catalogue.csproj", "{28D7D000-6D66-4D00-8059-0F2128687C81}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL CODE DB", "SQL CODE DB", "{E0A1B58D-363A-44B6-894A-74B79BC6BC81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
