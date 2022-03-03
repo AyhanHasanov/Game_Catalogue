@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Monnie\\source\\it's fine\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {}
+    "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Monnie\\source\\it's fine\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {
+    "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Monnie\\source\\it's fine\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+        "projectUniqueName": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
         "projectName": "Game_Catalogue",
-        "projectPath": "C:\\Users\\Monnie\\source\\it's fine\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
-        "packagesPath": "C:\\Users\\Monnie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Monnie\\source\\it's fine\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\obj\\",
+        "projectPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Monnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

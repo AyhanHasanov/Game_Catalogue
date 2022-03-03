@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 /// <summary>
-/// Microsoft SQL Server Database Connetion Class
+/// Microsoft SQL Server Database Connection Class
 /// </summary>
 public static class DataBase
 {
