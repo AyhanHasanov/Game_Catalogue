@@ -37,7 +37,7 @@ constraint fk_usersgames_user Foreign key ([user_id]) references users([id]),
 constraint fk_usersgames_game Foreign key ([game_id]) references games([id_game])
 );
 
-
+Alter table [Games] Add [image] IMAGE NULL;
 
 
 
