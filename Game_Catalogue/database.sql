@@ -41,3 +41,4 @@ constraint fk_usersgames_game Foreign key ([game_id]) references games([id_game]
 
 
 
+

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vl7dT2ZIRBq6Ge0Wa2EL53BKaEWGtjeub/YdvI7WEDG+JCmm4Hq0SJBNTblLdTQHcLtvbLt7JeRvdMcWtEfesg==",
+  "dgSpecHash": "i4RjSLmiQWyxFEgt0dpwQnjr4OjUQei5mNxP4UFksD4OsHC9WjIVwf9pXj8HhlROTF9xM5ft8eUFHq4ouivg6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ayhan\\source\\repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+  "projectFilePath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ayhan\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Ayhan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
