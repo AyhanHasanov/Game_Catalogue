@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {}
+    "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {
+    "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+        "projectUniqueName": "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
         "projectName": "Game_Catalogue",
-        "projectPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+        "projectPath": "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
         "packagesPath": "C:\\Users\\Monnie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\obj\\",
+        "outputPath": "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Monnie\\AppData\\Roaming\\NuGet\\NuGet.Config",

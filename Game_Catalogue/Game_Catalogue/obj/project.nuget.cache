@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RJyGC3kLCuKeqxZq8TfKzAxiChmfSvC1JzeoLBmgnUa3uaXyBwcerEotsU/4QntoijaQe83mXnYXA+Z72BSQXw==",
+  "dgSpecHash": "TsM/o7tL1g7/8PrbRN35WusZ6U+4oDwLnS8Kolo1IxmVBqcrEP94zYf0a07KKZ7ZPGgX4Lo1dSqQPeRM6Bg/WQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+  "projectFilePath": "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Monnie\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",
     "C:\\Users\\Monnie\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
