@@ -1,3 +1,4 @@
+using Game_Catalogue.Presentation;
 using MaterialSkin.Controls;
 
 namespace Game_Catalogue
@@ -19,5 +20,17 @@ namespace Game_Catalogue
 
             this.ForeColor = Color.White;
         }
+
+        private void MemberLogIn_Click(object sender, EventArgs e)
+        {
+                
+        }
+
+        private void LogIn_Button_Click(object sender, EventArgs e)
+        {
+            HomePage homepage = new HomePage();
+            homepage.Show();
+        }
     }
+
 }
