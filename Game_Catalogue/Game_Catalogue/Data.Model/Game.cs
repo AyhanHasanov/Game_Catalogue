@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 
 namespace Game_Catalogue.Data.Model
-{
+{    
+/// <summary>
+/// 
+/// </summary>
     public partial class Game
     {
         public int IdGame { get; set; }
