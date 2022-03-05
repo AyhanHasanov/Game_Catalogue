@@ -8,6 +8,7 @@ namespace Game_Catalogue.Data.Model
 
     public partial class GameCatalogueContext : DbContext
     {
+
         public GameCatalogueContext()
         {
             Database.EnsureCreated();
@@ -18,10 +19,36 @@ namespace Game_Catalogue.Data.Model
         {
         }
 
+        /// <summary>
+        /// Gets or sets the games.
+        /// </summary>
+        /// <value>
+        /// The games.
+        /// </value>
         public virtual DbSet<Game> Games { get; set; } = null!;
+
+        /// <summary>
+        /// Gets or sets the genres.
+        /// </summary>
+        /// <value>
+        /// The genres.
+        /// </value>
         public virtual DbSet<Genre> Genres { get; set; } = null!;
+        /// <summary>
+        /// Gets or sets the users.
+        /// </summary>
+        /// <value>
+        /// The users.
+        /// </value>
         public virtual DbSet<User> Users { get; set; } = null!;
+        /// <summary>
+        /// Gets or sets the users games.
+        /// </summary>
+        /// <value>
+        /// The users games.
+        /// </value>
         public virtual DbSet<UsersGame> UsersGames { get; set; } = null!;
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,6 +58,7 @@ namespace Game_Catalogue.Data.Model
                 optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=GameCatalogue;Trusted_Connection=True;");
             }          
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
