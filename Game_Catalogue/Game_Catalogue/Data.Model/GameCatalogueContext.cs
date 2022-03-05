@@ -6,6 +6,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 namespace Game_Catalogue.Data.Model
 {
 
+    /// <summary>
+    /// Class GameCatalogueContext
+    /// </summary>
+    /// <seealso cref="Microsoft.EntityFrameworkCore.DbContext" />
     public partial class GameCatalogueContext : DbContext
     {
 
