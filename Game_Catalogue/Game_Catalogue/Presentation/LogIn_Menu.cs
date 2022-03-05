@@ -3,10 +3,10 @@ using MaterialSkin.Controls;
 namespace Game_Catalogue
 {
 
-    public partial class Form1 : MaterialForm
+    public partial class LogIn_Page : MaterialForm
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        public Form1()
+        public LogIn_Page()
         {
             InitializeComponent();
             materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;

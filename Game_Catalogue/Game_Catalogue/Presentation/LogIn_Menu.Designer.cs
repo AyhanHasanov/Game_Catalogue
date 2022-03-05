@@ -1,6 +1,6 @@
 ﻿namespace Game_Catalogue
 {
-    partial class Form1
+    partial class LogIn_Page
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // LogIn_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 554);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(398, 595);
+            this.Name = "LogIn_Page";
+            this.Text = "LogIn";
             this.ResumeLayout(false);
 
         }
