@@ -1,0 +1,14 @@
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\bin\Debug\net6.0\Game.Data.deps.json
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\bin\Debug\net6.0\Game.Data.runtimeconfig.json
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\bin\Debug\net6.0\Game.Data.dll
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\bin\Debug\net6.0\Game.Data.pdb
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Game.Data.csproj.AssemblyReference.cache
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Game.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Game.Data.AssemblyInfoInputs.cache
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Game.Data.AssemblyInfo.cs
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Game.Data.csproj.CoreCompileInputs.cache
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Game.Data.dll
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\refint\Game.Data.dll
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Game.Data.pdb
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Game.Data.genruntimeconfig.cache
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\ref\Game.Data.dll

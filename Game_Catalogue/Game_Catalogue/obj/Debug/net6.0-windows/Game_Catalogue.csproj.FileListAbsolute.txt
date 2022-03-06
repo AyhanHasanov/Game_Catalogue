@@ -241,7 +241,6 @@ C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Cata
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game_Catalogue.pdb
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Humanizer.dll
-C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\MaterialSkin.dll
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -281,3 +280,6 @@ C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Cata
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.csproj.CopyComplete
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.genruntimeconfig.cache
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\ref\Game_Catalogue.dll
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game.Data.dll
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game.Data.pdb
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Properties.Resources.resources
