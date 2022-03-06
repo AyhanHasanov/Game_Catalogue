@@ -1,0 +1,7 @@
+Menu Background Color - 55, 49, 78
+Background - 45 41 64
+Active game control - 245 87 142
+Inactive game control - 245 167 198
+Inactive text color - 150, 142, 183
+Active text color - 247, 247, 247
+
