@@ -34,13 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // closeBox
             // 
             this.closeBox.Image = global::Game_Catalogue.Properties.Resources.icons8_final_state_52;
-            this.closeBox.Location = new System.Drawing.Point(1360, 10);
+            this.closeBox.Location = new System.Drawing.Point(1363, 19);
             this.closeBox.Name = "closeBox";
             this.closeBox.Size = new System.Drawing.Size(25, 25);
             this.closeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -53,7 +52,7 @@
             // minimizeBox
             // 
             this.minimizeBox.Image = global::Game_Catalogue.Properties.Resources.icons8_final_state_52__2_;
-            this.minimizeBox.Location = new System.Drawing.Point(1328, 10);
+            this.minimizeBox.Location = new System.Drawing.Point(1331, 19);
             this.minimizeBox.Name = "minimizeBox";
             this.minimizeBox.Size = new System.Drawing.Size(25, 25);
             this.minimizeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,14 +64,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Thistle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.closeBox);
-            this.panel1.Controls.Add(this.minimizeBox);
+            this.panel1.BackColor = System.Drawing.Color.MediumPurple;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1400, 45);
+            this.panel1.Size = new System.Drawing.Size(1400, 10);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -80,18 +76,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.label1.Location = new System.Drawing.Point(4, 1);
+            this.label1.Location = new System.Drawing.Point(0, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 41);
+            this.label1.Size = new System.Drawing.Size(490, 164);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Sladuri games ";
+            this.label1.Text = "SQUID GAMES SLADURI EDITION :}}}\r\n\r\n\r\n\r\n";
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 700);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.closeBox);
+            this.Controls.Add(this.minimizeBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -99,9 +98,8 @@
             this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.closeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
