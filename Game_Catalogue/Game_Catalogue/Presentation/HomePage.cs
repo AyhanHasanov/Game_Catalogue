@@ -71,7 +71,12 @@ namespace Game_Catalogue.Presentation
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            panel1.Draggable(this,true);
+            this.Draggable(true);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            addGameUserControl1.Visible = true;
         }
     }
 }

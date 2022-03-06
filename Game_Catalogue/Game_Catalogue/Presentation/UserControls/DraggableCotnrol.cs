@@ -14,7 +14,7 @@ namespace Game_Catalogue.Presentation
         /// <summary>
         /// Enabling/disabling dragging for control
         /// </summary>
-        public static void Draggable(this Control control1, Form control, bool Enable)
+        public static void Draggable(this Control control, bool Enable)
         {
             if (Enable)
             {
