@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4uwCL02i7VDUh9RtC8Qe4UxRaNLwYsBvF8vLSg7BibxQLkUe8TXTse1cFILesbLEzULYxF34zBjPVL2usUeqFA==",
+  "dgSpecHash": "fkr/JvdKT9jvttztCcEDMF0RE6XuJVmdZObAuHxxv1rBe+40iWf+BOrv8GVCOsxMYg15GeCItJXIt5ttjxQpLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+  "projectFilePath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\julia\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\julia\\.nuget\\packages\\materialskin.2\\2.3.1\\materialskin.2.2.3.1.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

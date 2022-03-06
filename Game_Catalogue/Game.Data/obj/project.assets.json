@@ -1,19 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {
-      "FontAwesome.Sharp/5.15.4": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0-windows7.0/FontAwesome.Sharp.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0-windows7.0/FontAwesome.Sharp.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App"
-        ]
-      },
+    "net6.0": {
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -22,18 +10,6 @@
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
         }
-      },
-      "MaterialSkin.2/2.3.1": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0-windows7.0/MaterialSkin.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0-windows7.0/MaterialSkin.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
       },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
@@ -714,42 +690,10 @@
             "rid": "win"
           }
         }
-      },
-      "Game.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
-          "System.Data.SqlClient": "4.8.3"
-        },
-        "compile": {
-          "bin/placeholder/Game.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Game.Data.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "FontAwesome.Sharp/5.15.4": {
-      "sha512": "IqJe1IQas6tSVXMNHTWA/NJeP7azyxDTk6DCB+NMXOOED2F07IYI9nvfB1HP83r4yh5cntZoTdwSpIraA5XoXw==",
-      "type": "package",
-      "path": "fontawesome.sharp/5.15.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fontawesome.sharp.5.15.4.nupkg.sha512",
-        "fontawesome.sharp.nuspec",
-        "lib/net40/FontAwesome.Sharp.dll",
-        "lib/net45/FontAwesome.Sharp.dll",
-        "lib/net472/FontAwesome.Sharp.dll",
-        "lib/net48/FontAwesome.Sharp.dll",
-        "lib/net5.0-windows7.0/FontAwesome.Sharp.dll",
-        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
-      ]
-    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -764,23 +708,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "MaterialSkin.2/2.3.1": {
-      "sha512": "w2vFxLNk4InCDU7pXDfBqPfv55HhBtuu8HRfEqQpeS3sNTS1pUzDs/hS0b5JW2/tKvt+P1of9OINP8a9omWDBg==",
-      "type": "package",
-      "path": "materialskin.2/2.3.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net45/MaterialSkin.dll",
-        "lib/net461/MaterialSkin.dll",
-        "lib/net48/MaterialSkin.dll",
-        "lib/net5.0-windows7.0/MaterialSkin.dll",
-        "materialskin.2.2.3.1.nupkg.sha512",
-        "materialskin.2.nuspec",
-        "nugetIcon.png"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -2131,18 +2058,10 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "Game.Data/1.0.0": {
-      "type": "project",
-      "path": "../Game.Data/Game.Data.csproj",
-      "msbuildProject": "../Game.Data/Game.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": [
-      "FontAwesome.Sharp >= 5.15.4",
-      "Game.Data >= 1.0.0",
-      "MaterialSkin.2 >= 2.3.1",
+    "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.2",
@@ -2156,11 +2075,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
-      "projectName": "Game_Catalogue",
-      "projectPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+      "projectUniqueName": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+      "projectName": "Game.Data",
+      "projectPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
       "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\obj\\",
+      "outputPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2171,20 +2090,16 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
-          "projectReferences": {
-            "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
-              "projectPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj"
-            }
-          }
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -2194,17 +2109,9 @@
       }
     },
     "frameworks": {
-      "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
-          "FontAwesome.Sharp": {
-            "target": "Package",
-            "version": "[5.15.4, )"
-          },
-          "MaterialSkin.2": {
-            "target": "Package",
-            "version": "[2.3.1, )"
-          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.2, )"
@@ -2237,9 +2144,6 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"

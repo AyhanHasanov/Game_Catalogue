@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game_Catalogue", "Game_Catalogue\Game_Catalogue.csproj", "{28D7D000-6D66-4D00-8059-0F2128687C81}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL CODE DB", "SQL CODE DB", "{E0A1B58D-363A-44B6-894A-74B79BC6BC81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game_Catalogue.Test", "Game_Catalogue.Test\Game_Catalogue.Test.csproj", "{739ADDC4-94B1-471A-988B-F18F5DEF597B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_Catalogue.Test", "Game_Catalogue.Test\Game_Catalogue.Test.csproj", "{739ADDC4-94B1-471A-988B-F18F5DEF597B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Data", "Game.Data\Game.Data.csproj", "{737A58BE-1510-477E-9A8B-1BB3981C84AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +23,10 @@ Global
 		{739ADDC4-94B1-471A-988B-F18F5DEF597B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{739ADDC4-94B1-471A-988B-F18F5DEF597B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{739ADDC4-94B1-471A-988B-F18F5DEF597B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{737A58BE-1510-477E-9A8B-1BB3981C84AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737A58BE-1510-477E-9A8B-1BB3981C84AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737A58BE-1510-477E-9A8B-1BB3981C84AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737A58BE-1510-477E-9A8B-1BB3981C84AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

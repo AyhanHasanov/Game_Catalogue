@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
+using Game_Data.Model;
 
-namespace Game_Catalogue.Data.Model
+namespace Game_Data
 {
 
     /// <summary>
@@ -18,9 +16,9 @@ namespace Game_Catalogue.Data.Model
             Database.EnsureCreated();
         }
 
-        public GameCatalogueContext(DbContextOptions<GameCatalogueContext> options)
-            : base(options)
+        public GameCatalogueContext(DbContextOptions<GameCatalogueContext> options) : base(options)
         {
+            Database.EnsureCreated();
         }
 
         /// <summary>
@@ -38,6 +36,7 @@ namespace Game_Catalogue.Data.Model
         /// The genres.
         /// </value>
         public virtual DbSet<Genre> Genres { get; set; } = null!;
+
         /// <summary>
         /// Gets or sets the users.
         /// </summary>
@@ -45,6 +44,7 @@ namespace Game_Catalogue.Data.Model
         /// The users.
         /// </value>
         public virtual DbSet<User> Users { get; set; } = null!;
+
         /// <summary>
         /// Gets or sets the users games.
         /// </summary>
@@ -58,9 +58,9 @@ namespace Game_Catalogue.Data.Model
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=GameCatalogue;Trusted_Connection=True;");
-            }          
+            }
         }
 
 

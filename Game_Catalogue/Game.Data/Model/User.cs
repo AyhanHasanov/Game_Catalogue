@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Game_Catalogue.Data.Model
+namespace Game_Data.Model
 {
     /// <summary>
     /// Class User

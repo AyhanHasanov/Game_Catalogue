@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Game_Catalogue.Data.Model
-{    
-/// <summary>
-/// Class Game
-/// </summary>
+﻿namespace Game_Data.Model
+{
+    /// <summary>
+    /// Class Game
+    /// </summary>
     public partial class Game
     {
         /// <summary>
@@ -15,6 +12,7 @@ namespace Game_Catalogue.Data.Model
         /// The identifier game.
         /// </value>
         public int IdGame { get; set; }
+
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
@@ -22,6 +20,7 @@ namespace Game_Catalogue.Data.Model
         /// The name.
         /// </value>
         public string Name { get; set; } = null!;
+
         /// <summary>
         /// Gets or sets the opinion.
         /// </summary>
@@ -29,6 +28,7 @@ namespace Game_Catalogue.Data.Model
         /// The opinion.
         /// </value>
         public string? Opinion { get; set; }
+
         /// <summary>
         /// Gets or sets the state.
         /// </summary>
@@ -36,6 +36,7 @@ namespace Game_Catalogue.Data.Model
         /// The state.
         /// </value>
         public string State { get; set; } = null!;
+
         /// <summary>
         /// Gets or sets the identifier genre.
         /// </summary>
@@ -43,6 +44,7 @@ namespace Game_Catalogue.Data.Model
         /// The identifier genre.
         /// </value>
         public int IdGenre { get; set; }
+
         /// <summary>
         /// Gets or sets the image.
         /// </summary>

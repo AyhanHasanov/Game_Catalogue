@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Game_Catalogue.Data.Model
+﻿namespace Game_Data.Model
 {
     /// <summary>
     /// class Genre
@@ -23,6 +20,7 @@ namespace Game_Catalogue.Data.Model
         /// The identifier genre.
         /// </value>
         public int IdGenre { get; set; }
+
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
@@ -30,6 +28,7 @@ namespace Game_Catalogue.Data.Model
         /// The name.
         /// </value>
         public string Name { get; set; } = null!;
+
 
         /// <summary>
         /// Gets or sets the collection of games.
@@ -40,3 +39,4 @@ namespace Game_Catalogue.Data.Model
         public virtual ICollection<Game> Games { get; set; }
     }
 }
+

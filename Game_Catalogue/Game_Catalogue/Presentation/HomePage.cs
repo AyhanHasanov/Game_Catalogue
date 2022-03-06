@@ -1,10 +1,29 @@
-﻿using MaterialSkin.Controls;
+﻿using Game_Data;
+using Game_Data.Model;
+using MaterialSkin.Controls;
 
 namespace Game_Catalogue.Presentation
 {
+    /// <summary>
+    /// UI
+    /// </summary>
+    /// <seealso cref="MaterialSkin.Controls.MaterialForm" />
     public partial class HomePage : MaterialForm
     {
+
+        /// <summary>
+        /// Database Context
+        /// </summary>
+        private GameCatalogueContext games = new GameCatalogueContext();
+
+
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
+
+
+
+        /// <summary>
+        ///  Constructor
+        /// </summary>
         public HomePage()
         {
             InitializeComponent();
