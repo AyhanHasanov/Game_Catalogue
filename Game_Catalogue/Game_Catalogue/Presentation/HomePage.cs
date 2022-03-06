@@ -24,9 +24,54 @@ namespace Game_Catalogue.Presentation
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Handles the Click event of the closeBox control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void closeBox_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+        private void closeBox_MouseEnter(object sender, EventArgs e)
+        {
+            IncreasePictureBoxSize(closeBox);
+        }
+        private void closeBox_MouseLeave(object sender, EventArgs e)
+        {
+            DecreasePictureBoxSize(closeBox);
+        }
+
+        private void minimizeBox_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void minimizeBox_MouseEnter(object sender, EventArgs e)
+        {
+            IncreasePictureBoxSize(minimizeBox);
+        }
+
+        private void minimizeBox_MouseLeave(object sender, EventArgs e)
+        {
+            DecreasePictureBoxSize(minimizeBox);
+        }
+        private void IncreasePictureBoxSize(PictureBox pB)
+        {
+            pB.Height = 30;
+            pB.Width = 30;
+            pB.Location = new Point(pB.Location.X - 5, pB.Location.Y - 5);
+        }
+
+        private void DecreasePictureBoxSize(PictureBox pB)
+        {
+            pB.Height = 25;
+            pB.Width = 25;
+            pB.Location = new Point(pB.Location.X + 5, pB.Location.Y + 5);
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            panel1.Draggable(this,true);
         }
     }
 }

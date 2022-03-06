@@ -63,9 +63,9 @@ namespace Game_Catalogue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_close_52 {
+        internal static System.Drawing.Bitmap icons8_final_state_52 {
             get {
-                object obj = ResourceManager.GetObject("icons8_close_52", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_final_state_52", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Game_Catalogue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_maximize_button_52 {
+        internal static System.Drawing.Bitmap icons8_final_state_52__1_ {
             get {
-                object obj = ResourceManager.GetObject("icons8_maximize_button_52", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_final_state_52__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Game_Catalogue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_subtract_52 {
+        internal static System.Drawing.Bitmap icons8_final_state_52__2_ {
             get {
-                object obj = ResourceManager.GetObject("icons8_subtract_52", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_final_state_52__2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
