@@ -35,6 +35,7 @@
             this.username_textbox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.email_textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Registration_Button
@@ -123,12 +124,24 @@
             this.email_textBox1.TabIndex = 17;
             this.email_textBox1.Text = "Email Address";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(51, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(305, 45);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Create an Account";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(408, 516);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.email_textBox1);
             this.Controls.Add(this.panel1);
@@ -153,5 +166,6 @@
         private TextBox username_textbox;
         private Panel panel2;
         private TextBox email_textBox1;
+        private Label label1;
     }
 }
