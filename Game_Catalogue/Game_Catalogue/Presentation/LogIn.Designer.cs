@@ -45,7 +45,7 @@
             this.LogIn_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogIn_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LogIn_Button.ForeColor = System.Drawing.Color.White;
-            this.LogIn_Button.Location = new System.Drawing.Point(129, 434);
+            this.LogIn_Button.Location = new System.Drawing.Point(130, 480);
             this.LogIn_Button.Name = "LogIn_Button";
             this.LogIn_Button.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.LogIn_Button.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
@@ -62,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(103, 390);
+            this.label1.Location = new System.Drawing.Point(104, 436);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 23);
             this.label1.TabIndex = 8;
@@ -76,7 +76,7 @@
             this.username_textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.username_textbox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.username_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.username_textbox.Location = new System.Drawing.Point(83, 209);
+            this.username_textbox.Location = new System.Drawing.Point(84, 255);
             this.username_textbox.MaxLength = 255;
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.Size = new System.Drawing.Size(256, 30);
@@ -90,7 +90,7 @@
             this.password_textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.password_textbox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.password_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.password_textbox.Location = new System.Drawing.Point(83, 291);
+            this.password_textbox.Location = new System.Drawing.Point(84, 337);
             this.password_textbox.MaxLength = 255;
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.Size = new System.Drawing.Size(256, 30);
@@ -100,7 +100,7 @@
             // gamePanel
             // 
             this.gamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.gamePanel.Location = new System.Drawing.Point(83, 245);
+            this.gamePanel.Location = new System.Drawing.Point(84, 291);
             this.gamePanel.Name = "gamePanel";
             this.gamePanel.Size = new System.Drawing.Size(256, 6);
             this.gamePanel.TabIndex = 11;
@@ -108,7 +108,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.panel1.Location = new System.Drawing.Point(83, 327);
+            this.panel1.Location = new System.Drawing.Point(84, 373);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(256, 6);
             this.panel1.TabIndex = 12;
@@ -118,7 +118,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(144, 130);
+            this.label2.Location = new System.Drawing.Point(145, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 45);
             this.label2.TabIndex = 20;
@@ -129,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(408, 516);
+            this.ClientSize = new System.Drawing.Size(408, 564);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gamePanel);
