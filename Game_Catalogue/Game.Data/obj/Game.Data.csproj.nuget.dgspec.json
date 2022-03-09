@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {}
+    "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
+    "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
         "projectName": "Game.Data",
-        "projectPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
-        "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
+        "projectPath": "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+        "packagesPath": "C:\\Users\\Monnie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Monnie\\source\\it's fine\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ayhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Monnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

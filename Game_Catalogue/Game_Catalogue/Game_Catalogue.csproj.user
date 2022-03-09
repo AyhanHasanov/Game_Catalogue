@@ -4,7 +4,13 @@
     <Compile Update="Presentation\Components\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Presentation\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Presentation\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Presentation\UserControls\AddGameUserControl.cs">
