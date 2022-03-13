@@ -22,5 +22,8 @@
     <Compile Update="Presentation\UserControls\AddGameUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Presentation\UserControls\MyProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

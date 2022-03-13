@@ -45,9 +45,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(396, 22);
+            this.label1.Location = new System.Drawing.Point(396, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 42);
+            this.label1.Size = new System.Drawing.Size(181, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Game";
             // 
@@ -58,10 +58,10 @@
             this.gameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gameTxtBox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gameTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.gameTxtBox.Location = new System.Drawing.Point(96, 132);
+            this.gameTxtBox.Location = new System.Drawing.Point(96, 139);
             this.gameTxtBox.MaxLength = 255;
             this.gameTxtBox.Name = "gameTxtBox";
-            this.gameTxtBox.Size = new System.Drawing.Size(407, 27);
+            this.gameTxtBox.Size = new System.Drawing.Size(407, 30);
             this.gameTxtBox.TabIndex = 1;
             this.gameTxtBox.Text = "Name of game";
             this.gameTxtBox.Click += new System.EventHandler(this.gameTxtBox_Click);
@@ -73,7 +73,7 @@
             // gamePanel
             // 
             this.gamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.gamePanel.Location = new System.Drawing.Point(95, 163);
+            this.gamePanel.Location = new System.Drawing.Point(95, 172);
             this.gamePanel.Name = "gamePanel";
             this.gamePanel.Size = new System.Drawing.Size(407, 6);
             this.gamePanel.TabIndex = 3;
@@ -85,10 +85,10 @@
             this.descrpTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.descrpTxtBox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descrpTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.descrpTxtBox.Location = new System.Drawing.Point(92, 228);
+            this.descrpTxtBox.Location = new System.Drawing.Point(92, 240);
             this.descrpTxtBox.Multiline = true;
             this.descrpTxtBox.Name = "descrpTxtBox";
-            this.descrpTxtBox.Size = new System.Drawing.Size(407, 130);
+            this.descrpTxtBox.Size = new System.Drawing.Size(407, 137);
             this.descrpTxtBox.TabIndex = 2;
             this.descrpTxtBox.Text = "Description";
             this.descrpTxtBox.Click += new System.EventHandler(this.descrpTxtBox_Click);
@@ -100,7 +100,7 @@
             // descrpPanel
             // 
             this.descrpPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.descrpPanel.Location = new System.Drawing.Point(95, 358);
+            this.descrpPanel.Location = new System.Drawing.Point(95, 377);
             this.descrpPanel.Name = "descrpPanel";
             this.descrpPanel.Size = new System.Drawing.Size(407, 6);
             this.descrpPanel.TabIndex = 3;
@@ -110,9 +110,9 @@
             this.planToPlayRadioBttn.AutoSize = true;
             this.planToPlayRadioBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.planToPlayRadioBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.planToPlayRadioBttn.Location = new System.Drawing.Point(658, 171);
+            this.planToPlayRadioBttn.Location = new System.Drawing.Point(658, 163);
             this.planToPlayRadioBttn.Name = "planToPlayRadioBttn";
-            this.planToPlayRadioBttn.Size = new System.Drawing.Size(140, 34);
+            this.planToPlayRadioBttn.Size = new System.Drawing.Size(146, 34);
             this.planToPlayRadioBttn.TabIndex = 3;
             this.planToPlayRadioBttn.TabStop = true;
             this.planToPlayRadioBttn.Text = "Plan to play";
@@ -124,9 +124,9 @@
             this.playingRadioButton.AutoSize = true;
             this.playingRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playingRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playingRadioButton.Location = new System.Drawing.Point(658, 228);
+            this.playingRadioButton.Location = new System.Drawing.Point(658, 223);
             this.playingRadioButton.Name = "playingRadioButton";
-            this.playingRadioButton.Size = new System.Drawing.Size(98, 34);
+            this.playingRadioButton.Size = new System.Drawing.Size(103, 34);
             this.playingRadioButton.TabIndex = 4;
             this.playingRadioButton.TabStop = true;
             this.playingRadioButton.Text = "Playing";
@@ -138,9 +138,9 @@
             this.playedRadioButton.AutoSize = true;
             this.playedRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playedRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playedRadioButton.Location = new System.Drawing.Point(658, 285);
+            this.playedRadioButton.Location = new System.Drawing.Point(658, 283);
             this.playedRadioButton.Name = "playedRadioButton";
-            this.playedRadioButton.Size = new System.Drawing.Size(92, 34);
+            this.playedRadioButton.Size = new System.Drawing.Size(98, 34);
             this.playedRadioButton.TabIndex = 5;
             this.playedRadioButton.TabStop = true;
             this.playedRadioButton.Text = "Played";
@@ -155,12 +155,12 @@
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(92, 450);
+            this.customButton1.Location = new System.Drawing.Point(92, 474);
             this.customButton1.Name = "customButton1";
             this.customButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.customButton1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.customButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.customButton1.Size = new System.Drawing.Size(168, 70);
+            this.customButton1.Size = new System.Drawing.Size(168, 74);
             this.customButton1.TabIndex = 6;
             this.customButton1.Text = "Add Game";
             this.customButton1.TextColor = System.Drawing.Color.White;
@@ -184,14 +184,14 @@
             "Simulation",
             "Sports",
             "Strategy"});
-            this.flatCombo1.Location = new System.Drawing.Point(658, 358);
+            this.flatCombo1.Location = new System.Drawing.Point(658, 366);
             this.flatCombo1.Name = "flatCombo1";
-            this.flatCombo1.Size = new System.Drawing.Size(234, 27);
+            this.flatCombo1.Size = new System.Drawing.Size(234, 28);
             this.flatCombo1.TabIndex = 7;
             // 
             // AddGameUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.flatCombo1);
@@ -205,7 +205,7 @@
             this.Controls.Add(this.gameTxtBox);
             this.Controls.Add(this.label1);
             this.Name = "AddGameUserControl";
-            this.Size = new System.Drawing.Size(1000, 570);
+            this.Size = new System.Drawing.Size(1000, 600);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -74,24 +74,41 @@ namespace Game_Catalogue.Presentation
             this.Draggable(true);
             addGameUserControl1.Visible = false;
             myListUserControl1.Visible = false;
+            myProfile1.Visible = false;
+            timer1.Start();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            addGameUserControl1.Visible = true;
-            myListUserControl1.Visible = false;
-        }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void myListBttn_Click(object sender, EventArgs e)
         {
             addGameUserControl1.Visible = false;
             myListUserControl1.Visible = true;
+            myProfile1.Visible = false;
+
         }
 
+        private void addGamePageBttn_Click(object sender, EventArgs e)
+        {
+            addGameUserControl1.Visible = true;
+            myListUserControl1.Visible = false;
+            myProfile1.Visible = false;
+        }
+        private void myProfileBttn_Click(object sender, EventArgs e)
+        {
+            addGameUserControl1.Visible = false;
+            myListUserControl1.Visible = false;
+            myProfile1.Visible = true;
+        }
         public void ShowAddGame()
         {
             
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToString("HH:mm:ss  dd/MM");
+        }
+
+        
     }
 }
