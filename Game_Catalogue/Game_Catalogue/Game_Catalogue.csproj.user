@@ -4,11 +4,17 @@
     <Compile Update="Presentation\Components\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Presentation\Components\FlatCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Presentation\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Presentation\HomePage.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\UserControls\MyList.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Presentation\Registration.cs">
       <SubType>Form</SubType>

@@ -96,7 +96,6 @@ C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogu
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.csproj.AssemblyReference.cache
-C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Form1.resources
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.csproj.GenerateResource.cache
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.AssemblyInfoInputs.cache
@@ -288,3 +287,12 @@ C:\Users\Monnie\source\it's fine\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game
 C:\Users\Monnie\source\it's fine\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Properties.Resources.resources
 C:\Users\Monnie\source\it's fine\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.LogIn_Form.resources
 C:\Users\Monnie\source\it's fine\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.Registration.resources
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game.Data.dll
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game.Data.pdb
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.HomePage.resources
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.LogIn_Form.resources
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.Registration.resources
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.UserControls.AddGameUserControl.resources
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.MyList.resources
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Properties.Resources.resources
