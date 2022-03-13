@@ -30,6 +30,7 @@ namespace Game_Catalogue.Presentation
 
             LogIn_Form Login = new LogIn_Form();
             Login.Show();
+            this.Close();
         }
     }
 }
