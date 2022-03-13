@@ -93,6 +93,10 @@
             this.password_textbox.Text = "Password";
             this.password_textbox.Click += new System.EventHandler(this.password_textbox_Click);
             this.password_textbox.TextChanged += new System.EventHandler(this.password_textbox_TextChanged);
+            this.password_textbox.Enter += new System.EventHandler(this.password_textbox_Enter);
+            this.password_textbox.Leave += new System.EventHandler(this.password_textbox_Leave);
+            this.password_textbox.MouseEnter += new System.EventHandler(this.password_textbox_MouseEnter);
+            this.password_textbox.MouseLeave += new System.EventHandler(this.password_textbox_MouseLeave);
             // 
             // username_textbox
             // 
@@ -108,6 +112,10 @@
             this.username_textbox.TabIndex = 13;
             this.username_textbox.Text = "Username";
             this.username_textbox.Click += new System.EventHandler(this.username_textbox_Click);
+            this.username_textbox.Enter += new System.EventHandler(this.username_textbox_Enter);
+            this.username_textbox.Leave += new System.EventHandler(this.username_textbox_Leave);
+            this.username_textbox.MouseEnter += new System.EventHandler(this.username_textbox_MouseEnter);
+            this.username_textbox.MouseLeave += new System.EventHandler(this.username_textbox_MouseLeave);
             // 
             // panel2
             // 
@@ -131,6 +139,10 @@
             this.email_textBox1.TabIndex = 17;
             this.email_textBox1.Text = "Email Address";
             this.email_textBox1.Click += new System.EventHandler(this.email_textBox1_Click);
+            this.email_textBox1.Enter += new System.EventHandler(this.email_textBox1_Enter);
+            this.email_textBox1.Leave += new System.EventHandler(this.email_textBox1_Leave);
+            this.email_textBox1.MouseEnter += new System.EventHandler(this.email_textBox1_MouseEnter);
+            this.email_textBox1.MouseLeave += new System.EventHandler(this.email_textBox1_MouseLeave);
             // 
             // label1
             // 

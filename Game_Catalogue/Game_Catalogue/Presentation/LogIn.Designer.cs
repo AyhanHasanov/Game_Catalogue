@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(104, 414);
+            this.label1.Location = new System.Drawing.Point(117, 414);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 21);
             this.label1.TabIndex = 8;
@@ -87,6 +87,10 @@
             this.username_textbox.TabIndex = 9;
             this.username_textbox.Text = "Username";
             this.username_textbox.Click += new System.EventHandler(this.username_textbox_Click);
+            this.username_textbox.Enter += new System.EventHandler(this.username_textbox_Enter);
+            this.username_textbox.Leave += new System.EventHandler(this.username_textbox_Leave);
+            this.username_textbox.MouseEnter += new System.EventHandler(this.username_textbox_MouseEnter);
+            this.username_textbox.MouseLeave += new System.EventHandler(this.username_textbox_MouseLeave);
             // 
             // password_textbox
             // 
@@ -103,6 +107,10 @@
             this.password_textbox.Text = "Password";
             this.password_textbox.Click += new System.EventHandler(this.password_textbox_Click);
             this.password_textbox.TextChanged += new System.EventHandler(this.password_textbox_TextChanged);
+            this.password_textbox.Enter += new System.EventHandler(this.password_textbox_Enter);
+            this.password_textbox.Leave += new System.EventHandler(this.password_textbox_Leave);
+            this.password_textbox.MouseEnter += new System.EventHandler(this.password_textbox_MouseEnter);
+            this.password_textbox.MouseLeave += new System.EventHandler(this.password_textbox_MouseLeave);
             // 
             // gamePanel
             // 
