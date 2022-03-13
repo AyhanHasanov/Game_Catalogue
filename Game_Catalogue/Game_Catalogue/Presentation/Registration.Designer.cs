@@ -130,6 +130,7 @@
             this.email_textBox1.Size = new System.Drawing.Size(256, 27);
             this.email_textBox1.TabIndex = 17;
             this.email_textBox1.Text = "Email Address";
+            this.email_textBox1.Click += new System.EventHandler(this.email_textBox1_Click);
             // 
             // label1
             // 

@@ -33,5 +33,40 @@ namespace Game_Catalogue.Presentation
             string username = username_textbox.ToString();
             string passwornd = password_textbox.ToString();
         }
+
+        private void username_textbox_Click(object sender, EventArgs e)
+        {
+            if (username_textbox.Text == "Username")
+            {
+                username_textbox.Text = "";
+            }
+        }
+
+        private void password_textbox_Click(object sender, EventArgs e)
+        {
+            if (password_textbox.Text == "Password")
+            {
+                password_textbox.Text = "";
+            }
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (password_textbox.UseSystemPasswordChar == true)
+            {
+                password_textbox.UseSystemPasswordChar = false;
+                pictureBox2.Image = Properties.Resources.icons8_uchiha_eyes_50;
+            }
+            else
+            {
+                password_textbox.UseSystemPasswordChar = true;
+                pictureBox2.Image = Properties.Resources.icons8_eyelashes_2d_50;
+            }
+        }
+
+        private void password_textbox_TextChanged(object sender, EventArgs e)
+        {
+            password_textbox.UseSystemPasswordChar = true;
+        }
     }
 }

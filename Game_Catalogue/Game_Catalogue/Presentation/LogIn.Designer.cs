@@ -36,7 +36,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // LogIn_Button
@@ -84,6 +86,7 @@
             this.username_textbox.Size = new System.Drawing.Size(256, 27);
             this.username_textbox.TabIndex = 9;
             this.username_textbox.Text = "Username";
+            this.username_textbox.Click += new System.EventHandler(this.username_textbox_Click);
             // 
             // password_textbox
             // 
@@ -98,6 +101,8 @@
             this.password_textbox.Size = new System.Drawing.Size(256, 27);
             this.password_textbox.TabIndex = 10;
             this.password_textbox.Text = "Password";
+            this.password_textbox.Click += new System.EventHandler(this.password_textbox_Click);
+            this.password_textbox.TextChanged += new System.EventHandler(this.password_textbox_TextChanged);
             // 
             // gamePanel
             // 
@@ -136,12 +141,24 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Game_Catalogue.Properties.Resources.icons8_uchiha_eyes_50;
+            this.pictureBox2.Location = new System.Drawing.Point(46, 320);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
+            // 
             // LogIn_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(408, 536);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -153,6 +170,7 @@
             this.Name = "LogIn_Form";
             this.Text = "LogIn";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +186,6 @@
         private Panel panel1;
         private Label label2;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

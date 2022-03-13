@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AKZzWrIQMBGDhus5VW4SCrBliaarEKadOed3V1r0fTK9P0eYATk0YVxq8pMJr/Z1flN2rcZFtqxYfxCuhQ3VgA==",
+  "dgSpecHash": "r/qQAB+U/MW2fsjWuCTJp6vaF7RUcikXbj3mJCQUlNykRCGOpoaVDrTZS0cvivVc9mwQWxmHbWe++jldVsRRVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+  "projectFilePath": "C:\\Users\\julia\\source\\Game Catalogue\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julia\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

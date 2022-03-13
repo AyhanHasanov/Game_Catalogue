@@ -2075,11 +2075,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+      "projectUniqueName": "C:\\Users\\julia\\source\\Game Catalogue\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
       "projectName": "Game.Data",
-      "projectPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+      "projectPath": "C:\\Users\\julia\\source\\Game Catalogue\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
       "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julia\\source\\Game Catalogue\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
+      "outputPath": "C:\\Users\\julia\\source\\Game Catalogue\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -62,9 +62,17 @@ namespace Game_Catalogue.Presentation
 
         private void username_textbox_Click(object sender, EventArgs e)
         {
-            if (password_textbox.Text == "Username")
+            if (username_textbox.Text == "Username")
             {
-                password_textbox.Text = "";
+                username_textbox.Text = "";
+            }
+        }
+
+        private void email_textBox1_Click(object sender, EventArgs e)
+        {
+            if (email_textBox1.Text == "Email Address")
+            {
+                email_textBox1.Text = "";
             }
         }
     }
