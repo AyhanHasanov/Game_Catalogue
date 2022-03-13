@@ -1,4 +1,6 @@
-# Game Catalogue - It Career
-This software aims to allow its users to gather all of their games in one place wheter they plan to play it, currently playing it or already played. It is also crucial to keep in mind that this is our first ever programe so please lower your expectetions. 
+# Game Catalogue - A project for It Career
+This software aims to allow its users to gather all of their games in one place whether they plan to play it, are currently playing it or have already played. It is also crucial to keep in mind that this is our first ever programme so please lower your expectations. 
 
-# Developers: Ayhan Hasanov, Yuliana Ivanova, Simona Belcheva 
+Developed on C#.
+
+# Developers: Ayhan Hasanov (ayhan.hsn.01@gmail.com), Yuliana Ivanova (julianaivanova04@gmail.com), Simona Belcheva (monniebellchewa@gmail.com )
