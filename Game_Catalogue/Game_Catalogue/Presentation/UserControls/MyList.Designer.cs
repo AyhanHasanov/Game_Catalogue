@@ -1,6 +1,6 @@
 ﻿namespace Game_Catalogue.Presentation
 {
-    partial class MyList
+    partial class MyListUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -39,13 +39,14 @@
             this.planToPlayRadioBttn = new System.Windows.Forms.RadioButton();
             this.delButton1 = new Game_Catalogue.Presentation.Components.CustomButton();
             this.addButton1 = new Game_Catalogue.Presentation.Components.CustomButton();
+            this.flatCombo1 = new Game_Catalogue.Presentation.Components.FlatCombo();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowDrop = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(78)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(241, 48);
@@ -79,9 +80,10 @@
             this.gameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.gameTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gameTxtBox.Enabled = false;
             this.gameTxtBox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gameTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.gameTxtBox.Location = new System.Drawing.Point(23, 91);
+            this.gameTxtBox.Location = new System.Drawing.Point(25, 48);
             this.gameTxtBox.MaxLength = 255;
             this.gameTxtBox.Name = "gameTxtBox";
             this.gameTxtBox.Size = new System.Drawing.Size(200, 27);
@@ -91,7 +93,7 @@
             // gamePanel
             // 
             this.gamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.gamePanel.Location = new System.Drawing.Point(23, 124);
+            this.gamePanel.Location = new System.Drawing.Point(25, 81);
             this.gamePanel.Name = "gamePanel";
             this.gamePanel.Size = new System.Drawing.Size(201, 10);
             this.gamePanel.TabIndex = 9;
@@ -101,9 +103,10 @@
             this.descrpTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.descrpTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descrpTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.descrpTxtBox.Enabled = false;
             this.descrpTxtBox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descrpTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.descrpTxtBox.Location = new System.Drawing.Point(23, 170);
+            this.descrpTxtBox.Location = new System.Drawing.Point(25, 127);
             this.descrpTxtBox.Multiline = true;
             this.descrpTxtBox.Name = "descrpTxtBox";
             this.descrpTxtBox.Size = new System.Drawing.Size(201, 120);
@@ -113,7 +116,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.panel1.Location = new System.Drawing.Point(23, 296);
+            this.panel1.Location = new System.Drawing.Point(25, 253);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(201, 10);
             this.panel1.TabIndex = 10;
@@ -121,9 +124,10 @@
             // playedRadioButton
             // 
             this.playedRadioButton.AutoSize = true;
+            this.playedRadioButton.Enabled = false;
             this.playedRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playedRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playedRadioButton.Location = new System.Drawing.Point(23, 422);
+            this.playedRadioButton.Location = new System.Drawing.Point(25, 418);
             this.playedRadioButton.Name = "playedRadioButton";
             this.playedRadioButton.Size = new System.Drawing.Size(92, 34);
             this.playedRadioButton.TabIndex = 13;
@@ -134,9 +138,10 @@
             // playingRadioButton
             // 
             this.playingRadioButton.AutoSize = true;
+            this.playingRadioButton.Enabled = false;
             this.playingRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playingRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playingRadioButton.Location = new System.Drawing.Point(23, 382);
+            this.playingRadioButton.Location = new System.Drawing.Point(25, 378);
             this.playingRadioButton.Name = "playingRadioButton";
             this.playingRadioButton.Size = new System.Drawing.Size(98, 34);
             this.playingRadioButton.TabIndex = 12;
@@ -147,9 +152,10 @@
             // planToPlayRadioBttn
             // 
             this.planToPlayRadioBttn.AutoSize = true;
+            this.planToPlayRadioBttn.Enabled = false;
             this.planToPlayRadioBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.planToPlayRadioBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.planToPlayRadioBttn.Location = new System.Drawing.Point(23, 342);
+            this.planToPlayRadioBttn.Location = new System.Drawing.Point(25, 338);
             this.planToPlayRadioBttn.Name = "planToPlayRadioBttn";
             this.planToPlayRadioBttn.Size = new System.Drawing.Size(140, 34);
             this.planToPlayRadioBttn.TabIndex = 11;
@@ -194,12 +200,38 @@
             this.addButton1.Text = "Add";
             this.addButton1.TextColor = System.Drawing.Color.White;
             this.addButton1.UseVisualStyleBackColor = true;
+            this.addButton1.Click += new System.EventHandler(this.addButton1_Click);
             // 
-            // MyList
+            // flatCombo1
+            // 
+            this.flatCombo1.BackColor = System.Drawing.Color.White;
+            this.flatCombo1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.flatCombo1.Enabled = false;
+            this.flatCombo1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.flatCombo1.FormattingEnabled = true;
+            this.flatCombo1.Items.AddRange(new object[] {
+            "Early Access",
+            "Action",
+            "Adventure",
+            "Casual",
+            "Indie",
+            "Massively Multiplayer",
+            "Racing",
+            "RPG",
+            "Simulation",
+            "Sports",
+            "Strategy"});
+            this.flatCombo1.Location = new System.Drawing.Point(25, 287);
+            this.flatCombo1.Name = "flatCombo1";
+            this.flatCombo1.Size = new System.Drawing.Size(200, 27);
+            this.flatCombo1.TabIndex = 16;
+            // 
+            // MyListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(49)))), ((int)(((byte)(78)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.flatCombo1);
             this.Controls.Add(this.addButton1);
             this.Controls.Add(this.delButton1);
             this.Controls.Add(this.playedRadioButton);
@@ -211,7 +243,7 @@
             this.Controls.Add(this.gameTxtBox);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "MyList";
+            this.Name = "MyListUserControl";
             this.Size = new System.Drawing.Size(1000, 570);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -232,5 +264,6 @@
         private RadioButton planToPlayRadioBttn;
         private Components.CustomButton delButton1;
         private Components.CustomButton addButton1;
+        private Components.FlatCombo flatCombo1;
     }
 }

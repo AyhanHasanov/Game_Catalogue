@@ -294,5 +294,5 @@ C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogu
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.LogIn_Form.resources
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.Registration.resources
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.UserControls.AddGameUserControl.resources
-C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.MyList.resources
 C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Properties.Resources.resources
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.MyListUserControl.resources

@@ -14,7 +14,7 @@ namespace Game_Catalogue.Presentation
         /// </summary>
         private GameCatalogueContext games = new GameCatalogueContext();
 
-
+        bool addGame = MyListUserControl.addGameVisible;
 
         /// <summary>
         ///  Constructor
@@ -72,11 +72,26 @@ namespace Game_Catalogue.Presentation
         private void HomePage_Load(object sender, EventArgs e)
         {
             this.Draggable(true);
+            addGameUserControl1.Visible = false;
+            myListUserControl1.Visible = false;
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
             addGameUserControl1.Visible = true;
+            myListUserControl1.Visible = false;
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            addGameUserControl1.Visible = false;
+            myListUserControl1.Visible = true;
+        }
+
+        public void ShowAddGame()
+        {
+            
+        }
+
     }
 }

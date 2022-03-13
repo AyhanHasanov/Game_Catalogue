@@ -35,6 +35,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.addGameUserControl1 = new Game_Catalogue.Presentation.UserControls.AddGameUserControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.myListUserControl1 = new Game_Catalogue.Presentation.MyListUserControl();
             ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -93,6 +94,7 @@
             this.iconButton2.Text = "My List";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -115,7 +117,7 @@
             // addGameUserControl1
             // 
             this.addGameUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.addGameUserControl1.Location = new System.Drawing.Point(312, 84);
+            this.addGameUserControl1.Location = new System.Drawing.Point(325, 83);
             this.addGameUserControl1.Name = "addGameUserControl1";
             this.addGameUserControl1.Size = new System.Drawing.Size(1000, 570);
             this.addGameUserControl1.TabIndex = 3;
@@ -132,12 +134,21 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Sladuri games idk";
             // 
+            // myListUserControl1
+            // 
+            this.myListUserControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
+            this.myListUserControl1.Location = new System.Drawing.Point(350, 80);
+            this.myListUserControl1.Name = "myListUserControl1";
+            this.myListUserControl1.Size = new System.Drawing.Size(964, 585);
+            this.myListUserControl1.TabIndex = 5;
+           
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1400, 665);
+            this.Controls.Add(this.myListUserControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.addGameUserControl1);
             this.Controls.Add(this.panel2);
@@ -165,5 +176,6 @@
         private Label label1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private MyListUserControl myListUserControl1;
     }
 }

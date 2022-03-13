@@ -10,13 +10,18 @@ using System.Windows.Forms;
 
 namespace Game_Catalogue.Presentation
 {
-    public partial class MyList : UserControl
+    public partial class MyListUserControl : UserControl
     {
-        public MyList()
+        public MyListUserControl()
         {
             InitializeComponent();
         }
 
-        
+        public static bool addGameVisible = false;
+
+        private void addButton1_Click(object sender, EventArgs e)
+        {
+            addGameVisible = true;  
+        }
     }
 }
