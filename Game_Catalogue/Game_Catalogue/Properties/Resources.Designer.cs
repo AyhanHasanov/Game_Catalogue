@@ -63,6 +63,66 @@ namespace Game_Catalogue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Artboard_4 {
+            get {
+                object obj = ResourceManager.GetObject("Artboard_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Artboard_4_copy {
+            get {
+                object obj = ResourceManager.GetObject("Artboard_4_copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Artboard_4_copy_2 {
+            get {
+                object obj = ResourceManager.GetObject("Artboard_4_copy_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Artboard_4_copy_3 {
+            get {
+                object obj = ResourceManager.GetObject("Artboard_4_copy_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Artboard_4_copy_4 {
+            get {
+                object obj = ResourceManager.GetObject("Artboard_4_copy_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eyelashes_2d_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_eyelashes_2d_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_final_state_52 {
             get {
                 object obj = ResourceManager.GetObject("icons8_final_state_52", resourceCulture);
@@ -86,6 +146,16 @@ namespace Game_Catalogue.Properties {
         internal static System.Drawing.Bitmap icons8_final_state_52__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8_final_state_52__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_uchiha_eyes_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_uchiha_eyes_50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

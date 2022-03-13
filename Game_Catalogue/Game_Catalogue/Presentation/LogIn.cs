@@ -25,6 +25,7 @@ namespace Game_Catalogue.Presentation
         {
             Registration Registration = new Registration();
             Registration.Show();
+            this.Hide();
         }
 
         private void LogIn_Button_Click(object sender, EventArgs e)

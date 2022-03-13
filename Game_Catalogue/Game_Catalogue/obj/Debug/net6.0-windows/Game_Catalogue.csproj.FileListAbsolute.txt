@@ -300,3 +300,4 @@ C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Cata
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.Registration.resources
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.MyListUserControl.resources
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.UserControls.MyProfile.resources
+C:\Users\julia\source\Game Catalogue\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.UserControls.MyProfile.resources
