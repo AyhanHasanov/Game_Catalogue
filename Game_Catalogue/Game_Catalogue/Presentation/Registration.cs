@@ -28,9 +28,12 @@ namespace Game_Catalogue.Presentation
             string passwornd = password_textbox.ToString();
             string email = email_textBox1.ToString();
 
+            //Check for data
+
             LogIn_Form Login = new LogIn_Form();
             Login.Show();
             this.Close();
+            this.Dispose();
         }
 
         private void password_textbox_TextChanged(object sender, EventArgs e)

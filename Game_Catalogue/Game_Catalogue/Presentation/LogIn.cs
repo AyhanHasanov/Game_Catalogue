@@ -32,45 +32,33 @@ namespace Game_Catalogue.Presentation
         {
             string username = username_textbox.ToString();
             string passwornd = password_textbox.ToString();
+
+            //Check
+
+            HomePage hp = new HomePage();
+            hp.Show();
+            this.Hide();
         }
 
-        private void username_textbox_Click(object sender, EventArgs e)
-        {
-            if (username_textbox.Text == "Username")
-            {
-                username_textbox.Text = "";
-            }
-        }
 
-        private void password_textbox_Click(object sender, EventArgs e)
-        {
-            if (password_textbox.Text == "Password")
-            {
-                password_textbox.Text = "";
-            }
-        }
-
+        // ANIMATIONS
+        
+        // Show or hide password - IMAME NICE OKO NA UCHIHA (NARUTO) DA VI E QD 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            if (password_textbox.UseSystemPasswordChar == true)
+            /*if (password_textbox.UseSystemPasswordChar == true)
             {
                 password_textbox.UseSystemPasswordChar = false;
-                pictureBox2.Image = Properties.Resources.icons8_uchiha_eyes_50;
+                eyeBox.Image = Properties.Resources.icons8_uchiha_eyes_50;
             }
             else
             {
                 password_textbox.UseSystemPasswordChar = true;
-                pictureBox2.Image = Properties.Resources.icons8_eyelashes_2d_50;
-            }
+                eyeBox.Image = Properties.Resources.icons8_eyelashes_2d_50;
+            }*/
         }
 
-        private void password_textbox_TextChanged(object sender, EventArgs e)
-        {
-            password_textbox.UseSystemPasswordChar = true;
-        }
-
-
-        //animations
+        
         private void username_textbox_MouseEnter(object sender, EventArgs e)
         {
             username_textbox.ForeColor = activeTextColor;
@@ -102,6 +90,14 @@ namespace Game_Catalogue.Presentation
                 username_textbox.ForeColor = inactiveTextColor;
             }
         }
+       
+        private void username_textbox_Click(object sender, EventArgs e)
+        {
+            if (username_textbox.Text == "Username")
+            {
+                username_textbox.Text = "";
+            }
+        }
 
         private void password_textbox_MouseEnter(object sender, EventArgs e)
         {
@@ -130,6 +126,33 @@ namespace Game_Catalogue.Presentation
             {
                 password_textbox.Text = "Password";
                 password_textbox.ForeColor = inactiveTextColor;
+            }
+        }
+      
+        private void password_textbox_TextChanged(object sender, EventArgs e)
+        {
+            password_textbox.UseSystemPasswordChar = true;
+        }
+   
+        private void password_textbox_Click(object sender, EventArgs e)
+        {
+            if (password_textbox.Text == "Password")
+            {
+                password_textbox.Text = "";
+            }
+        }
+
+        private void eyeBox_Click(object sender, EventArgs e)
+        {
+            if (password_textbox.UseSystemPasswordChar == true)
+            {
+                password_textbox.UseSystemPasswordChar = false;
+                eyeBox.Image = Properties.Resources.icons8_uchiha_eyes_50;
+            }
+            else
+            {
+                password_textbox.UseSystemPasswordChar = true;
+                eyeBox.Image = Properties.Resources.icons8_eyelashes_2d_50;
             }
         }
     }
