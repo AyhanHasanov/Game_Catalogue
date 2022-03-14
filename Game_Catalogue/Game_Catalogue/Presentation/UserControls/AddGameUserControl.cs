@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Game_Catalogue.Businesss;
+using Game_Data.Model;
+using System.IO;
 
 namespace Game_Catalogue.Presentation.UserControls
 {
@@ -21,6 +24,8 @@ namespace Game_Catalogue.Presentation.UserControls
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
+
+        AddGame_Logic addGame_Logic = new AddGame_Logic(); 
 
         private void gameTxtBox_MouseEnter(object sender, EventArgs e)
         {
@@ -122,5 +127,48 @@ namespace Game_Catalogue.Presentation.UserControls
             else
                 playedRadioButton.ForeColor = inactiveTextColor;
         }
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            byte[] images = null;
+            FileStream stream = new FileStream(imgLocation,FileMode.Open,FileAccess.Read);
+            BinaryReader binaryReader = new BinaryReader(stream);
+            images = binaryReader.ReadBytes((int)stream.Length);
+
+            Genre genre = new Genre();
+            Game game = new Game();
+
+            game.Name = gameTxtBox.Text;
+            game.Opinion = descrpTxtBox.Text;
+            genre.Name = flatCombo1.SelectedText; //?
+
+            if(planToPlayRadioBttn.Checked == true)
+            {
+                game.State = "Plan to play";
+            }
+            else if(playingRadioButton.Checked == true)
+            {
+                game.State = "Playing";
+            }
+            else if(playedRadioButton.Checked == true)
+            {
+                game.State = "Played";
+            }
+
+            game.Image = images;
+
+            addGame_Logic.Add(game);
+            
+        }
+        string imgLocation = "";
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if(dialog.ShowDialog()==DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                pictureBox1.ImageLocation = imgLocation;
+            }
+        } //tui e browse-a na snimka
     }
 }
