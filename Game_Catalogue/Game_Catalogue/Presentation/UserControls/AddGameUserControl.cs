@@ -130,6 +130,12 @@ namespace Game_Catalogue.Presentation.UserControls
             else
                 playedRadioButton.ForeColor = inactiveTextColor;
         }
+
+        /// <summary>
+        /// Adding game to database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void customButton1_Click(object sender, EventArgs e)
         {
             byte[] images = null;
@@ -137,12 +143,12 @@ namespace Game_Catalogue.Presentation.UserControls
             BinaryReader binaryReader = new BinaryReader(stream);
             images = binaryReader.ReadBytes((int)stream.Length);
 
-            Genre genre = new Genre();
+            int genreId = flatCombo1.SelectedIndex + 1;
             Game game = new Game();
 
             game.Name = gameTxtBox.Text;
             game.Opinion = descrpTxtBox.Text;
-            genre.Name = flatCombo1.SelectedText; //?
+            game.IdGenre = genreId;
 
             if(planToPlayRadioBttn.Checked == true)
             {
@@ -160,7 +166,6 @@ namespace Game_Catalogue.Presentation.UserControls
             game.Image = images;
 
             addGame_Logic.Add(game);
-            
         }
 
         string imgLocation = "";
