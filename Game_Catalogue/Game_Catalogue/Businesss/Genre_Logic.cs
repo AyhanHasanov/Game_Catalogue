@@ -20,11 +20,17 @@ namespace Game_Catalogue.Businesss
                 context.SaveChanges();
             }
         }
+
+        /// <summary>
+        /// Gets the count of genres
+        /// </summary>
+        /// <returns></returns>
         public int GetCount()
         {
             using(context = new GameCatalogueContext())
                 return context.Genres.Count();
         }
+
         public Genre GetGenre(int id)
         {
             using(context = new GameCatalogueContext())

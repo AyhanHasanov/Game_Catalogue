@@ -11,6 +11,7 @@ using Game_Catalogue.Businesss;
 using Game_Data.Model;
 using System.IO;
 using Game_Data;
+using System.Data.SqlClient;
 
 namespace Game_Catalogue.Presentation.UserControls
 {
@@ -25,6 +26,7 @@ namespace Game_Catalogue.Presentation.UserControls
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
+
         GameCatalogueContext gameCatalogue = new GameCatalogueContext();
         AddGame_Logic addGame_Logic = new AddGame_Logic(); 
 
@@ -160,7 +162,14 @@ namespace Game_Catalogue.Presentation.UserControls
             addGame_Logic.Add(game);
             
         }
+
         string imgLocation = "";
+
+        /// <summary>
+        /// Browsing images
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void customButton2_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -170,14 +179,16 @@ namespace Game_Catalogue.Presentation.UserControls
                 imgLocation = dialog.FileName.ToString();
                 pictureBox1.ImageLocation = imgLocation;
             }
-        } //tui e browse-a na snimka
+        } 
 
         private void AddGameUserControl_Load(object sender, EventArgs e)
         {
             Genre_Logic genre_Logic = new Genre_Logic();
-            for (int i = 0; i < genre_Logic.GetCount() ; i++)
+            int end = genre_Logic.GetCount();
+            for (int i = 1; i <= end; i++)
             {
                 Genre genre = genre_Logic.GetGenre(i);
+                if (genre!= null)
                 flatCombo1.Items.Add(genre.Name.ToString());
             }
         }
