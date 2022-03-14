@@ -49,7 +49,7 @@
             this.LogIn_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogIn_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LogIn_Button.ForeColor = System.Drawing.Color.White;
-            this.LogIn_Button.Location = new System.Drawing.Point(130, 480);
+            this.LogIn_Button.Location = new System.Drawing.Point(129, 460);
             this.LogIn_Button.Name = "LogIn_Button";
             this.LogIn_Button.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.LogIn_Button.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(117, 436);
+            this.label1.Location = new System.Drawing.Point(109, 422);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 23);
             this.label1.TabIndex = 8;
@@ -80,10 +80,10 @@
             this.username_textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.username_textbox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.username_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.username_textbox.Location = new System.Drawing.Point(84, 255);
+            this.username_textbox.Location = new System.Drawing.Point(56, 254);
             this.username_textbox.MaxLength = 255;
             this.username_textbox.Name = "username_textbox";
-            this.username_textbox.Size = new System.Drawing.Size(256, 30);
+            this.username_textbox.Size = new System.Drawing.Size(294, 30);
             this.username_textbox.TabIndex = 9;
             this.username_textbox.Text = "Username";
             this.username_textbox.Click += new System.EventHandler(this.username_textbox_Click);
@@ -99,7 +99,7 @@
             this.password_textbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.password_textbox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.password_textbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.password_textbox.Location = new System.Drawing.Point(84, 337);
+            this.password_textbox.Location = new System.Drawing.Point(56, 336);
             this.password_textbox.MaxLength = 255;
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.Size = new System.Drawing.Size(256, 30);
@@ -115,17 +115,17 @@
             // gamePanel
             // 
             this.gamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.gamePanel.Location = new System.Drawing.Point(84, 291);
+            this.gamePanel.Location = new System.Drawing.Point(56, 290);
             this.gamePanel.Name = "gamePanel";
-            this.gamePanel.Size = new System.Drawing.Size(256, 6);
+            this.gamePanel.Size = new System.Drawing.Size(294, 6);
             this.gamePanel.TabIndex = 11;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.panel1.Location = new System.Drawing.Point(84, 373);
+            this.panel1.Location = new System.Drawing.Point(56, 372);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(256, 6);
+            this.panel1.Size = new System.Drawing.Size(294, 6);
             this.panel1.TabIndex = 12;
             // 
             // label2
@@ -133,7 +133,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(145, 176);
+            this.label2.Location = new System.Drawing.Point(149, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 45);
             this.label2.TabIndex = 20;
@@ -142,7 +142,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Game_Catalogue.Properties.Resources.Artboard_4_copy_4;
-            this.pictureBox1.Location = new System.Drawing.Point(149, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(153, 45);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(103, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +152,7 @@
             // eyeBox
             // 
             this.eyeBox.Image = global::Game_Catalogue.Properties.Resources.icons8_uchiha_eyes_50;
-            this.eyeBox.Location = new System.Drawing.Point(46, 337);
+            this.eyeBox.Location = new System.Drawing.Point(318, 330);
             this.eyeBox.Name = "eyeBox";
             this.eyeBox.Size = new System.Drawing.Size(32, 36);
             this.eyeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

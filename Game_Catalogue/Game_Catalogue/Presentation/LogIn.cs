@@ -43,22 +43,6 @@ namespace Game_Catalogue.Presentation
 
         // ANIMATIONS
         
-        // Show or hide password - IMAME NICE OKO NA UCHIHA (NARUTO) DA VI E QD 
-        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
-        {
-            /*if (password_textbox.UseSystemPasswordChar == true)
-            {
-                password_textbox.UseSystemPasswordChar = false;
-                eyeBox.Image = Properties.Resources.icons8_uchiha_eyes_50;
-            }
-            else
-            {
-                password_textbox.UseSystemPasswordChar = true;
-                eyeBox.Image = Properties.Resources.icons8_eyelashes_2d_50;
-            }*/
-        }
-
-        
         private void username_textbox_MouseEnter(object sender, EventArgs e)
         {
             username_textbox.ForeColor = activeTextColor;

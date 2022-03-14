@@ -365,3 +365,5 @@ C:\Users\julia\source\Game Catalogue\AyhanHasanov\Game_Catalogue\Game_Catalogue\
 C:\Users\julia\source\Game Catalogue\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.pdb
 C:\Users\julia\source\Game Catalogue\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.genruntimeconfig.cache
 C:\Users\julia\source\Game Catalogue\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\ref\Game_Catalogue.dll
+C:\Users\Monnie\source\it's fine\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.MyListUserControl.resources
+C:\Users\Monnie\source\it's fine\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.UserControls.MyProfile.resources
