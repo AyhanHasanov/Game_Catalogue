@@ -20,5 +20,10 @@ namespace Game_Catalogue.Businesss
                 context.SaveChanges();
             }
         }
+        public int GetCount()
+        {
+            using(context = new GameCatalogueContext())
+                return context.Genres.Count();
+        }
     }
 }

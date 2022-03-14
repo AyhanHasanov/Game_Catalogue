@@ -1,4 +1,6 @@
-﻿using Game_Data;
+﻿using Game_Catalogue.Businesss;
+using Game_Data;
+using Game_Data.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -141,10 +143,22 @@ namespace Game_Catalogue.Presentation
                 eyeBox.Image = Properties.Resources.icons8_eyelashes_2d_50;
             }
         }
-        bool flag = false;
         private void LogIn_Form_Load(object sender, EventArgs e)
         {
-            if(!flag)
+            Genre_Logic controller = new Genre_Logic();
+            if(controller.GetCount() == 0)
+            {
+                string[] genres = { "Early Access" , "Action" , "Adventure" , "Casual" ,
+                    "Indie", "Massively Multiplayer", "Racing", "RPG",
+                "Simulation", "Sports", "Strategy" };
+
+                for (int i = 0; i < genres.Length; i++)
+                {
+                    Genre genre = new Genre();
+                    genre.Name = genres[i];
+                    controller.Add(genre);
+                }
+            }
         }
     }
 }
