@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.Registration_Button = new Game_Catalogue.Presentation.Components.CustomButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gamePanel = new System.Windows.Forms.Panel();
@@ -193,6 +194,7 @@
             this.Controls.Add(this.username_textbox);
             this.Controls.Add(this.Registration_Button);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registration";
             this.Text = "Registration";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

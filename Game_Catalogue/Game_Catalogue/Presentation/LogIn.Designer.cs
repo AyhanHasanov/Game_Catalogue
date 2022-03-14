@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn_Form));
             this.LogIn_Button = new Game_Catalogue.Presentation.Components.CustomButton();
             this.label1 = new System.Windows.Forms.Label();
             this.username_textbox = new System.Windows.Forms.TextBox();
@@ -175,6 +176,7 @@
             this.Controls.Add(this.username_textbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LogIn_Button);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn_Form";
             this.Text = "LogIn";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
