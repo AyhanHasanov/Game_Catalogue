@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Game_Catalogue.Businesss;
 using Game_Data.Model;
 using System.IO;
+using Game_Data;
 
 namespace Game_Catalogue.Presentation.UserControls
 {
@@ -24,7 +25,7 @@ namespace Game_Catalogue.Presentation.UserControls
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
-
+        GameCatalogueContext gameCatalogue = new GameCatalogueContext();
         AddGame_Logic addGame_Logic = new AddGame_Logic(); 
 
         private void gameTxtBox_MouseEnter(object sender, EventArgs e)
@@ -170,5 +171,15 @@ namespace Game_Catalogue.Presentation.UserControls
                 pictureBox1.ImageLocation = imgLocation;
             }
         } //tui e browse-a na snimka
+
+        private void AddGameUserControl_Load(object sender, EventArgs e)
+        {
+            Genre_Logic genre_Logic = new Genre_Logic();
+            for (int i = 0; i < genre_Logic.GetCount() ; i++)
+            {
+                Genre genre = genre_Logic.GetGenre(i);
+                flatCombo1.Items.Add(genre.Name.ToString());
+            }
+        }
     }
 }

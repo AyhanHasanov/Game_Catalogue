@@ -25,5 +25,13 @@ namespace Game_Catalogue.Businesss
             using(context = new GameCatalogueContext())
                 return context.Genres.Count();
         }
+        public Genre GetGenre(int id)
+        {
+            using(context = new GameCatalogueContext())
+            {
+                var result = context.Genres.Where(g=> g.IdGenre == id).FirstOrDefault();
+                return result;
+            }
+        }
     }
 }

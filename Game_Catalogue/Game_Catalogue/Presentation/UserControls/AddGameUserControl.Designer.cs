@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.gameTxtBox = new System.Windows.Forms.TextBox();
             this.gamePanel = new System.Windows.Forms.Panel();
@@ -41,7 +42,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customButton2 = new Game_Catalogue.Presentation.Components.CustomButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.gameCatalogueContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameCatalogueContextBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -175,22 +178,11 @@
             // 
             this.flatCombo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.flatCombo1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.flatCombo1.DataSource = this.gameCatalogueContextBindingSource;
             this.flatCombo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flatCombo1.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.flatCombo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             this.flatCombo1.FormattingEnabled = true;
-            this.flatCombo1.Items.AddRange(new object[] {
-            "Early Access",
-            "Action",
-            "Adventure",
-            "Casual",
-            "Indie",
-            "Massively Multiplayer",
-            "Racing",
-            "RPG",
-            "Simulation",
-            "Sports",
-            "Strategy"});
             this.flatCombo1.Location = new System.Drawing.Point(97, 328);
             this.flatCombo1.Name = "flatCombo1";
             this.flatCombo1.Size = new System.Drawing.Size(376, 38);
@@ -229,6 +221,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // gameCatalogueContextBindingSource
+            // 
+            this.gameCatalogueContextBindingSource.DataSource = typeof(Game_Data.GameCatalogueContext);
+            // 
             // AddGameUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -248,7 +244,9 @@
             this.Controls.Add(this.label1);
             this.Name = "AddGameUserControl";
             this.Size = new System.Drawing.Size(1000, 600);
+            this.Load += new System.EventHandler(this.AddGameUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameCatalogueContextBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +267,6 @@
         private PictureBox pictureBox1;
         private Components.CustomButton customButton2;
         private OpenFileDialog openFileDialog1;
+        private BindingSource gameCatalogueContextBindingSource;
     }
 }
