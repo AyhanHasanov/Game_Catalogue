@@ -138,34 +138,43 @@ namespace Game_Catalogue.Presentation.UserControls
         /// <param name="e"></param>
         private void customButton1_Click(object sender, EventArgs e)
         {
-            byte[] images = null;
-            FileStream stream = new FileStream(imgLocation,FileMode.Open,FileAccess.Read);
-            BinaryReader binaryReader = new BinaryReader(stream);
-            images = binaryReader.ReadBytes((int)stream.Length);
-
-            int genreId = flatCombo1.SelectedIndex + 1;
-            Game game = new Game();
-
-            game.Name = gameTxtBox.Text;
-            game.Opinion = descrpTxtBox.Text;
-            game.IdGenre = genreId;
-
-            if(planToPlayRadioBttn.Checked == true)
+            try
             {
-                game.State = "Plan to play";
-            }
-            else if(playingRadioButton.Checked == true)
-            {
-                game.State = "Playing";
-            }
-            else if(playedRadioButton.Checked == true)
-            {
-                game.State = "Played";
-            }
+                byte[] images = null;
+                FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader binaryReader = new BinaryReader(stream);
+                images = binaryReader.ReadBytes((int)stream.Length);
 
-            game.Image = images;
+                int genreId = flatCombo1.SelectedIndex + 1;
+                Game game = new Game();
 
-            addGame_Logic.Add(game);
+                game.Name = gameTxtBox.Text;
+                game.Opinion = descrpTxtBox.Text;
+                game.IdGenre = genreId;
+
+                if (planToPlayRadioBttn.Checked == true)
+                {
+                    game.State = "Plan to play";
+                }
+                else if (playingRadioButton.Checked == true)
+                {
+                    game.State = "Playing";
+                }
+                else if (playedRadioButton.Checked == true)
+                {
+                    game.State = "Played";
+                }
+
+                game.Image = images;
+
+                addGame_Logic.Add(game);
+                MessageBox.Show("Added game successfuly! :)");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Failed adding game! :(");
+                throw;
+            }
         }
 
         string imgLocation = "";
