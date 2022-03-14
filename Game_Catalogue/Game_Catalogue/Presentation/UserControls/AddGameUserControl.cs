@@ -141,9 +141,12 @@ namespace Game_Catalogue.Presentation.UserControls
             try
             {
                 byte[] images = null;
-                FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                BinaryReader binaryReader = new BinaryReader(stream);
-                images = binaryReader.ReadBytes((int)stream.Length);
+                if (imgLocation != "")
+                {
+                    FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader binaryReader = new BinaryReader(stream);
+                    images = binaryReader.ReadBytes((int)stream.Length);
+                }
 
                 int genreId = flatCombo1.SelectedIndex + 1;
                 Game game = new Game();
@@ -173,7 +176,6 @@ namespace Game_Catalogue.Presentation.UserControls
             catch (Exception)
             {
                 MessageBox.Show("Failed adding game! :(");
-                throw;
             }
         }
 

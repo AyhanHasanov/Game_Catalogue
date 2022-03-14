@@ -5,6 +5,8 @@
     /// </summary>
     public partial class Game
     {
+        private string name;
+
         /// <summary>
         /// Gets or sets the identifier game.
         /// </summary>
@@ -19,7 +21,19 @@
         /// <value>
         /// The name.
         /// </value>
-        public string Name { get; set; } = null!;
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+
+                if (string.IsNullOrEmpty(value) || value.ToLower() == "name of game")
+                {
+                    throw new ArgumentNullException("Name cannot be empty");
+                }
+                name = value; 
+            } 
+        } 
 
         /// <summary>
         /// Gets or sets the opinion.
@@ -27,7 +41,7 @@
         /// <value>
         /// The opinion.
         /// </value>
-        public string? Opinion { get; set; }
+        public string Opinion { get; set; }
 
         /// <summary>
         /// Gets or sets the state.
