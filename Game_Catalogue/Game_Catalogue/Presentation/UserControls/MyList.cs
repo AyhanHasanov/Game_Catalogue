@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Game_Catalogue.Businesss;
+using Game_Data;
+using Game_Data.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,9 +35,18 @@ namespace Game_Catalogue.Presentation
 
         private void MyListUserControl_Load(object sender, EventArgs e)
         {
+            //Filling the comboBox with genres from the database
+            Genre_Logic genre_Logic = new Genre_Logic();
+            int end = genre_Logic.GetCount();
+            for (int i = 1; i <= end; i++)
+            {
+                Genre genre = genre_Logic.GetGenre(i);
+                if (genre != null)
+                    flatCombo1.Items.Add(genre.Name.ToString());
+            }
 
+            LoadDataGridRecords();
         }
-
 
         private void gameTxtBox_Click(object sender, EventArgs e)
         {
@@ -54,6 +66,7 @@ namespace Game_Catalogue.Presentation
         {
             gamePanel.BackColor = inactivePanelColor;
         }
+
         private void gameTxtBox_Enter(object sender, EventArgs e)
         {
             if (gameTxtBox.Text == "Edit name")
@@ -63,6 +76,7 @@ namespace Game_Catalogue.Presentation
             }
             gamePanel.BackColor = activePanelColor;
         }
+
         private void gameTxtBox_Leave(object sender, EventArgs e)
         { 
             if (gameTxtBox.Text == "")
@@ -72,9 +86,7 @@ namespace Game_Catalogue.Presentation
             }
             gamePanel.BackColor = inactivePanelColor;
         }
-
-        
-
+  
         private void descrpTxtBox_Click(object sender, EventArgs e)
         {
             if (descrpTxtBox.Text == "Edit descriptoin")
@@ -112,6 +124,25 @@ namespace Game_Catalogue.Presentation
                 descrpTxtBox.ForeColor = inactiveTextColor;
             }
             descpPanel.BackColor = activePanelColor;
+        }
+
+        void LoadDataGridRecords()
+        {
+            dataGridView1.AutoGenerateColumns = false;
+            using (GameCatalogueContext context = new GameCatalogueContext())
+            {
+                dataGridView1.DataSource = context.Games.ToList<Game>();
+            }
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void gameTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            addButton1.Enabled = true;
         }
     }
 }

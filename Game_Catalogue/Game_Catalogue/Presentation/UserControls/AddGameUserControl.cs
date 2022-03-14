@@ -199,6 +199,7 @@ namespace Game_Catalogue.Presentation.UserControls
 
         private void AddGameUserControl_Load(object sender, EventArgs e)
         {
+            //Filling the comboBox with genres from the database
             Genre_Logic genre_Logic = new Genre_Logic();
             int end = genre_Logic.GetCount();
             for (int i = 1; i <= end; i++)
