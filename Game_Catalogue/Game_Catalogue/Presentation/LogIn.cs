@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Game_Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -138,6 +140,11 @@ namespace Game_Catalogue.Presentation
                 password_textbox.UseSystemPasswordChar = true;
                 eyeBox.Image = Properties.Resources.icons8_eyelashes_2d_50;
             }
+        }
+        bool flag = false;
+        private void LogIn_Form_Load(object sender, EventArgs e)
+        {
+            if(!flag)
         }
     }
 }

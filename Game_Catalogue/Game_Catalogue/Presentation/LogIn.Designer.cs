@@ -179,6 +179,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn_Form";
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeBox)).EndInit();
             this.ResumeLayout(false);
