@@ -47,7 +47,7 @@ namespace Game_Catalogue.Presentation
 
             LoadDataGridRecords();
 
-            this.dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 13.2);
+            //this.dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 13.2);
 
 
         }

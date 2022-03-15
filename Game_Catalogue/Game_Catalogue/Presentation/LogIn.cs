@@ -1,4 +1,5 @@
-﻿using Game_Catalogue.Businesss;
+﻿using Game_Catalogue.Business;
+using Game_Catalogue.Businesss;
 using Game_Data.Model;
 
 namespace Game_Catalogue.Presentation
@@ -14,6 +15,8 @@ namespace Game_Catalogue.Presentation
         Color activeTextColor = Color.FromArgb(247, 247, 247);
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
         private static LogIn_Form lg = new LogIn_Form();
+        User_Logic user_Logic = new User_Logic();
+
         private void label1_Click(object sender, EventArgs e)
         {
             Registration Registration = new Registration();
@@ -24,14 +27,22 @@ namespace Game_Catalogue.Presentation
         private void LogIn_Button_Click(object sender, EventArgs e)
         {
             string username = username_textbox.ToString();
-            string passwornd = password_textbox.ToString();
+            string password = password_textbox.ToString();
 
             //Check
 
-            HomePage hp = new HomePage();
-            hp.Show();
-            lg.Close();
-            this.Hide();    
+            try
+            {
+                user_Logic.CheckPassword(username, password);
+                HomePage hp = new HomePage();
+                hp.Show();
+                lg.Close();
+                this.Hide();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Username and password do not match!", "Login aborted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
 
 

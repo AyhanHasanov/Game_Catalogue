@@ -42,5 +42,16 @@ namespace Game_Catalogue.Business
                     return targerUser;
             }
         }
+
+        public bool CheckPassword(string username, string password)
+        {
+            using (context = new GameCatalogueContext())
+            {
+                User user = GetUserByUsername(username);
+                if (user.Password != password)
+                    throw new Exception();
+                else return true;
+            }
+        }
     }
 }
