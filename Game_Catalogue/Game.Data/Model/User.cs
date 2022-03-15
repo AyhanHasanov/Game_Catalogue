@@ -8,6 +8,10 @@ namespace Game_Data.Model
     /// </summary>
     public partial class User
     {
+        private string name;
+        private string email;
+        private string password;
+
         /// <summary>
         /// Gets or sets the identifier.
         /// </summary>
@@ -22,7 +26,16 @@ namespace Game_Data.Model
         /// <value>
         /// The email.
         /// </value>
-        public string Email { get; set; } = null!;
+        public string Email
+        {
+            get { return email; }
+            set
+            {
+                if (string.IsNullOrEmpty(value) || value.ToLower().Equals("email address"))
+                    throw new ArgumentException("Invalid email address!");
+                email = value;
+            }
+        }
 
         /// <summary>
         /// Gets or sets the username.
@@ -30,7 +43,17 @@ namespace Game_Data.Model
         /// <value>
         /// The username.
         /// </value>
-        public string Username { get; set; } = null!;
+        public string Username
+        {
+            get { return name; }
+            set
+            {
+                if (string.IsNullOrEmpty(value) || value.ToLower().Equals("username"))
+                    throw new ArgumentException("Invalid username!");
+
+                name = value;
+            }
+        }
 
         /// <summary>
         /// Gets or sets the password.
@@ -38,7 +61,16 @@ namespace Game_Data.Model
         /// <value>
         /// The password.
         /// </value>
-        public string Password { get; set; } = null!;
+        public string Password
+        {
+            get { return password; }
+            set
+            {
+                if (string.IsNullOrEmpty(value) || value.ToLower().Equals("password"))
+                    throw new ArgumentException("Invalid password!");
+                password = value;
+            }
+        }
 
         /// <summary>
         /// Gets or sets the date the account is created at.

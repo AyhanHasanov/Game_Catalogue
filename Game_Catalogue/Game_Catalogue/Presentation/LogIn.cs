@@ -1,16 +1,5 @@
 ﻿using Game_Catalogue.Businesss;
-using Game_Data;
 using Game_Data.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Game_Catalogue.Presentation
 {
@@ -24,12 +13,11 @@ namespace Game_Catalogue.Presentation
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
-        private static LogIn_Form lg = new LogIn_Form();
+
         private void label1_Click(object sender, EventArgs e)
         {
             Registration Registration = new Registration();
             Registration.Show();
-            this.Hide();
         }
 
         private void LogIn_Button_Click(object sender, EventArgs e)
@@ -41,12 +29,12 @@ namespace Game_Catalogue.Presentation
 
             HomePage hp = new HomePage();
             hp.Show();
-            lg.Close();
+            this.Hide();
         }
 
 
         // ANIMATIONS
-        
+
         private void username_textbox_MouseEnter(object sender, EventArgs e)
         {
             username_textbox.ForeColor = activeTextColor;
@@ -78,7 +66,7 @@ namespace Game_Catalogue.Presentation
                 username_textbox.ForeColor = inactiveTextColor;
             }
         }
-       
+
         private void username_textbox_Click(object sender, EventArgs e)
         {
             if (username_textbox.Text == "Username")
@@ -116,12 +104,12 @@ namespace Game_Catalogue.Presentation
                 password_textbox.ForeColor = inactiveTextColor;
             }
         }
-      
+
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
             password_textbox.UseSystemPasswordChar = true;
         }
-   
+
         private void password_textbox_Click(object sender, EventArgs e)
         {
             if (password_textbox.Text == "Password")
@@ -146,7 +134,7 @@ namespace Game_Catalogue.Presentation
         private void LogIn_Form_Load(object sender, EventArgs e)
         {
             Genre_Logic controller = new Genre_Logic();
-            if(controller.GetCount() == 0)
+            if (controller.GetCount() == 0)
             {
                 string[] genres = { "Early Access" , "Action" , "Adventure" , "Casual" ,
                     "Indie", "Massively Multiplayer", "Racing", "RPG",

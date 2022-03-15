@@ -1,35 +1,67 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Game_Catalogue.Business;
+using Game_Data.Model;
 
 namespace Game_Catalogue.Presentation
 {
     public partial class Registration : Form
     {
-        public Registration()
-        {
-            InitializeComponent();
-        }
-
+        User_Logic loginControl = new User_Logic();
+        User user;
         Color activePanelColor = Color.FromArgb(245, 87, 142);
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
 
+        public Registration()
+        {
+            InitializeComponent();
+        }
+
         private void Registration_Button_Click(object sender, EventArgs e)
         {
-            string username = username_textbox.ToString();
-            string passwornd = password_textbox.ToString();
-            string email = email_textBox1.ToString();
+            try
+            {
+                string username = username_textbox.Text;
+                string passwornd = password_textbox.Text;
+                string email = email_textBox1.Text;
 
-            //Check for data
+                user = new User();
+                user.Username = username;
+                user.Password = passwornd;
+                user.Email = email;
+                user.CreatedAt = DateTime.Now;
 
+                if (loginControl.CheckIfUserExists(email))
+                {
+                    MessageBox.Show("There already is an account registered for this email!",
+                        "Registration aborted!");
+                }
+                else
+                {
+                    loginControl.CreateNewUser(user);
+
+                    MessageBox.Show("You have successfully registered your account! Have fun!",
+                        "Registration successful!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                    CloseRegistrationFormAndOpenLoginForm();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("You cannot leave fields empty or with their default " +
+                    "values (\"username\", \"email address\", \"password\")!",
+                    "Registration aborted :}",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Asterisk);
+            }
+
+        }
+
+        private void CloseRegistrationFormAndOpenLoginForm()
+        {
             LogIn_Form Login = new LogIn_Form();
             Login.Show();
             this.Close();
@@ -51,7 +83,7 @@ namespace Game_Catalogue.Presentation
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            if (password_textbox.UseSystemPasswordChar  == true)
+            if (password_textbox.UseSystemPasswordChar == true)
             {
                 password_textbox.UseSystemPasswordChar = false;
                 pictureBox2.Image = Properties.Resources.icons8_uchiha_eyes_50;
@@ -78,7 +110,7 @@ namespace Game_Catalogue.Presentation
                 email_textBox1.Text = "";
             }
         }
-        
+
         //animations
         private void username_textbox_MouseEnter(object sender, EventArgs e)
         {
@@ -169,5 +201,6 @@ namespace Game_Catalogue.Presentation
                 password_textbox.ForeColor = inactiveTextColor;
             }
         }
+
     }
 }
