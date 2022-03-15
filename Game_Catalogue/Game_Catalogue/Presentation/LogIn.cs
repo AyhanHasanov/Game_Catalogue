@@ -13,7 +13,7 @@ namespace Game_Catalogue.Presentation
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
-
+        LogIn_Form lg = new LogIn_Form();
         private void label1_Click(object sender, EventArgs e)
         {
             Registration Registration = new Registration();
@@ -30,6 +30,7 @@ namespace Game_Catalogue.Presentation
             HomePage hp = new HomePage();
             hp.Show();
             this.Hide();
+            lg.Close();
         }
 
 
