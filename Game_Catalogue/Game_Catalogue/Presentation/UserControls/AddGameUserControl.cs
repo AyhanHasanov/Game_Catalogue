@@ -28,7 +28,7 @@ namespace Game_Catalogue.Presentation.UserControls
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
 
         GameCatalogueContext gameCatalogue = new GameCatalogueContext();
-        AddGame_Logic addGame_Logic = new AddGame_Logic(); 
+        Game_Logic addGame_Logic = new Game_Logic(); 
 
         private void gameTxtBox_MouseEnter(object sender, EventArgs e)
         {
@@ -172,6 +172,7 @@ namespace Game_Catalogue.Presentation.UserControls
 
                 addGame_Logic.Add(game);
                 MessageBox.Show("Added game successfuly! :)");
+
             }
             catch (Exception)
             {

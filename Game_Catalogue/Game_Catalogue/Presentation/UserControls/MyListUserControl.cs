@@ -48,9 +48,28 @@ namespace Game_Catalogue.Presentation
             LoadDataGridRecords();
 
             //this.dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 13.2);
+        }
 
+        public void LoadDataGridRecords()
+        {
+            dataGridView1.AutoGenerateColumns = false;
+            using (GameCatalogueContext context = new GameCatalogueContext())
+            {
+                dataGridView1.DataSource = context.Games.ToList<Game>();
+                
+            }
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
 
         }
+        private void gameTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            addButton1.Enabled = true;
+        }
+
+        // ANIMATIONS
 
         private void gameTxtBox_Click(object sender, EventArgs e)
         {
@@ -130,23 +149,13 @@ namespace Game_Catalogue.Presentation
             descpPanel.BackColor = activePanelColor;
         }
 
-        void LoadDataGridRecords()
+        // Whenever the visibility of the user control is changed the
+        // "LoadDataGridRecords" is called in order to refresh the records
+        // The reason for using this event is that the visibility of the user
+        // controls are changed when navigating through the pages.
+        private void MyListUserControl_VisibleChanged(object sender, EventArgs e)
         {
-            dataGridView1.AutoGenerateColumns = false;
-            using (GameCatalogueContext context = new GameCatalogueContext())
-            {
-                dataGridView1.DataSource = context.Games.ToList<Game>();
-            }
-        }
-
-        private void updateButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void gameTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            addButton1.Enabled = true;
+            LoadDataGridRecords();
         }
     }
 }

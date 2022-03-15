@@ -13,7 +13,7 @@
     <Compile Update="Presentation\HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Presentation\UserControls\MyList.cs">
+    <Compile Update="Presentation\UserControls\MyListUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Presentation\Registration.cs">

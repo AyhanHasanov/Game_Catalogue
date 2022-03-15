@@ -26,8 +26,8 @@ namespace Game_Catalogue.Presentation
 
         private void LogIn_Button_Click(object sender, EventArgs e)
         {
-            string username = username_textbox.ToString();
-            string password = password_textbox.ToString();
+            string username = username_textbox.Text;
+            string password = password_textbox.Text;
 
             //Check
 
@@ -39,9 +39,10 @@ namespace Game_Catalogue.Presentation
                 lg.Close();
                 this.Hide();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Username and password do not match!", "Login aborted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(ex.Message + ex.InnerException);
+                //MessageBox.Show("Username and password do not match!", "Login aborted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 

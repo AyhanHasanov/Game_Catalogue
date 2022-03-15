@@ -35,11 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.gameName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameState = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updateButton = new Game_Catalogue.Presentation.Components.CustomButton();
             this.gameTxtBox = new System.Windows.Forms.TextBox();
             this.gamePanel = new System.Windows.Forms.Panel();
@@ -53,6 +48,11 @@
             this.flatCombo1 = new Game_Catalogue.Presentation.Components.FlatCombo();
             this.gameCatalogueContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gameCatalogueContextBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gameName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameImage = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameCatalogueContextBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameCatalogueContextBindingSource1)).BeginInit();
@@ -112,45 +112,6 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(884, 429);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // gameName
-            // 
-            this.gameName.DataPropertyName = "name";
-            this.gameName.HeaderText = "Name";
-            this.gameName.MinimumWidth = 6;
-            this.gameName.Name = "gameName";
-            this.gameName.Width = 115;
-            // 
-            // gameDescription
-            // 
-            this.gameDescription.DataPropertyName = "opinion";
-            this.gameDescription.HeaderText = "Description";
-            this.gameDescription.MinimumWidth = 6;
-            this.gameDescription.Name = "gameDescription";
-            this.gameDescription.Width = 115;
-            // 
-            // gameGenre
-            // 
-            this.gameGenre.HeaderText = "Genre";
-            this.gameGenre.MinimumWidth = 6;
-            this.gameGenre.Name = "gameGenre";
-            this.gameGenre.Width = 115;
-            // 
-            // gameState
-            // 
-            this.gameState.DataPropertyName = "state";
-            this.gameState.HeaderText = "State";
-            this.gameState.MinimumWidth = 6;
-            this.gameState.Name = "gameState";
-            this.gameState.Width = 115;
-            // 
-            // gameImage
-            // 
-            this.gameImage.DataPropertyName = "image";
-            this.gameImage.HeaderText = "Image";
-            this.gameImage.MinimumWidth = 6;
-            this.gameImage.Name = "gameImage";
-            this.gameImage.Width = 115;
             // 
             // updateButton
             // 
@@ -329,6 +290,48 @@
             // 
             this.gameCatalogueContextBindingSource1.DataSource = typeof(Game_Data.GameCatalogueContext);
             // 
+            // gameName
+            // 
+            this.gameName.DataPropertyName = "name";
+            this.gameName.HeaderText = "Name";
+            this.gameName.MinimumWidth = 6;
+            this.gameName.Name = "gameName";
+            this.gameName.Width = 115;
+            // 
+            // gameDescription
+            // 
+            this.gameDescription.DataPropertyName = "opinion";
+            this.gameDescription.HeaderText = "Description";
+            this.gameDescription.MinimumWidth = 6;
+            this.gameDescription.Name = "gameDescription";
+            this.gameDescription.Width = 115;
+            // 
+            // gameGenre
+            // 
+            this.gameGenre.DataPropertyName = "GenreName";
+            this.gameGenre.HeaderText = "Genre";
+            this.gameGenre.MinimumWidth = 6;
+            this.gameGenre.Name = "gameGenre";
+            this.gameGenre.Width = 115;
+            // 
+            // gameState
+            // 
+            this.gameState.DataPropertyName = "state";
+            this.gameState.HeaderText = "State";
+            this.gameState.MinimumWidth = 6;
+            this.gameState.Name = "gameState";
+            this.gameState.Width = 115;
+            // 
+            // gameImage
+            // 
+            this.gameImage.DataPropertyName = "image";
+            this.gameImage.HeaderText = "Image";
+            this.gameImage.MinimumWidth = 6;
+            this.gameImage.Name = "gameImage";
+            this.gameImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gameImage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.gameImage.Width = 115;
+            // 
             // MyListUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -349,6 +352,7 @@
             this.Name = "MyListUserControl";
             this.Size = new System.Drawing.Size(1147, 600);
             this.Load += new System.EventHandler(this.MyListUserControl_Load);
+            this.VisibleChanged += new System.EventHandler(this.MyListUserControl_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameCatalogueContextBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameCatalogueContextBindingSource1)).EndInit();
@@ -377,6 +381,6 @@
         private DataGridViewTextBoxColumn gameDescription;
         private DataGridViewTextBoxColumn gameGenre;
         private DataGridViewTextBoxColumn gameState;
-        private DataGridViewTextBoxColumn gameImage;
+        private DataGridViewImageColumn gameImage;
     }
 }

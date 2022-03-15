@@ -1,4 +1,5 @@
-﻿namespace Game_Data.Model
+﻿
+namespace Game_Data.Model
 {
     /// <summary>
     /// Class Game

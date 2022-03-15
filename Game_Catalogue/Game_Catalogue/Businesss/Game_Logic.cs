@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Game_Catalogue.Businesss
 {
-    internal class AddGame_Logic
+    public class Game_Logic
     {
         private GameCatalogueContext catalogueContext = new GameCatalogueContext();
 
@@ -81,6 +81,16 @@ namespace Game_Catalogue.Businesss
                     catalogueContext.Games.Remove(game);
                     catalogueContext.SaveChanges();
                 }
+            }
+        }
+
+        public string GetGenre(int id)
+        {
+            using (catalogueContext = new GameCatalogueContext())
+            {
+                Genre genre = catalogueContext.Genres.Where(g => g.IdGenre == id).ToList().First();
+                var name = genre.Name;
+                return name;
             }
         }
     }
