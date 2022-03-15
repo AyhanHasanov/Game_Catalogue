@@ -46,6 +46,10 @@ namespace Game_Catalogue.Presentation
             }
 
             LoadDataGridRecords();
+
+            this.dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 13.2);
+
+
         }
 
         private void gameTxtBox_Click(object sender, EventArgs e)
