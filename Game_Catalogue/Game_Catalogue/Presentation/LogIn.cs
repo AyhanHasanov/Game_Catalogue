@@ -18,6 +18,7 @@ namespace Game_Catalogue.Presentation
         {
             Registration Registration = new Registration();
             Registration.Show();
+            this.Hide();
         }
 
         private void LogIn_Button_Click(object sender, EventArgs e)
@@ -29,8 +30,8 @@ namespace Game_Catalogue.Presentation
 
             HomePage hp = new HomePage();
             hp.Show();
-            this.Hide();
             lg.Close();
+            this.Hide();    
         }
 
 
