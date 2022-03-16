@@ -11,11 +11,14 @@ namespace Game_Data
     {
         public GameCatalogueContext()
         {
+            Database.EnsureCreated();
         }
+
 
         public GameCatalogueContext(DbContextOptions<GameCatalogueContext> options)
             : base(options)
         {
+            Database.EnsureCreated();
         }
 
         public virtual DbSet<Game> Games { get; set; } = null!;

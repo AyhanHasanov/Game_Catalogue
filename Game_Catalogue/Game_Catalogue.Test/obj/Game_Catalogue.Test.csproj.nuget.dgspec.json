@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\Game_Catalogue.Test.csproj": {}
+    "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\Game_Catalogue.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
+    "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+        "projectUniqueName": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
         "projectName": "Game.Data",
-        "projectPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
-        "packagesPath": "C:\\Users\\Monnie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
+        "projectPath": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Monnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,17 +82,21 @@
         }
       }
     },
-    "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\Game_Catalogue.Test.csproj": {
+    "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\Game_Catalogue.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\Game_Catalogue.Test.csproj",
+        "projectUniqueName": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\Game_Catalogue.Test.csproj",
         "projectName": "Game_Catalogue.Test",
-        "projectPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\Game_Catalogue.Test.csproj",
-        "packagesPath": "C:\\Users\\Monnie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\obj\\",
+        "projectPath": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\Game_Catalogue.Test.csproj",
+        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Monnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,8 +110,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {
-                "projectPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj"
+              "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {
+                "projectPath": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj"
               }
             }
           }
@@ -131,17 +139,21 @@
         }
       }
     },
-    "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {
+    "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+        "projectUniqueName": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
         "projectName": "Game_Catalogue",
-        "projectPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
-        "packagesPath": "C:\\Users\\Monnie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\obj\\",
+        "projectPath": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj",
+        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Monnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -155,8 +167,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
-                "projectPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj"
+              "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
+                "projectPath": "C:\\Users\\julia\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj"
               }
             }
           }
