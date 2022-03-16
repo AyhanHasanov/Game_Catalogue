@@ -38,7 +38,5 @@ constraint fk_usersgames_game Foreign key ([game_id]) references games([id_game]
 );
 
 Alter table [Games] Add [image] IMAGE NULL;
-
-
-
-
+Alter table [Users_games] Add [Id] INT NOT NULL IDENTITY;
+Alter table [Users_games] Add Primary Key ([id]);
