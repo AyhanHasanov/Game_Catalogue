@@ -1,4 +1,4 @@
-﻿using Game_Catalogue.Businesss;
+﻿using Game_Catalogue.Business;
 using Game_Data;
 using Game_Data.Model;
 using System;

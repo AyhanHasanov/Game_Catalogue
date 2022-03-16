@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game_Catalogue.Businesss
+namespace Game_Catalogue.Business
 {
     public class Genre_Logic
     {
