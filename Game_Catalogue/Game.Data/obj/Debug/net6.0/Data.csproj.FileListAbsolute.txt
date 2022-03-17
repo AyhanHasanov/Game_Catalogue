@@ -12,3 +12,17 @@ C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.pdb
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\ref\Data.dll
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\bin\Debug\net6.0\Data.deps.json
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\bin\Debug\net6.0\Data.runtimeconfig.json
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\bin\Debug\net6.0\Data.dll
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\bin\Debug\net6.0\Data.pdb
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.AssemblyInfo.cs
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.dll
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\refint\Data.dll
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.pdb
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game.Data\obj\Debug\net6.0\ref\Data.dll

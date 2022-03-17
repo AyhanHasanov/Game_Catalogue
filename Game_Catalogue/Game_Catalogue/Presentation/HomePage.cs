@@ -336,7 +336,86 @@ namespace Game_Catalogue.Presentation
             else
                 playedAGRadioButton.ForeColor = inactiveTextColor;
         }
-        
 
+        //  My List Animations
+
+        private void editNameMLBttn_Click(object sender, EventArgs e)
+        {
+            if (editNameMLBttn.Text == "Edit name")
+            {
+                editNameMLBttn.Text = "";
+                editNameMLBttn.ForeColor = activeTextColor;
+            }
+        }
+
+        private void editNameMLBttn_Enter(object sender, EventArgs e)
+        {
+
+            if (editNameMLBttn.Text == "Edit name")
+            {
+                editNameMLBttn.Text = "";
+                editNameMLBttn.ForeColor = activeTextColor;
+            }
+            panel4.BackColor = activePanelColor;
+        }
+
+        private void editNameMLBttn_Leave(object sender, EventArgs e)
+        {
+            if (editNameMLBttn.Text == "")
+            {
+                editNameMLBttn.Text = "Edit name";
+                editNameMLBttn.ForeColor = inactiveTextColor;
+            }
+            panel4.BackColor = inactivePanelColor;
+        }
+
+        private void editNameMLBttn_MouseEnter(object sender, EventArgs e)
+        {
+            panel4.BackColor = activePanelColor;
+        }
+
+        private void editNameMLBttn_MouseLeave(object sender, EventArgs e)
+        {
+            panel4.BackColor = inactivePanelColor;
+        }
+
+        private void editDescriptionMLBttn_Click(object sender, EventArgs e)
+        {
+            if (editDescriptionMLBttn.Text == "Edit descriptoin")
+            {
+                editDescriptionMLBttn.ForeColor = activeTextColor;
+                editDescriptionMLBttn.Text = "";
+            }
+        }
+
+        private void editDescriptionMLBttn_Enter(object sender, EventArgs e)
+        {
+            if (editDescriptionMLBttn.Text == "Edit description")
+            {
+                editDescriptionMLBttn.Text = "";
+                editDescriptionMLBttn.ForeColor = activeTextColor;
+            }
+            descpPanel.BackColor = activePanelColor;
+        }
+
+        private void editDescriptionMLBttn_Leave(object sender, EventArgs e)
+        {
+            if (editDescriptionMLBttn.Text == "")
+            {
+                editDescriptionMLBttn.Text = "Edit description";
+                editDescriptionMLBttn.ForeColor = inactiveTextColor;
+            }
+            descpPanel.BackColor = activePanelColor;
+        }
+
+        private void editDescriptionMLBttn_MouseEnter(object sender, EventArgs e)
+        {
+            descpPanel.BackColor = activePanelColor;
+        }
+
+        private void editDescriptionMLBttn_MouseLeave(object sender, EventArgs e)
+        {
+            descpPanel.BackColor = inactivePanelColor;
+        }
     }
 }
