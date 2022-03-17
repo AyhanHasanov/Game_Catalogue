@@ -48,10 +48,12 @@ namespace Game_Catalogue.Presentation
         {
             Environment.Exit(0);
         }
+
         private void closeBox_MouseEnter(object sender, EventArgs e)
         {
             IncreasePictureBoxSize(closeBox);
         }
+
         private void closeBox_MouseLeave(object sender, EventArgs e)
         {
             DecreasePictureBoxSize(closeBox);
@@ -61,6 +63,7 @@ namespace Game_Catalogue.Presentation
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
         private void minimizeBox_MouseEnter(object sender, EventArgs e)
         {
             IncreasePictureBoxSize(minimizeBox);
@@ -70,12 +73,14 @@ namespace Game_Catalogue.Presentation
         {
             DecreasePictureBoxSize(minimizeBox);
         }
+
         private void IncreasePictureBoxSize(PictureBox pB)
         {
             pB.Height = 30;
             pB.Width = 30;
             pB.Location = new Point(pB.Location.X - 5, pB.Location.Y - 5);
         }
+
         private void DecreasePictureBoxSize(PictureBox pB)
         {
             pB.Height = 25;
@@ -115,6 +120,7 @@ namespace Game_Catalogue.Presentation
             deleteBttn.Enabled = false;
         }
 
+
         // Menu bttns and manipulation
         private void myListBttn_Click(object sender, EventArgs e)
         {
@@ -131,20 +137,34 @@ namespace Game_Catalogue.Presentation
             myProfilePanel.Visible = false;
             myListPanel.Visible = false;
         }
+
         private void myProfileBttn_Click(object sender, EventArgs e)
         {
             addGamePanel.Visible = false;
             myProfilePanel.Visible = true;
             myListPanel.Visible = false;
         }
-        public void ShowAddGame()
-        {
-            
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             label2.Text = DateTime.Now.ToString("HH:mm:ss  dd/MM");
+        }
+
+
+        // My List Buttons
+        private void updateBttn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteBttn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addBttn_Click(object sender, EventArgs e)
+        {
+
         }
 
 
@@ -173,11 +193,11 @@ namespace Game_Catalogue.Presentation
                 {
                     game.State = "Plan to play";
                 }
-                else if (planToPlayAGRadioBttn.Checked == true)
+                else if (playingAGRadioButton.Checked == true)
                 {
                     game.State = "Playing";
                 }
-                else if (planToPlayAGRadioBttn.Checked == true)
+                else if (playedAGRadioButton.Checked == true)
                 {
                     game.State = "Played";
                 }
@@ -239,6 +259,7 @@ namespace Game_Catalogue.Presentation
             gamePanel.BackColor = activePanelColor;
 
         }
+
         private void nameAGTxtBox_Leave(object sender, EventArgs e)
         {
             if (nameAGTxtBox.Text == "")
@@ -249,10 +270,12 @@ namespace Game_Catalogue.Presentation
             gamePanel.BackColor = inactivePanelColor;
 
         }
+
         private void nameAGTxtBox_MouseEnter(object sender, EventArgs e)
         {
             gamePanel.BackColor = activePanelColor;
         }
+
         private void nameAGTxtBox_MouseLeave(object sender, EventArgs e)
         {
             gamePanel.BackColor = inactivePanelColor;
@@ -312,8 +335,9 @@ namespace Game_Catalogue.Presentation
             descrpPanel.BackColor = inactivePanelColor;
         }
 
+        // Radio Buttons Animation on Add Game 
 
-        private void planToPlayRadioBttn_CheckedChanged(object sender, EventArgs e)
+        private void planToPlayAGRadioBttn_CheckedChanged(object sender, EventArgs e)
         {
             if (planToPlayAGRadioBttn.Checked)
                 planToPlayAGRadioBttn.ForeColor = activeTextColor;
@@ -321,7 +345,7 @@ namespace Game_Catalogue.Presentation
                 planToPlayAGRadioBttn.ForeColor = inactiveTextColor;
         }
 
-        private void playingRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void playingAGRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (playingAGRadioButton.Checked)
                 playingAGRadioButton.ForeColor = activeTextColor;
@@ -329,13 +353,14 @@ namespace Game_Catalogue.Presentation
                 playingAGRadioButton.ForeColor = inactiveTextColor;
         }
 
-        private void playedRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void playedAGRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (playedAGRadioButton.Checked)
                 playedAGRadioButton.ForeColor = activeTextColor;
             else
                 playedAGRadioButton.ForeColor = inactiveTextColor;
         }
+
 
         //  My List Animations
 
@@ -417,5 +442,6 @@ namespace Game_Catalogue.Presentation
         {
             descpPanel.BackColor = inactivePanelColor;
         }
+
     }
 }

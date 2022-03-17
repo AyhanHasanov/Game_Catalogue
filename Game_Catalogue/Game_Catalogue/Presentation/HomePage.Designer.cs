@@ -64,13 +64,6 @@
             this.nameAGTxtBox = new System.Windows.Forms.TextBox();
             this.genresAGCombo = new Game_Catalogue.Presentation.Components.FlatCombo();
             this.descrpAGTxtBox = new System.Windows.Forms.TextBox();
-            this.addGameBttn = new Game_Catalogue.Presentation.Components.CustomButton();
-            this.gamePanel = new System.Windows.Forms.Panel();
-            this.playedAGRadioButton = new System.Windows.Forms.RadioButton();
-            this.descrpPanel = new System.Windows.Forms.Panel();
-            this.playingAGRadioButton = new System.Windows.Forms.RadioButton();
-            this.planToPlayAGRadioBttn = new System.Windows.Forms.RadioButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.myListPanel = new System.Windows.Forms.Panel();
             this.genresMLCombo = new Game_Catalogue.Presentation.Components.FlatCombo();
             this.addBttn = new Game_Catalogue.Presentation.Components.CustomButton();
@@ -89,15 +82,22 @@
             this.gameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gameState = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gameImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.addGameBttn = new Game_Catalogue.Presentation.Components.CustomButton();
+            this.gamePanel = new System.Windows.Forms.Panel();
+            this.playedAGRadioButton = new System.Windows.Forms.RadioButton();
+            this.descrpPanel = new System.Windows.Forms.Panel();
+            this.playingAGRadioButton = new System.Windows.Forms.RadioButton();
+            this.planToPlayAGRadioBttn = new System.Windows.Forms.RadioButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
             this.panel2.SuspendLayout();
             this.myProfilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.addGamePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.myListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // closeBox
@@ -423,91 +423,6 @@
             this.descrpAGTxtBox.MouseEnter += new System.EventHandler(this.descrpAGTxtBox_MouseEnter);
             this.descrpAGTxtBox.MouseLeave += new System.EventHandler(this.descrpAGTxtBox_MouseLeave);
             // 
-            // addGameBttn
-            // 
-            this.addGameBttn.BorderColor = System.Drawing.Color.White;
-            this.addGameBttn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.addGameBttn.FlatAppearance.BorderSize = 0;
-            this.addGameBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addGameBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addGameBttn.ForeColor = System.Drawing.Color.White;
-            this.addGameBttn.Location = new System.Drawing.Point(91, 446);
-            this.addGameBttn.Name = "addGameBttn";
-            this.addGameBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.addGameBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
-            this.addGameBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.addGameBttn.Size = new System.Drawing.Size(168, 70);
-            this.addGameBttn.TabIndex = 6;
-            this.addGameBttn.Text = "Add Game";
-            this.addGameBttn.TextColor = System.Drawing.Color.White;
-            this.addGameBttn.UseVisualStyleBackColor = true;
-            this.addGameBttn.Click += new System.EventHandler(this.addGameBttn_Click);
-            // 
-            // gamePanel
-            // 
-            this.gamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.gamePanel.Location = new System.Drawing.Point(90, 174);
-            this.gamePanel.Name = "gamePanel";
-            this.gamePanel.Size = new System.Drawing.Size(376, 6);
-            this.gamePanel.TabIndex = 3;
-            // 
-            // playedAGRadioButton
-            // 
-            this.playedAGRadioButton.AutoSize = true;
-            this.playedAGRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.playedAGRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playedAGRadioButton.Location = new System.Drawing.Point(353, 202);
-            this.playedAGRadioButton.Name = "playedAGRadioButton";
-            this.playedAGRadioButton.Size = new System.Drawing.Size(92, 34);
-            this.playedAGRadioButton.TabIndex = 5;
-            this.playedAGRadioButton.TabStop = true;
-            this.playedAGRadioButton.Text = "Played";
-            this.playedAGRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // descrpPanel
-            // 
-            this.descrpPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.descrpPanel.Location = new System.Drawing.Point(541, 273);
-            this.descrpPanel.Name = "descrpPanel";
-            this.descrpPanel.Size = new System.Drawing.Size(407, 6);
-            this.descrpPanel.TabIndex = 3;
-            // 
-            // playingAGRadioButton
-            // 
-            this.playingAGRadioButton.AutoSize = true;
-            this.playingAGRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.playingAGRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playingAGRadioButton.Location = new System.Drawing.Point(244, 202);
-            this.playingAGRadioButton.Name = "playingAGRadioButton";
-            this.playingAGRadioButton.Size = new System.Drawing.Size(98, 34);
-            this.playingAGRadioButton.TabIndex = 4;
-            this.playingAGRadioButton.TabStop = true;
-            this.playingAGRadioButton.Text = "Playing";
-            this.playingAGRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // planToPlayAGRadioBttn
-            // 
-            this.planToPlayAGRadioBttn.AutoSize = true;
-            this.planToPlayAGRadioBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.planToPlayAGRadioBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.planToPlayAGRadioBttn.Location = new System.Drawing.Point(92, 202);
-            this.planToPlayAGRadioBttn.Name = "planToPlayAGRadioBttn";
-            this.planToPlayAGRadioBttn.Size = new System.Drawing.Size(140, 34);
-            this.planToPlayAGRadioBttn.TabIndex = 3;
-            this.planToPlayAGRadioBttn.TabStop = true;
-            this.planToPlayAGRadioBttn.Text = "Plan to play";
-            this.planToPlayAGRadioBttn.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(541, 322);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(404, 194);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
             // myListPanel
             // 
             this.myListPanel.Controls.Add(this.genresMLCombo);
@@ -522,7 +437,7 @@
             this.myListPanel.Controls.Add(this.editNameMLBttn);
             this.myListPanel.Controls.Add(this.updateBttn);
             this.myListPanel.Controls.Add(this.dataGridView1);
-            this.myListPanel.Location = new System.Drawing.Point(298, 91);
+            this.myListPanel.Location = new System.Drawing.Point(266, 89);
             this.myListPanel.Name = "myListPanel";
             this.myListPanel.Size = new System.Drawing.Size(1144, 562);
             this.myListPanel.TabIndex = 18;
@@ -559,6 +474,7 @@
             this.addBttn.Text = "Add";
             this.addBttn.TextColor = System.Drawing.Color.White;
             this.addBttn.UseVisualStyleBackColor = true;
+            this.addBttn.Click += new System.EventHandler(this.addBttn_Click);
             // 
             // deleteBttn
             // 
@@ -579,6 +495,7 @@
             this.deleteBttn.Text = "Delete";
             this.deleteBttn.TextColor = System.Drawing.Color.White;
             this.deleteBttn.UseVisualStyleBackColor = true;
+            this.deleteBttn.Click += new System.EventHandler(this.deleteBttn_Click);
             // 
             // playedMLButton
             // 
@@ -692,6 +609,7 @@
             this.updateBttn.Text = "Update";
             this.updateBttn.TextColor = System.Drawing.Color.White;
             this.updateBttn.UseVisualStyleBackColor = true;
+            this.updateBttn.Click += new System.EventHandler(this.updateBttn_Click);
             // 
             // dataGridView1
             // 
@@ -817,6 +735,94 @@
             this.gameImage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.gameImage.Width = 115;
             // 
+            // addGameBttn
+            // 
+            this.addGameBttn.BorderColor = System.Drawing.Color.White;
+            this.addGameBttn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.addGameBttn.FlatAppearance.BorderSize = 0;
+            this.addGameBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addGameBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addGameBttn.ForeColor = System.Drawing.Color.White;
+            this.addGameBttn.Location = new System.Drawing.Point(91, 446);
+            this.addGameBttn.Name = "addGameBttn";
+            this.addGameBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.addGameBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
+            this.addGameBttn.OnHoverTextColor = System.Drawing.Color.White;
+            this.addGameBttn.Size = new System.Drawing.Size(168, 70);
+            this.addGameBttn.TabIndex = 6;
+            this.addGameBttn.Text = "Add Game";
+            this.addGameBttn.TextColor = System.Drawing.Color.White;
+            this.addGameBttn.UseVisualStyleBackColor = true;
+            this.addGameBttn.Click += new System.EventHandler(this.addGameBttn_Click);
+            // 
+            // gamePanel
+            // 
+            this.gamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.gamePanel.Location = new System.Drawing.Point(90, 174);
+            this.gamePanel.Name = "gamePanel";
+            this.gamePanel.Size = new System.Drawing.Size(376, 6);
+            this.gamePanel.TabIndex = 3;
+            // 
+            // playedAGRadioButton
+            // 
+            this.playedAGRadioButton.AutoSize = true;
+            this.playedAGRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.playedAGRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
+            this.playedAGRadioButton.Location = new System.Drawing.Point(353, 202);
+            this.playedAGRadioButton.Name = "playedAGRadioButton";
+            this.playedAGRadioButton.Size = new System.Drawing.Size(92, 34);
+            this.playedAGRadioButton.TabIndex = 5;
+            this.playedAGRadioButton.TabStop = true;
+            this.playedAGRadioButton.Text = "Played";
+            this.playedAGRadioButton.UseVisualStyleBackColor = true;
+            this.playedAGRadioButton.CheckedChanged += new System.EventHandler(this.playedAGRadioButton_CheckedChanged);
+            // 
+            // descrpPanel
+            // 
+            this.descrpPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.descrpPanel.Location = new System.Drawing.Point(541, 273);
+            this.descrpPanel.Name = "descrpPanel";
+            this.descrpPanel.Size = new System.Drawing.Size(407, 6);
+            this.descrpPanel.TabIndex = 3;
+            // 
+            // playingAGRadioButton
+            // 
+            this.playingAGRadioButton.AutoSize = true;
+            this.playingAGRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.playingAGRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
+            this.playingAGRadioButton.Location = new System.Drawing.Point(244, 202);
+            this.playingAGRadioButton.Name = "playingAGRadioButton";
+            this.playingAGRadioButton.Size = new System.Drawing.Size(98, 34);
+            this.playingAGRadioButton.TabIndex = 4;
+            this.playingAGRadioButton.TabStop = true;
+            this.playingAGRadioButton.Text = "Playing";
+            this.playingAGRadioButton.UseVisualStyleBackColor = true;
+            this.playingAGRadioButton.CheckedChanged += new System.EventHandler(this.playingAGRadioButton_CheckedChanged);
+            // 
+            // planToPlayAGRadioBttn
+            // 
+            this.planToPlayAGRadioBttn.AutoSize = true;
+            this.planToPlayAGRadioBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.planToPlayAGRadioBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
+            this.planToPlayAGRadioBttn.Location = new System.Drawing.Point(92, 202);
+            this.planToPlayAGRadioBttn.Name = "planToPlayAGRadioBttn";
+            this.planToPlayAGRadioBttn.Size = new System.Drawing.Size(140, 34);
+            this.planToPlayAGRadioBttn.TabIndex = 3;
+            this.planToPlayAGRadioBttn.TabStop = true;
+            this.planToPlayAGRadioBttn.Text = "Plan to play";
+            this.planToPlayAGRadioBttn.UseVisualStyleBackColor = true;
+            this.planToPlayAGRadioBttn.CheckedChanged += new System.EventHandler(this.planToPlayAGRadioBttn_CheckedChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(541, 322);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(404, 194);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -844,10 +850,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.addGamePanel.ResumeLayout(false);
             this.addGamePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.myListPanel.ResumeLayout(false);
             this.myListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
