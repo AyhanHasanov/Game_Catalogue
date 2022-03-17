@@ -43,8 +43,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.customButton2 = new Game_Catalogue.Presentation.Components.CustomButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gameCatalogueContextBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(396, 23);
+            this.label1.Location = new System.Drawing.Point(391, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 45);
             this.label1.TabIndex = 0;
@@ -65,7 +67,7 @@
             this.gameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gameTxtBox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.gameTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.gameTxtBox.Location = new System.Drawing.Point(96, 139);
+            this.gameTxtBox.Location = new System.Drawing.Point(91, 150);
             this.gameTxtBox.MaxLength = 255;
             this.gameTxtBox.Name = "gameTxtBox";
             this.gameTxtBox.Size = new System.Drawing.Size(375, 30);
@@ -80,7 +82,7 @@
             // gamePanel
             // 
             this.gamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.gamePanel.Location = new System.Drawing.Point(95, 172);
+            this.gamePanel.Location = new System.Drawing.Point(90, 183);
             this.gamePanel.Name = "gamePanel";
             this.gamePanel.Size = new System.Drawing.Size(376, 6);
             this.gamePanel.TabIndex = 3;
@@ -92,7 +94,7 @@
             this.descrpTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.descrpTxtBox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descrpTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.descrpTxtBox.Location = new System.Drawing.Point(543, 139);
+            this.descrpTxtBox.Location = new System.Drawing.Point(538, 150);
             this.descrpTxtBox.Multiline = true;
             this.descrpTxtBox.Name = "descrpTxtBox";
             this.descrpTxtBox.Size = new System.Drawing.Size(407, 137);
@@ -107,7 +109,7 @@
             // descrpPanel
             // 
             this.descrpPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.descrpPanel.Location = new System.Drawing.Point(546, 276);
+            this.descrpPanel.Location = new System.Drawing.Point(541, 287);
             this.descrpPanel.Name = "descrpPanel";
             this.descrpPanel.Size = new System.Drawing.Size(407, 6);
             this.descrpPanel.TabIndex = 3;
@@ -117,7 +119,7 @@
             this.planToPlayRadioBttn.AutoSize = true;
             this.planToPlayRadioBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.planToPlayRadioBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.planToPlayRadioBttn.Location = new System.Drawing.Point(97, 202);
+            this.planToPlayRadioBttn.Location = new System.Drawing.Point(92, 213);
             this.planToPlayRadioBttn.Name = "planToPlayRadioBttn";
             this.planToPlayRadioBttn.Size = new System.Drawing.Size(146, 34);
             this.planToPlayRadioBttn.TabIndex = 3;
@@ -131,7 +133,7 @@
             this.playingRadioButton.AutoSize = true;
             this.playingRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playingRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playingRadioButton.Location = new System.Drawing.Point(249, 202);
+            this.playingRadioButton.Location = new System.Drawing.Point(244, 213);
             this.playingRadioButton.Name = "playingRadioButton";
             this.playingRadioButton.Size = new System.Drawing.Size(103, 34);
             this.playingRadioButton.TabIndex = 4;
@@ -145,7 +147,7 @@
             this.playedRadioButton.AutoSize = true;
             this.playedRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playedRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playedRadioButton.Location = new System.Drawing.Point(358, 202);
+            this.playedRadioButton.Location = new System.Drawing.Point(353, 213);
             this.playedRadioButton.Name = "playedRadioButton";
             this.playedRadioButton.Size = new System.Drawing.Size(98, 34);
             this.playedRadioButton.TabIndex = 5;
@@ -162,7 +164,7 @@
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(96, 459);
+            this.customButton1.Location = new System.Drawing.Point(91, 470);
             this.customButton1.Name = "customButton1";
             this.customButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.customButton1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
@@ -182,19 +184,15 @@
             this.flatCombo1.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.flatCombo1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             this.flatCombo1.FormattingEnabled = true;
-            this.flatCombo1.Location = new System.Drawing.Point(97, 328);
+            this.flatCombo1.Location = new System.Drawing.Point(92, 339);
             this.flatCombo1.Name = "flatCombo1";
             this.flatCombo1.Size = new System.Drawing.Size(376, 38);
             this.flatCombo1.TabIndex = 7;
             // 
-            // gameCatalogueContextBindingSource
-            // 
-            this.gameCatalogueContextBindingSource.DataSource = typeof(Data.GameCatalogueContext);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(546, 328);
+            this.pictureBox1.Location = new System.Drawing.Point(541, 339);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(404, 204);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -209,7 +207,7 @@
             this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(893, 474);
+            this.customButton2.Location = new System.Drawing.Point(888, 485);
             this.customButton2.Name = "customButton2";
             this.customButton2.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.customButton2.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
@@ -225,30 +223,39 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.customButton2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.gameTxtBox);
+            this.panel1.Controls.Add(this.flatCombo1);
+            this.panel1.Controls.Add(this.descrpTxtBox);
+            this.panel1.Controls.Add(this.customButton1);
+            this.panel1.Controls.Add(this.gamePanel);
+            this.panel1.Controls.Add(this.playedRadioButton);
+            this.panel1.Controls.Add(this.descrpPanel);
+            this.panel1.Controls.Add(this.playingRadioButton);
+            this.panel1.Controls.Add(this.planToPlayRadioBttn);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(997, 597);
+            this.panel1.TabIndex = 10;
+            // 
             // AddGameUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.customButton2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.flatCombo1);
-            this.Controls.Add(this.customButton1);
-            this.Controls.Add(this.playedRadioButton);
-            this.Controls.Add(this.playingRadioButton);
-            this.Controls.Add(this.planToPlayRadioBttn);
-            this.Controls.Add(this.descrpPanel);
-            this.Controls.Add(this.gamePanel);
-            this.Controls.Add(this.descrpTxtBox);
-            this.Controls.Add(this.gameTxtBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Name = "AddGameUserControl";
             this.Size = new System.Drawing.Size(1000, 600);
             this.Load += new System.EventHandler(this.AddGameUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gameCatalogueContextBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -268,5 +275,6 @@
         private Components.CustomButton customButton2;
         private OpenFileDialog openFileDialog1;
         private BindingSource gameCatalogueContextBindingSource;
+        private Panel panel1;
     }
 }

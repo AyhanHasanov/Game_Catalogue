@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Game_Catalogue.Presentation.Components
 {
-    internal class FlatCombo: ComboBox
+    public class FlatCombo: ComboBox
     {
         private const int WM_PAINT = 0xF;
         private int buttonWidth = SystemInformation.HorizontalScrollBarArrowWidth;
