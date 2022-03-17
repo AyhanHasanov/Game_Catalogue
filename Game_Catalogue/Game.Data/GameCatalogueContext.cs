@@ -42,7 +42,7 @@ namespace Game_Data
                 entity.HasKey(e => e.IdGame)
                     .HasName("pk_games_id");
 
-                entity.HasIndex(e => e.IdGenre, "IX_Games_id_genre");
+                //entity.HasIndex(e => e.IdGenre, "IX_Games_id_genre");
 
                 entity.Property(e => e.IdGame).HasColumnName("id_game");
 
@@ -88,11 +88,11 @@ namespace Game_Data
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.Email, "UQ__Users__AB6E6164F56D7870")
-                    .IsUnique();
+                //entity.HasIndex(e => e.Email, "UQ__Users__AB6E6164F56D7870")
+                    //.IsUnique();
 
-                entity.HasIndex(e => e.Username, "UQ__Users__F3DBC572A854F7CE")
-                    .IsUnique();
+               // entity.HasIndex(e => e.Username, "UQ__Users__F3DBC572A854F7CE")
+                    //.IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
@@ -121,9 +121,9 @@ namespace Game_Data
             {
                 entity.ToTable("Users_games");
 
-                entity.HasIndex(e => e.GameId, "IX_Users_games_game_id");
+                /*entity.HasIndex(e => e.GameId, "IX_Users_games_game_id");
 
-                entity.HasIndex(e => e.UserId, "IX_Users_games_user_id");
+                entity.HasIndex(e => e.UserId, "IX_Users_games_user_id");*/
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
