@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Game_Data.Model;
+using Data.Model;
 using System.IO;
-using Game_Data;
+using Data;
 using System.Data.SqlClient;
 using Game_Catalogue.Business;
 

@@ -290,11 +290,11 @@
             // 
             // gameCatalogueContextBindingSource
             // 
-            this.gameCatalogueContextBindingSource.DataSource = typeof(Game_Data.GameCatalogueContext);
+            this.gameCatalogueContextBindingSource.DataSource = typeof(Data.GameCatalogueContext);
             // 
             // gameCatalogueContextBindingSource1
             // 
-            this.gameCatalogueContextBindingSource1.DataSource = typeof(Game_Data.GameCatalogueContext);
+            this.gameCatalogueContextBindingSource1.DataSource = typeof(Data.GameCatalogueContext);
             // 
             // gameName
             // 

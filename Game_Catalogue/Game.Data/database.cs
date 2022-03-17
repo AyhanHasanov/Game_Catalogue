@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace Game_Data
+namespace Data
 {
 
     /// <summary>

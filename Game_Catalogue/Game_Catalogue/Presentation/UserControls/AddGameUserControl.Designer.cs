@@ -189,7 +189,7 @@
             // 
             // gameCatalogueContextBindingSource
             // 
-            this.gameCatalogueContextBindingSource.DataSource = typeof(Game_Data.GameCatalogueContext);
+            this.gameCatalogueContextBindingSource.DataSource = typeof(Data.GameCatalogueContext);
             // 
             // pictureBox1
             // 

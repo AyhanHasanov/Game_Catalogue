@@ -1,5 +1,5 @@
 ﻿using Game_Catalogue.Business;
-using Game_Data.Model;
+using Data.Model;
 using System.IO;
 
 namespace Game_Catalogue.Presentation

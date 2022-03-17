@@ -1,6 +1,6 @@
 ﻿using Game_Catalogue.Business;
-using Game_Data;
-using Game_Data.Model;
+using Data;
+using Data.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -1,5 +1,5 @@
-﻿using Game_Data;
-using Game_Data.Model;
+﻿using Data;
+using Data.Model;
 
 namespace Game_Catalogue.Presentation
 {

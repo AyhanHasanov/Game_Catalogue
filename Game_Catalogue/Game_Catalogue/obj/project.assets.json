@@ -1572,7 +1572,7 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Game.Data/1.0.0": {
+      "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -1581,10 +1581,10 @@
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
-          "bin/placeholder/Game.Data.dll": {}
+          "bin/placeholder/Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Game.Data.dll": {}
+          "bin/placeholder/Data.dll": {}
         }
       }
     }
@@ -5997,16 +5997,16 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Game.Data/1.0.0": {
+    "Data/1.0.0": {
       "type": "project",
-      "path": "../Game.Data/Game.Data.csproj",
-      "msbuildProject": "../Game.Data/Game.Data.csproj"
+      "path": "../Game.Data/Data.csproj",
+      "msbuildProject": "../Game.Data/Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "Data >= 1.0.0",
       "FontAwesome.Sharp >= 5.15.4",
-      "Game.Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.23",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.23",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.23",
@@ -6046,8 +6046,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
-              "projectPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj"
+            "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj"
             }
           }
         }

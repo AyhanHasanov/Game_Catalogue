@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Game_Data.Model
+namespace Data.Model
 {
     public partial class UsersGame
     {

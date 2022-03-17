@@ -1,10 +1,6 @@
-﻿using Game_Data;
-using Game_Data.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Data;
+using Data.Model;
+
 
 namespace Game_Catalogue.Business
 {

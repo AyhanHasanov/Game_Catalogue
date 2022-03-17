@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Game_Data.Model;
+﻿using Data.Model;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
-
-namespace Game_Data
+namespace Data
 {
     public partial class GameCatalogueContext : DbContext
     {

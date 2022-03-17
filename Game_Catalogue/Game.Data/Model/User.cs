@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Game_Data.Model
+namespace Data.Model
 {
     public partial class User
     {

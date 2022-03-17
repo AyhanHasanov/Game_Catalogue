@@ -417,8 +417,8 @@ C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Cata
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
-C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game.Data.dll
-C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game.Data.pdb
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Data.dll
+C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Data.pdb
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.csproj.AssemblyReference.cache
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.HomePage.resources
 C:\Users\Ayhan\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.LogIn_Form.resources

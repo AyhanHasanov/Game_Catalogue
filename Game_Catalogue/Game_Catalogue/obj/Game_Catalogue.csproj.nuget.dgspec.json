@@ -4,12 +4,12 @@
     "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue\\Game_Catalogue.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
+    "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
-        "projectName": "Game.Data",
-        "projectPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj",
+        "projectName": "Data",
+        "projectPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
         "projectStyle": "PackageReference",
@@ -110,8 +110,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj": {
-                "projectPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj"
+              "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj"
               }
             }
           }

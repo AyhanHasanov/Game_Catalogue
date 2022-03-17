@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sDy58TJl4wkEvPPBSasfxujb1SnQQ4ytbXSw/oWy5tqeZupMlTBjYLlHmO9vG2vkLUssAleGV0omDqYaJxE09A==",
+  "dgSpecHash": "L+IjdY31jTprzTPhliXU4AhamF7M0Mym0k7QRePkW01DdkdSW+q89MqGTcGNykIEzDH8JAbhgl4vZO2Doco/Dw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Game.Data.csproj",
+  "projectFilePath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ayhan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Ayhan\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
