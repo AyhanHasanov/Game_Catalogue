@@ -165,7 +165,7 @@ namespace Game_Catalogue.Presentation
                 for (int i = 0; i < genres.Length; i++)
                 {
                     Genre genre = new Genre();
-                    genre.Name = genres[i];
+                    genre.GenreName = genres[i];
                     controller.Add(genre);
                 }
             }

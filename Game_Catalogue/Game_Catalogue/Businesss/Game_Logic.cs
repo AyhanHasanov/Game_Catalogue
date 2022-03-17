@@ -85,7 +85,7 @@ namespace Game_Catalogue.Business
             using (catalogueContext = new GameCatalogueContext())
             {
                 Genre genre = catalogueContext.Genres.Where(g => g.IdGenre == id).ToList().First();
-                var name = genre.Name;
+                var name = genre.GenreName;
                 return name;
             }
         }

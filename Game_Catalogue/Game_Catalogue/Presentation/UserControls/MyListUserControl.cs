@@ -42,7 +42,7 @@ namespace Game_Catalogue.Presentation
             {
                 Genre genre = genre_Logic.GetGenre(i);
                 if (genre != null)
-                    flatCombo1.Items.Add(genre.Name.ToString());
+                    flatCombo1.Items.Add(genre.GenreName.ToString());
             }
 
             LoadDataGridRecords();

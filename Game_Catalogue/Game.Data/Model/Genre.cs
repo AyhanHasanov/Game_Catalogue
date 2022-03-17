@@ -12,7 +12,7 @@ namespace Data.Model
 
         public int IdGenre { get; set; }
 
-        public string Name { get; set; } = null!;
+        public string GenreName { get; set; } = null!;
 
         public virtual ICollection<Game> Games { get; set; }
     }

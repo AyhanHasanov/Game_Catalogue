@@ -38,6 +38,18 @@ namespace Game_Catalogue.Business
             }
         }
 
+        public User GetUserFromTxtFile()
+        {
+            using (context = new GameCatalogueContext())
+            {
+                using (var reader = new StreamReader("username.txt"))
+                {
+                    string username = reader.ReadToEnd().Trim().Replace("\\r", "").Replace("\\n", "");
+                    return GetUserByUsername(username);
+                }
+            }
+        }
+
         public bool CheckPassword(string username, string password)
         {
             using (context = new GameCatalogueContext())

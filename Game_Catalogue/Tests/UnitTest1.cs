@@ -10,9 +10,9 @@ namespace Tests
         public void TestAddGenre()
         {
             Genre genre = new Genre();
-            genre.Name = "Action";
+            genre.GenreName = "Action";
 
-            Assert.AreEqual("Action", genre.Name);
+            Assert.AreEqual("Action", genre.GenreName);
 
         }
     }

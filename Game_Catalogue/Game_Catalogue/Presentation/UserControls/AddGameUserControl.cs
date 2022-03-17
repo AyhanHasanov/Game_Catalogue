@@ -122,7 +122,7 @@ namespace Game_Catalogue.Presentation.UserControls
             {
                 Genre genre = genre_Logic.GetGenre(i);
                 if (genre != null)
-                    flatCombo1.Items.Add(genre.Name.ToString());
+                    flatCombo1.Items.Add(genre.GenreName.ToString());
             }
         }
         private void gameTxtBox_MouseEnter(object sender, EventArgs e)

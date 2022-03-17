@@ -26,6 +26,7 @@ namespace Game_Catalogue.Presentation
         Game_Logic addGame_Logic = new Game_Logic();
         UsersGame_Logic usersGame_Logic = new UsersGame_Logic();
         User_Logic users_Logic = new User_Logic();
+        User currentUser = new User();
 
 
         /// <summary>
@@ -105,8 +106,8 @@ namespace Game_Catalogue.Presentation
                 Genre genre = genre_Logic.GetGenre(i);
                 if (genre != null)
                 { 
-                    genresAGCombo.Items.Add(genre.Name.ToString()); 
-                    genresMLCombo.Items.Add(genre.Name.ToString()); 
+                    genresAGCombo.Items.Add(genre.GenreName.ToString()); 
+                    genresMLCombo.Items.Add(genre.GenreName.ToString()); 
                 }
             }
 
@@ -118,6 +119,8 @@ namespace Game_Catalogue.Presentation
             playingMLButton.Enabled = false;
             updateBttn.Enabled = false;
             deleteBttn.Enabled = false;
+
+            currentUser = users_Logic.GetUserFromTxtFile();
         }
 
 
@@ -128,6 +131,7 @@ namespace Game_Catalogue.Presentation
             addGamePanel.Visible = false;
             myProfilePanel.Visible = false;
             myListPanel.Visible = true;
+            LoadDataGridRecords();
 
         }
 
@@ -225,6 +229,30 @@ namespace Game_Catalogue.Presentation
             catch (Exception)
             {
                 MessageBox.Show("Failed adding game! :(");
+            }
+        }
+
+        public void LoadDataGridRecords()
+        {
+            dataGridView1.AutoGenerateColumns = false;
+            using (GameCatalogueContext context = new GameCatalogueContext())
+            {
+
+                var gamesList = from userGames in context.UsersGames
+                                join games in context.Games on userGames.GameId equals games.IdGame
+                                join genre in context.Genres on games.IdGenre equals genre.IdGenre
+                                select new
+                                {
+                                    userGames.UserId,
+                                    games.Name,
+                                    games.Opinion,
+                                    genre.GenreName,
+                                    games.State,
+                                    games.Image
+                                };
+
+                var list = gamesList.ToList().Where(u => u.UserId.Equals(currentUser.Id));  
+                dataGridView1.DataSource = list;
             }
         }
 
