@@ -28,5 +28,15 @@ namespace Game_Catalogue.Business
             }
         }
 
+        public List<UsersGame> GetAllGamesForCurrentUser(User user)
+        {
+            using (context = new GameCatalogueContext())
+            {
+                var result = context.UsersGames.Where(u => u.UserId.Equals(user.Id)).ToList();
+                return result;
+            }
+        }
+
+
     }
 }

@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\GameCatalogue",
+    "\\Game_Catalogue",
+    "\\Game_Catalogue\\Game.Data",
     "\\Game_Catalogue\\Game_Catalogue",
     "\\Game_Catalogue\\Game_Catalogue\\Presentation"
   ],
-  "SelectedNode": "\\GameCatalogue\\GameCatalogue.sln",
+  "SelectedNode": "\\Game_Catalogue\\Game.Data\\GameCatalogueContext.cs",
   "PreviewInSolutionExplorer": false
 }

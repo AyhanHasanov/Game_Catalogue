@@ -1,6 +1,8 @@
 ﻿using Data;
 using Data.Model;
 using Game_Catalogue.Business;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Game_Catalogue.Presentation
 {
@@ -23,7 +25,7 @@ namespace Game_Catalogue.Presentation
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
 
         GameCatalogueContext gameCatalogue = new GameCatalogueContext();
-        Game_Logic addGame_Logic = new Game_Logic();
+        Game_Logic game_Logic = new Game_Logic();
         UsersGame_Logic usersGame_Logic = new UsersGame_Logic();
         User_Logic users_Logic = new User_Logic();
         User currentUser = new User();
@@ -37,7 +39,7 @@ namespace Game_Catalogue.Presentation
             InitializeComponent();
         }
 
-    
+
         //  CLOSE AND MINIMIZE BUTTON ANIMATIONS 
 
         /// <summary>
@@ -90,7 +92,7 @@ namespace Game_Catalogue.Presentation
         }
 
 
-        
+
         private void HomePage_Load(object sender, EventArgs e)
         {
             this.Draggable(true);
@@ -105,9 +107,9 @@ namespace Game_Catalogue.Presentation
             {
                 Genre genre = genre_Logic.GetGenre(i);
                 if (genre != null)
-                { 
-                    genresAGCombo.Items.Add(genre.GenreName.ToString()); 
-                    genresMLCombo.Items.Add(genre.GenreName.ToString()); 
+                {
+                    genresAGCombo.Items.Add(genre.GenreName.ToString());
+                    genresMLCombo.Items.Add(genre.GenreName.ToString());
                 }
             }
 
@@ -121,6 +123,7 @@ namespace Game_Catalogue.Presentation
             deleteBttn.Enabled = false;
 
             currentUser = users_Logic.GetUserFromTxtFile();
+            LoadMyProfileInfo();
         }
 
 
@@ -147,6 +150,7 @@ namespace Game_Catalogue.Presentation
             addGamePanel.Visible = false;
             myProfilePanel.Visible = true;
             myListPanel.Visible = false;
+            LoadMyProfileInfo();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -216,7 +220,7 @@ namespace Game_Catalogue.Presentation
                     userID = users_Logic.GetUserByUsername(username).Id;
                 }
 
-                addGame_Logic.Add(game);
+                game_Logic.Add(game);
 
                 UsersGame ug = new UsersGame();
                 ug.UserId = userID;
@@ -238,24 +242,68 @@ namespace Game_Catalogue.Presentation
             using (GameCatalogueContext context = new GameCatalogueContext())
             {
 
-                var gamesList = from userGames in context.UsersGames
+                /*var gamesList = from userGames in context.UsersGames
                                 join games in context.Games on userGames.GameId equals games.IdGame
                                 join genre in context.Genres on games.IdGenre equals genre.IdGenre
                                 select new
                                 {
-                                    userGames.UserId,
-                                    games.Name,
-                                    games.Opinion,
-                                    genre.GenreName,
-                                    games.State,
-                                    games.Image
+                                    UserId = userGames.UserId,
+                                    Name = games.Name,
+                                    Opinion = games.Opinion,
+                                    Genre = genre.GenreName,
+                                    State = games.State,
+                                    Image = games.Image
                                 };
 
-                var list = gamesList.ToList().Where(u => u.UserId.Equals(currentUser.Id));  
-                dataGridView1.DataSource = list;
+                var list = gamesList.ToList().Where(u => u.UserId.Equals(currentUser.Id));
+                dataGridView1.DataSource = list;*/
+
+                var conn = DataBase.GetConnection();
+                conn.Open();
+                using (conn)
+                {
+                    /*SqlDataAdapter commmand = new SqlDataAdapter(
+                        $"SELECT Games.name, games.opinion, genres.name, games.state, games.image " +
+                        $"FROM Games " +
+                        $"JOIN Genres on games.id_genre = genres.id_genre " +
+                        $"Where Games.id_game IN(SELECT Users_games.game_id FROM Users_games Where Users_games.user_id = {this.currentUser.Id})", conn);
+                    
+                    DataTable gameTable = new DataTable();
+                    commmand.Fill(gameTable);
+                    dataGridView2.DataSource = gameTable;*/
+
+                    string sql = $"SELECT Users_games.user_id, Games.name, Games.opinion, Genres.name, Games.state, Games.image " +
+                                      $"FROM Users_games " +
+                                      $"JOIN Games on Users_games.game_id = Games.id_game " +
+                                      $"JOIN Genres on Games.id_genre = Genres.id_genre " +
+                                      $"WHERE Users_games.user_id = {this.currentUser.Id} ";
+
+                    SqlCommand command = new SqlCommand(sql, conn);
+                    SqlDataReader reader = command.ExecuteReader();
+                    using (reader)
+                    {
+                        int user_id = (int)reader["Id"];
+                        string game_name = (string)reader["Name"];
+                        string game_opinion = (string)reader["Opinion"];
+                        string genre = (string)reader["Name"];
+                        string state = (string)reader["State"];
+                        Image image = (Image)reader["Image"];
+
+                    }
+                }
+
+                //dataGridView1.DataSource = list;
             }
         }
 
+
+        public void LoadMyProfileInfo()
+        {
+            myProfileName.Text = currentUser.Username;
+            myProfileJoined.Text = currentUser.CreatedAt.ToString();
+            int count = usersGame_Logic.GetAllGamesForCurrentUser(currentUser).Count;
+            myProfileCount.Text = count.ToString();
+        }
         private void browsePic_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -263,7 +311,7 @@ namespace Game_Catalogue.Presentation
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 imgLocation = dialog.FileName.ToString();
-                pictureBox1.ImageLocation = imgLocation;
+                pictureBox2.ImageLocation = imgLocation;
             }
         }
 
@@ -350,7 +398,7 @@ namespace Game_Catalogue.Presentation
         private void descrpAGTxtBox_MouseLeave(object sender, EventArgs e)
         {
             descrpPanel.BackColor = inactivePanelColor;
-            
+
         }
 
         private void descrpTxtBox_MouseEnter(object sender, EventArgs e)

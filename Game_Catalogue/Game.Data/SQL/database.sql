@@ -40,3 +40,16 @@ constraint fk_usersgames_game Foreign key ([game_id]) references games([id_game]
 Alter table [Games] Add [image] IMAGE NULL;
 Alter table [Users_games] Add [Id] INT NOT NULL IDENTITY;
 Alter table [Users_games] Add Primary Key ([id]);
+
+
+SELECT Users_games.user_id, Games.name, Games.opinion, Genres.name, Games.state, Games.image
+FROM Users_games
+INNER JOIN Games on Users_games.game_id = Games.id_game
+INNER JOIN Genres  on Games.id_genre = Genres.id_genre
+WHERE Users_games.user_id = 1;
+
+
+SELECT Games.name, games.opinion, genres.name, games.state, games.image
+FROM Games
+INNER JOIN Genres on games.id_genre = genres.id_genre
+Where Games.id_game IN (SELECT Users_games.game_id FROM Users_games Where Users_games.user_id = 2);
