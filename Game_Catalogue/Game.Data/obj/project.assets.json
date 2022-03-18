@@ -5852,19 +5852,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Monnie\\.nuget\\packages\\": {}
+    "C:\\Users\\Ayhan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj",
-      "packagesPath": "C:\\Users\\Monnie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Monnie\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
+      "projectPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ayhan\\Source\\Repos\\AyhanHasanov\\Game_Catalogue\\Game_Catalogue\\Game.Data\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Monnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ayhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

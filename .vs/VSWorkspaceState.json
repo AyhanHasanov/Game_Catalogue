@@ -3,8 +3,9 @@
     "",
     "\\Game_Catalogue",
     "\\Game_Catalogue\\Game_Catalogue",
+    "\\Game_Catalogue\\Game_Catalogue\\Businesss",
     "\\Game_Catalogue\\Game_Catalogue\\Presentation"
   ],
-  "SelectedNode": "\\Game_Catalogue\\Game_Catalogue\\Presentation\\Registration.cs",
+  "SelectedNode": "\\Game_Catalogue\\Game_Catalogue\\Presentation\\HomePage.cs",
   "PreviewInSolutionExplorer": false
 }

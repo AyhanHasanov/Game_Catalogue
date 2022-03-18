@@ -38,6 +38,7 @@ namespace Game_Catalogue.Business
             using (context = new GameCatalogueContext())
             {
                 var usersGame = context.UsersGames.FirstOrDefault((ug => (ug.UserId == userId) && (ug.GameId == gameId)));
+                var game = context.Games.FirstOrDefault((g => (g.IdGame == gameId)));
                 if (usersGame == null)
                 {
                     throw new ArgumentException("Game does not exist!");
@@ -45,6 +46,7 @@ namespace Game_Catalogue.Business
                 else
                 {
                     context.UsersGames.Remove(usersGame);
+                    context.Games.Remove(game);
                     context.SaveChanges();
                 }
             }

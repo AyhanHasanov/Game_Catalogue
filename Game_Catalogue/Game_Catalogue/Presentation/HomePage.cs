@@ -137,7 +137,6 @@ namespace Game_Catalogue.Presentation
             myProfilePanel.Visible = false;
             myListPanel.Visible = true;
             LoadDataGridRecords();
-
         }
 
         private void addGamePageBttn_Click(object sender, EventArgs e)
@@ -501,7 +500,7 @@ namespace Game_Catalogue.Presentation
 
         private void RfrshButt1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Update();
+            LoadDataGridRecords();
         }
     }
 }
