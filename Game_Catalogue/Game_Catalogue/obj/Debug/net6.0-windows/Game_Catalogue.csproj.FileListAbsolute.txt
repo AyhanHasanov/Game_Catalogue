@@ -440,3 +440,4 @@ C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Cat
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Data.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Data.pdb
+C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.PictureVisualizer.resources

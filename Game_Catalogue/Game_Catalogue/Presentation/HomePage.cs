@@ -3,6 +3,7 @@ using Data.Model;
 using Game_Catalogue.Business;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Imaging;
 
 namespace Game_Catalogue.Presentation
 {
@@ -17,8 +18,6 @@ namespace Game_Catalogue.Presentation
         /// </summary>
         private GameCatalogueContext games = new GameCatalogueContext();
 
-        bool addGame = MyListUserControl.addGameVisible;
-
         Color activePanelColor = Color.FromArgb(245, 87, 142);
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
@@ -29,6 +28,7 @@ namespace Game_Catalogue.Presentation
         UsersGame_Logic usersGame_Logic = new UsersGame_Logic();
         User_Logic users_Logic = new User_Logic();
         User currentUser = new User();
+        Genre_Logic genre_Logic = new Genre_Logic();
 
 
         /// <summary>
@@ -160,7 +160,8 @@ namespace Game_Catalogue.Presentation
         private int Selected_Index;
         private void updateBttn_Click(object sender, EventArgs e)
         {
-            int genreId = genresMLCombo.SelectedIndex + 1;
+            string genre_name = this.genresMLCombo.GetItemText(genresMLCombo.SelectedItem);
+            int genreId = genre_Logic.GetGenreIdByName(genre_name);
             string name = editNameMLBttn.Text;
             string description = editDescriptionMLBttn.Text;
             string state = "";
@@ -196,7 +197,7 @@ namespace Game_Catalogue.Presentation
             SqlConnection conn = DataBase.GetConnection();
             string query = "select Users_games.user_id, Games.id_game, Games.name, Games.opinion, Genres.name, Games.state, Games.image";
             query += " from [dbo].[Users_games] inner join [dbo].[Games] on Users_games.game_id = Games.id_game";
-            query += $" inner join [dbo].[Genres] on Games.id_game = Genres.id_genre where Users_games.user_id = {currentUser.Id}";
+            query += $" inner join [dbo].[Genres] on Games.id_genre = Genres.id_genre where Users_games.user_id = {currentUser.Id}";
 
             SqlCommand command = new SqlCommand(query, conn);
             conn.Open();
@@ -227,7 +228,7 @@ namespace Game_Catalogue.Presentation
             dataGridView1.Columns["state"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns["image"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
-       
+
         // !!!!!!!!!!!!!!!
         private void LoadMyProfileInfo()
         {
@@ -252,7 +253,8 @@ namespace Game_Catalogue.Presentation
                     images = binaryReader.ReadBytes((int)stream.Length);
                 }
 
-                int genreId = genresAGCombo.SelectedIndex + 1;
+                string genre_name = this.genresAGCombo.GetItemText(genresAGCombo.SelectedItem);
+                int genreId = genre_Logic.GetGenreIdByName(genre_name);
                 Game game = new Game();
 
                 game.Name = nameAGTxtBox.Text;
@@ -511,6 +513,9 @@ namespace Game_Catalogue.Presentation
             descpPanel.BackColor = inactivePanelColor;
         }
 
+        Bitmap currentSelectedImage;
+        MemoryStream imageStream = new MemoryStream();
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Rows.Count != 0 || dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -521,7 +526,15 @@ namespace Game_Catalogue.Presentation
             editNameMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             editDescriptionMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             genresMLCombo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            string state= dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            string state = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+            try
+            {
+                imageStream = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[6].Value);
+            }
+            catch (Exception ex)
+            { }
+
             if (state == "Plan to play")
             {
                 planToPlayMLBttn.Checked = true;
@@ -541,5 +554,23 @@ namespace Game_Catalogue.Presentation
         {
             LoadDataGridRecords();
         }
+
+        private void viewImageBttn_Click(object sender, EventArgs e)
+        {
+            if (imageStream.Length != 0)
+            {
+                PictureVisualizer pV = new PictureVisualizer();
+                pV.image = currentSelectedImage;
+                pV.stream = imageStream;
+                pV.Show();
+            }
+            else
+            {
+                MessageBox.Show("There isn't any images added to this game!", "Sorry pal u have dumb :P");
+            }
+        }
     }
 }
+
+
+

@@ -7,6 +7,9 @@
     <Compile Update="Presentation\Components\FlatCombo.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Presentation\PictureVisualizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Presentation\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>

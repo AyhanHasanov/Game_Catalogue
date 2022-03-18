@@ -22,16 +22,29 @@ namespace Game_Catalogue.Business
         /// <returns></returns>
         public int GetCount()
         {
-            using(context = new GameCatalogueContext())
+            using (context = new GameCatalogueContext())
                 return context.Genres.Count();
         }
 
         public Genre GetGenre(int id)
         {
-            using(context = new GameCatalogueContext())
+            using (context = new GameCatalogueContext())
             {
-                var result = context.Genres.Where(g=> g.IdGenre == id).FirstOrDefault();
+                var result = context.Genres.Where(g => g.IdGenre == id).FirstOrDefault();
                 return result;
+            }
+        }
+
+
+        public int GetGenreIdByName(string genreName)
+        {
+            using (context = new GameCatalogueContext())
+            {
+                var genre = context.Genres.ToList().Where(g => g.GenreName.Equals(genreName)).FirstOrDefault();
+                if (genre != null)
+                    return genre.IdGenre;
+
+                return -1;
             }
         }
     }
