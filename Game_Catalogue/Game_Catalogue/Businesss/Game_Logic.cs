@@ -7,7 +7,6 @@ namespace Game_Catalogue.Business
     public class Game_Logic
     {
         private GameCatalogueContext catalogueContext = new GameCatalogueContext();
-
         /// <summary>
         /// Gets all.
         /// </summary>
@@ -58,23 +57,6 @@ namespace Game_Catalogue.Business
                 if (item != null)
                 {
                     catalogueContext.Entry(item).CurrentValues.SetValues(game);
-                    catalogueContext.SaveChanges();
-                }
-            }
-        }
-
-        /// <summary>
-        /// Deletes the specified identifier.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        public void Delete(int id)
-        {
-            using (catalogueContext = new GameCatalogueContext())
-            {
-                var game = catalogueContext.Games.Find(id);
-                if (game != null)
-                {
-                    catalogueContext.Games.Remove(game);
                     catalogueContext.SaveChanges();
                 }
             }

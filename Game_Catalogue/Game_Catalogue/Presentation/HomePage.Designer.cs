@@ -77,6 +77,7 @@
             this.editNameMLBttn = new System.Windows.Forms.TextBox();
             this.updateBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RfrshButt1 = new Game_Catalogue.Presentation.Components.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -498,6 +499,7 @@
             // 
             // myListPanel
             // 
+            this.myListPanel.Controls.Add(this.RfrshButt1);
             this.myListPanel.Controls.Add(this.genresMLCombo);
             this.myListPanel.Controls.Add(this.deleteBttn);
             this.myListPanel.Controls.Add(this.playedMLButton);
@@ -653,7 +655,7 @@
             this.updateBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.updateBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.updateBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.updateBttn.Size = new System.Drawing.Size(230, 47);
+            this.updateBttn.Size = new System.Drawing.Size(112, 47);
             this.updateBttn.TabIndex = 7;
             this.updateBttn.Text = "Update";
             this.updateBttn.TextColor = System.Drawing.Color.White;
@@ -709,6 +711,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(876, 568);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // RfrshButt1
+            // 
+            this.RfrshButt1.BorderColor = System.Drawing.Color.White;
+            this.RfrshButt1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.RfrshButt1.FlatAppearance.BorderSize = 0;
+            this.RfrshButt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RfrshButt1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RfrshButt1.ForeColor = System.Drawing.Color.White;
+            this.RfrshButt1.Location = new System.Drawing.Point(121, 502);
+            this.RfrshButt1.Name = "RfrshButt1";
+            this.RfrshButt1.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.RfrshButt1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
+            this.RfrshButt1.OnHoverTextColor = System.Drawing.Color.White;
+            this.RfrshButt1.Size = new System.Drawing.Size(112, 47);
+            this.RfrshButt1.TabIndex = 17;
+            this.RfrshButt1.Text = "Refresh";
+            this.RfrshButt1.TextColor = System.Drawing.Color.White;
+            this.RfrshButt1.UseVisualStyleBackColor = true;
+            this.RfrshButt1.Click += new System.EventHandler(this.RfrshButt1_Click);
             // 
             // HomePage
             // 
@@ -793,5 +815,6 @@
         private TextBox editNameMLBttn;
         private Components.CustomButton updateBttn;
         private DataGridView dataGridView1;
+        private Components.CustomButton RfrshButt1;
     }
 }

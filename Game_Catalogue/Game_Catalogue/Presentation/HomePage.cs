@@ -158,7 +158,6 @@ namespace Game_Catalogue.Presentation
 
         // My List Buttons
 
-        Game_Logic gameLogic = new Game_Logic();
         private int Selected_Index;
         private void updateBttn_Click(object sender, EventArgs e)
         {
@@ -167,8 +166,7 @@ namespace Game_Catalogue.Presentation
 
         private void deleteBttn_Click(object sender, EventArgs e)
         {
-            gameLogic.Delete(Selected_Index);
-            dataGridView1.Update();
+            usersGame_Logic.Delete(currentUser.Id, Selected_Index);
         }
 
         // DataGrid Methods
@@ -494,8 +492,16 @@ namespace Game_Catalogue.Presentation
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var idGame = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
-            Selected_Index = (int)idGame;
+            if (dataGridView1.Rows.Count != 0)
+            {
+                var idGame = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+                Selected_Index = (int)idGame;
+            }
+        }
+
+        private void RfrshButt1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Update();
         }
     }
 }
