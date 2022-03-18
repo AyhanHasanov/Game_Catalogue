@@ -4,11 +4,15 @@ using Data.Model;
 
 namespace Game_Catalogue.Business
 {
+    /// <summary>
+    /// Class Game_Logic
+    /// </summary>
     public class Game_Logic
     {
         private GameCatalogueContext catalogueContext = new GameCatalogueContext();
+
         /// <summary>
-        /// Gets all.
+        /// Gets all games.
         /// </summary>
         /// <returns></returns>
         public List<Game> GetAll()
@@ -62,6 +66,11 @@ namespace Game_Catalogue.Business
             }
         }
 
+        /// <summary>
+        /// Gets the genre of the game
+        /// </summary>
+        /// <param name="id">The name</param>
+        /// <returns></returns>
         public string GetGenre(int id)
         {
             using (catalogueContext = new GameCatalogueContext())

@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace Data.Model
 {
+    /// <summary>
+    /// Class User
+    /// </summary>
     public partial class User
     {
+        /// <summary>
+        /// User constructor
+        /// </summary>
         public User()
         {
             UsersGames = new HashSet<UsersGame>();
@@ -14,8 +20,15 @@ namespace Data.Model
         private string username;
         private string password;
 
+        /// <summary>
+        /// Gets or sets the user's id
+        /// </summary>
         public int Id { get; set; }
 
+
+        /// <summary>
+        /// Gets or sets the user's email
+        /// </summary>
         public string Email
         {
             get { return email; }
@@ -27,6 +40,9 @@ namespace Data.Model
             }
         }
 
+        /// <summary>
+        /// Gets or sets the user's username
+        /// </summary>
         public string Username
         {
             get { return username; }
@@ -39,6 +55,9 @@ namespace Data.Model
             }
         }
 
+        /// <summary>
+        /// Gets or sets the user's password
+        /// </summary>
         public string Password
         {
             get { return password; }
@@ -54,8 +73,14 @@ namespace Data.Model
             }
         }
 
+        /// <summary>
+        /// Gets or sets the date and time when the user's account was created
+        /// </summary>
         public DateTime? CreatedAt { get; set; }
 
+        /// <summary>
+        /// Collection UsersGames
+        /// </summary>
         public virtual ICollection<UsersGame> UsersGames { get; set; }
     }
 }

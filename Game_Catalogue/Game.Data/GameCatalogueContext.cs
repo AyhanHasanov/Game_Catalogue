@@ -3,30 +3,58 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data
 {
+    /// <summary>
+    /// Class GameCaralogueContext
+    /// </summary>
     public partial class GameCatalogueContext : DbContext
     {
+        /// <summary>
+        /// GameCatalogueContext constructor
+        /// </summary>
         public GameCatalogueContext()
         {
+            // Ensures the creation of the database
             Database.EnsureCreated();
         }
 
-
+        /// <summary>
+        /// GameCatalogueContext constructor
+        /// </summary>
         public GameCatalogueContext(DbContextOptions<GameCatalogueContext> options)
             : base(options)
         {
+            // Ensures the creation of the database
             Database.EnsureCreated();
         }
 
+        /// <summary>
+        /// Games table
+        /// </summary>
         public virtual DbSet<Game> Games { get; set; } = null!;
+
+        /// <summary>
+        /// Genres table
+        /// </summary>
         public virtual DbSet<Genre> Genres { get; set; } = null!;
+
+        /// <summary>
+        /// Users table
+        /// </summary>
         public virtual DbSet<User> Users { get; set; } = null!;
+
+        /// <summary>
+        /// UsersGames table
+        /// </summary>
         public virtual DbSet<UsersGame> UsersGames { get; set; } = null!;
 
+        /// <summary>
+        /// Configuring Sql Server connection string
+        /// </summary>
+        /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=GameCatalogue;Trusted_Connection=True;");
             }
         }
