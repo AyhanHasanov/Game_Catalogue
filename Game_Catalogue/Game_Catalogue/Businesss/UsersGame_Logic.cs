@@ -37,6 +37,8 @@ namespace Game_Catalogue.Business
             }
         }
 
+        public void Delete()
+        { }
 
     }
 }

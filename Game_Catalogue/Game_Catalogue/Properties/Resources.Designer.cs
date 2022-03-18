@@ -93,6 +93,16 @@ namespace Game_Catalogue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Artboard_4_copy_2___whitened_for_the_background {
+            get {
+                object obj = ResourceManager.GetObject("Artboard_4_copy_2___whitened_for_the_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Artboard_4_copy_3 {
             get {
                 object obj = ResourceManager.GetObject("Artboard_4_copy_3", resourceCulture);
@@ -107,6 +117,16 @@ namespace Game_Catalogue.Properties {
             get {
                 object obj = ResourceManager.GetObject("Artboard_4_copy_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon icon {
+            get {
+                object obj = ResourceManager.GetObject("icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

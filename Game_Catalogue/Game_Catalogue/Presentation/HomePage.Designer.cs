@@ -31,14 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.closeBox = new System.Windows.Forms.PictureBox();
             this.minimizeBox = new System.Windows.Forms.PictureBox();
@@ -51,7 +46,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.myProfilePanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.myProfileCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.myProfileJoined = new System.Windows.Forms.Label();
@@ -72,7 +66,6 @@
             this.planToPlayAGRadioBttn = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.myListPanel = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.genresMLCombo = new Game_Catalogue.Presentation.Components.FlatCombo();
             this.addBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.deleteBttn = new Game_Catalogue.Presentation.Components.CustomButton();
@@ -85,12 +78,6 @@
             this.editNameMLBttn = new System.Windows.Forms.TextBox();
             this.updateBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.UserIdCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameState = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameImage = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -99,7 +86,6 @@
             this.addGamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.myListPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,7 +125,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(199, 700);
+            this.panel2.Size = new System.Drawing.Size(199, 714);
             this.panel2.TabIndex = 2;
             // 
             // label2
@@ -225,21 +211,23 @@
             // 
             // myProfilePanel
             // 
+            this.myProfilePanel.BackgroundImage = global::Game_Catalogue.Properties.Resources.Artboard_4_copy_2___whitened_for_the_background;
+            this.myProfilePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.myProfilePanel.Controls.Add(this.pictureBox1);
-            this.myProfilePanel.Controls.Add(this.label7);
             this.myProfilePanel.Controls.Add(this.myProfileCount);
             this.myProfilePanel.Controls.Add(this.label3);
             this.myProfilePanel.Controls.Add(this.myProfileJoined);
             this.myProfilePanel.Controls.Add(this.label4);
             this.myProfilePanel.Controls.Add(this.myProfileName);
             this.myProfilePanel.Controls.Add(this.label9);
-            this.myProfilePanel.Location = new System.Drawing.Point(1416, 94);
+            this.myProfilePanel.Location = new System.Drawing.Point(544, 35);
             this.myProfilePanel.Name = "myProfilePanel";
-            this.myProfilePanel.Size = new System.Drawing.Size(556, 519);
+            this.myProfilePanel.Size = new System.Drawing.Size(556, 746);
             this.myProfilePanel.TabIndex = 5;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Game_Catalogue.Properties.Resources.user_icon;
             this.pictureBox1.Location = new System.Drawing.Point(233, 52);
             this.pictureBox1.Name = "pictureBox1";
@@ -248,23 +236,13 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(212, 469);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 28);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Thank you";
-            // 
             // myProfileCount
             // 
             this.myProfileCount.AutoSize = true;
+            this.myProfileCount.BackColor = System.Drawing.Color.Transparent;
             this.myProfileCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.myProfileCount.ForeColor = System.Drawing.Color.White;
-            this.myProfileCount.Location = new System.Drawing.Point(303, 346);
+            this.myProfileCount.Location = new System.Drawing.Point(95, 428);
             this.myProfileCount.Name = "myProfileCount";
             this.myProfileCount.Size = new System.Drawing.Size(36, 28);
             this.myProfileCount.TabIndex = 4;
@@ -273,20 +251,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(95, 346);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
+            this.label3.Location = new System.Drawing.Point(95, 386);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 56);
+            this.label3.Size = new System.Drawing.Size(375, 56);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Count of games \r\nin your list ";
+            this.label3.Text = "You have that many games in your list\r\n\r\n";
             // 
             // myProfileJoined
             // 
             this.myProfileJoined.AutoSize = true;
+            this.myProfileJoined.BackColor = System.Drawing.Color.Transparent;
             this.myProfileJoined.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.myProfileJoined.ForeColor = System.Drawing.Color.White;
-            this.myProfileJoined.Location = new System.Drawing.Point(303, 275);
+            this.myProfileJoined.Location = new System.Drawing.Point(95, 332);
             this.myProfileJoined.Name = "myProfileJoined";
             this.myProfileJoined.Size = new System.Drawing.Size(104, 28);
             this.myProfileJoined.TabIndex = 6;
@@ -295,20 +275,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(95, 275);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
+            this.label4.Location = new System.Drawing.Point(95, 291);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 28);
+            this.label4.Size = new System.Drawing.Size(168, 28);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Joined on";
+            this.label4.Text = "You joined us on";
             // 
             // myProfileName
             // 
             this.myProfileName.AutoSize = true;
+            this.myProfileName.BackColor = System.Drawing.Color.Transparent;
             this.myProfileName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.myProfileName.ForeColor = System.Drawing.Color.White;
-            this.myProfileName.Location = new System.Drawing.Point(303, 205);
+            this.myProfileName.Location = new System.Drawing.Point(95, 241);
             this.myProfileName.Name = "myProfileName";
             this.myProfileName.Size = new System.Drawing.Size(68, 28);
             this.myProfileName.TabIndex = 8;
@@ -317,13 +299,14 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             this.label9.Location = new System.Drawing.Point(95, 205);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 28);
+            this.label9.Size = new System.Drawing.Size(371, 28);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Name";
+            this.label9.Text = "We know you as: (aka your username)";
             // 
             // addGamePanel
             // 
@@ -516,7 +499,6 @@
             // 
             // myListPanel
             // 
-            this.myListPanel.Controls.Add(this.dataGridView2);
             this.myListPanel.Controls.Add(this.genresMLCombo);
             this.myListPanel.Controls.Add(this.addBttn);
             this.myListPanel.Controls.Add(this.deleteBttn);
@@ -529,20 +511,10 @@
             this.myListPanel.Controls.Add(this.editNameMLBttn);
             this.myListPanel.Controls.Add(this.updateBttn);
             this.myListPanel.Controls.Add(this.dataGridView1);
-            this.myListPanel.Location = new System.Drawing.Point(266, 94);
+            this.myListPanel.Location = new System.Drawing.Point(212, 64);
             this.myListPanel.Name = "myListPanel";
-            this.myListPanel.Size = new System.Drawing.Size(1144, 592);
+            this.myListPanel.Size = new System.Drawing.Size(1176, 636);
             this.myListPanel.TabIndex = 18;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(441, 160);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 29;
-            this.dataGridView2.Size = new System.Drawing.Size(300, 187);
-            this.dataGridView2.TabIndex = 17;
             // 
             // genresMLCombo
             // 
@@ -566,12 +538,12 @@
             this.addBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addBttn.ForeColor = System.Drawing.Color.White;
-            this.addBttn.Location = new System.Drawing.Point(696, 488);
+            this.addBttn.Location = new System.Drawing.Point(99, 502);
             this.addBttn.Name = "addBttn";
             this.addBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.addBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.addBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.addBttn.Size = new System.Drawing.Size(168, 74);
+            this.addBttn.Size = new System.Drawing.Size(90, 47);
             this.addBttn.TabIndex = 15;
             this.addBttn.Text = "Add";
             this.addBttn.TextColor = System.Drawing.Color.White;
@@ -587,12 +559,12 @@
             this.deleteBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.deleteBttn.ForeColor = System.Drawing.Color.White;
-            this.deleteBttn.Location = new System.Drawing.Point(503, 488);
+            this.deleteBttn.Location = new System.Drawing.Point(3, 555);
             this.deleteBttn.Name = "deleteBttn";
             this.deleteBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.deleteBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.deleteBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.deleteBttn.Size = new System.Drawing.Size(168, 74);
+            this.deleteBttn.Size = new System.Drawing.Size(90, 47);
             this.deleteBttn.TabIndex = 14;
             this.deleteBttn.Text = "Delete";
             this.deleteBttn.TextColor = System.Drawing.Color.White;
@@ -701,12 +673,12 @@
             this.updateBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.updateBttn.ForeColor = System.Drawing.Color.White;
-            this.updateBttn.Location = new System.Drawing.Point(308, 488);
+            this.updateBttn.Location = new System.Drawing.Point(3, 502);
             this.updateBttn.Name = "updateBttn";
             this.updateBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.updateBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.updateBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.updateBttn.Size = new System.Drawing.Size(168, 74);
+            this.updateBttn.Size = new System.Drawing.Size(90, 47);
             this.updateBttn.TabIndex = 7;
             this.updateBttn.Text = "Update";
             this.updateBttn.TextColor = System.Drawing.Color.White;
@@ -733,133 +705,50 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserIdCol,
-            this.gameName,
-            this.gameDescription,
-            this.gameGenre,
-            this.gameState,
-            this.gameImage});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.dataGridView1.Location = new System.Drawing.Point(266, 34);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridView1.RowHeadersWidth = 47;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(802, 429);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // UserIdCol
-            // 
-            this.UserIdCol.DataPropertyName = "UserId";
-            this.UserIdCol.HeaderText = "UserId";
-            this.UserIdCol.MinimumWidth = 6;
-            this.UserIdCol.Name = "UserIdCol";
-            this.UserIdCol.Width = 115;
-            // 
-            // gameName
-            // 
-            this.gameName.DataPropertyName = "Name";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.gameName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gameName.HeaderText = "Name";
-            this.gameName.MinimumWidth = 6;
-            this.gameName.Name = "gameName";
-            this.gameName.Width = 115;
-            // 
-            // gameDescription
-            // 
-            this.gameDescription.DataPropertyName = "Opinion";
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.dataGridView1.Location = new System.Drawing.Point(266, 34);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.gameDescription.DefaultCellStyle = dataGridViewCellStyle4;
-            this.gameDescription.HeaderText = "Description";
-            this.gameDescription.MinimumWidth = 6;
-            this.gameDescription.Name = "gameDescription";
-            this.gameDescription.Width = 115;
-            // 
-            // gameGenre
-            // 
-            this.gameGenre.DataPropertyName = "GenreName";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersWidth = 47;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.gameGenre.DefaultCellStyle = dataGridViewCellStyle5;
-            this.gameGenre.HeaderText = "Genre";
-            this.gameGenre.MinimumWidth = 6;
-            this.gameGenre.Name = "gameGenre";
-            this.gameGenre.Width = 115;
-            // 
-            // gameState
-            // 
-            this.gameState.DataPropertyName = "State";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.gameState.DefaultCellStyle = dataGridViewCellStyle6;
-            this.gameState.HeaderText = "State";
-            this.gameState.MinimumWidth = 6;
-            this.gameState.Name = "gameState";
-            this.gameState.Width = 115;
-            // 
-            // gameImage
-            // 
-            this.gameImage.DataPropertyName = "Image";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.gameImage.DefaultCellStyle = dataGridViewCellStyle7;
-            this.gameImage.HeaderText = "Image";
-            this.gameImage.MinimumWidth = 6;
-            this.gameImage.Name = "gameImage";
-            this.gameImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gameImage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.gameImage.Width = 115;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(876, 568);
+            this.dataGridView1.TabIndex = 0;
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1942, 700);
+            this.ClientSize = new System.Drawing.Size(1425, 714);
+            this.Controls.Add(this.myListPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.closeBox);
             this.Controls.Add(this.minimizeBox);
             this.Controls.Add(this.myProfilePanel);
             this.Controls.Add(this.addGamePanel);
-            this.Controls.Add(this.myListPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
@@ -876,7 +765,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.myListPanel.ResumeLayout(false);
             this.myListPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -898,7 +786,6 @@
         private FontAwesome.Sharp.IconButton myProfileBttn;
         private Panel myProfilePanel;
         private PictureBox pictureBox1;
-        private Label label7;
         private Label myProfileCount;
         private Label label3;
         private Label myProfileJoined;
@@ -931,12 +818,5 @@
         private TextBox editNameMLBttn;
         private Components.CustomButton updateBttn;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn UserIdCol;
-        private DataGridViewTextBoxColumn gameName;
-        private DataGridViewTextBoxColumn gameDescription;
-        private DataGridViewTextBoxColumn gameGenre;
-        private DataGridViewTextBoxColumn gameState;
-        private DataGridViewImageColumn gameImage;
-        private DataGridView dataGridView2;
     }
 }

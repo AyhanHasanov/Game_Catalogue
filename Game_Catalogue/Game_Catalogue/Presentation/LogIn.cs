@@ -18,7 +18,6 @@ namespace Game_Catalogue.Presentation
         private static LogIn_Form lg = new LogIn_Form();
         User_Logic user_Logic = new User_Logic();
 
-        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -29,31 +28,62 @@ namespace Game_Catalogue.Presentation
 
         private void LogIn_Button_Click(object sender, EventArgs e)
         {
+            LogIn();
+        }
+        private void username_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                LogIn();
+        }
+
+        private void password_textbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                LogIn();
+        }
+
+        private void LogIn_Form_Load(object sender, EventArgs e)
+        {
+            Genre_Logic controller = new Genre_Logic();
+            if (controller.GetCount() == 0)
+            {
+                string[] genres = { "Early Access" , "Action" , "Adventure" , "Casual" ,
+                    "Indie", "Massively Multiplayer", "Racing", "RPG",
+                "Simulation", "Sports", "Strategy" };
+
+                for (int i = 0; i < genres.Length; i++)
+                {
+                    Genre genre = new Genre();
+                    genre.GenreName = genres[i];
+                    controller.Add(genre);
+                }
+            }
+        }
+        private void LogIn()
+        {
             string username = username_textbox.Text;
             string password = password_textbox.Text;
 
             //Check
-
             try
             {
                 user_Logic.CheckPassword(username, password);
 
                 using (var writer = new StreamWriter("username.txt"))
                 {
-                    writer.WriteLine(username); 
+                    writer.WriteLine(username);
                 }
-                    HomePage hp = new HomePage();
+                HomePage hp = new HomePage();
                 hp.Show();
                 lg.Close();
                 this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.InnerException);
-                //MessageBox.Show("Username and password do not match!", "Login aborted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                //MessageBox.Show(ex.Message + ex.InnerException);
+                MessageBox.Show("Username and password do not match!", "Login aborted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
-
 
         // ANIMATIONS
 
@@ -153,22 +183,10 @@ namespace Game_Catalogue.Presentation
                 eyeBox.Image = Properties.Resources.icons8_eyelashes_2d_50;
             }
         }
-        private void LogIn_Form_Load(object sender, EventArgs e)
-        {
-            Genre_Logic controller = new Genre_Logic();
-            if (controller.GetCount() == 0)
-            {
-                string[] genres = { "Early Access" , "Action" , "Adventure" , "Casual" ,
-                    "Indie", "Massively Multiplayer", "Racing", "RPG",
-                "Simulation", "Sports", "Strategy" };
 
-                for (int i = 0; i < genres.Length; i++)
-                {
-                    Genre genre = new Genre();
-                    genre.GenreName = genres[i];
-                    controller.Add(genre);
-                }
-            }
+        private void LogIn_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

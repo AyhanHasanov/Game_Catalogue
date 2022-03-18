@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -51,13 +52,13 @@
             this.Registration_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Registration_Button.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Registration_Button.ForeColor = System.Drawing.Color.White;
-            this.Registration_Button.Location = new System.Drawing.Point(145, 495);
+            this.Registration_Button.Location = new System.Drawing.Point(145, 498);
             this.Registration_Button.Name = "Registration_Button";
             this.Registration_Button.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.Registration_Button.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.Registration_Button.OnHoverTextColor = System.Drawing.Color.White;
             this.Registration_Button.Size = new System.Drawing.Size(137, 44);
-            this.Registration_Button.TabIndex = 8;
+            this.Registration_Button.TabIndex = 3;
             this.Registration_Button.Text = "Register";
             this.Registration_Button.TextColor = System.Drawing.Color.White;
             this.Registration_Button.UseVisualStyleBackColor = true;
@@ -90,11 +91,12 @@
             this.password_textbox.MaxLength = 255;
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.Size = new System.Drawing.Size(256, 30);
-            this.password_textbox.TabIndex = 14;
+            this.password_textbox.TabIndex = 2;
             this.password_textbox.Text = "Password";
             this.password_textbox.Click += new System.EventHandler(this.password_textbox_Click);
             this.password_textbox.TextChanged += new System.EventHandler(this.password_textbox_TextChanged);
             this.password_textbox.Enter += new System.EventHandler(this.password_textbox_Enter);
+            this.password_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_textbox_KeyDown);
             this.password_textbox.Leave += new System.EventHandler(this.password_textbox_Leave);
             this.password_textbox.MouseEnter += new System.EventHandler(this.password_textbox_MouseEnter);
             this.password_textbox.MouseLeave += new System.EventHandler(this.password_textbox_MouseLeave);
@@ -110,10 +112,11 @@
             this.username_textbox.MaxLength = 255;
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.Size = new System.Drawing.Size(287, 30);
-            this.username_textbox.TabIndex = 13;
+            this.username_textbox.TabIndex = 0;
             this.username_textbox.Text = "Username";
             this.username_textbox.Click += new System.EventHandler(this.username_textbox_Click);
             this.username_textbox.Enter += new System.EventHandler(this.username_textbox_Enter);
+            this.username_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_textbox_KeyDown);
             this.username_textbox.Leave += new System.EventHandler(this.username_textbox_Leave);
             this.username_textbox.MouseEnter += new System.EventHandler(this.username_textbox_MouseEnter);
             this.username_textbox.MouseLeave += new System.EventHandler(this.username_textbox_MouseLeave);
@@ -137,10 +140,11 @@
             this.email_textBox1.MaxLength = 255;
             this.email_textBox1.Name = "email_textBox1";
             this.email_textBox1.Size = new System.Drawing.Size(294, 30);
-            this.email_textBox1.TabIndex = 17;
+            this.email_textBox1.TabIndex = 1;
             this.email_textBox1.Text = "Email Address";
             this.email_textBox1.Click += new System.EventHandler(this.email_textBox1_Click);
             this.email_textBox1.Enter += new System.EventHandler(this.email_textBox1_Enter);
+            this.email_textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.email_textBox1_KeyDown);
             this.email_textBox1.Leave += new System.EventHandler(this.email_textBox1_Leave);
             this.email_textBox1.MouseEnter += new System.EventHandler(this.email_textBox1_MouseEnter);
             this.email_textBox1.MouseLeave += new System.EventHandler(this.email_textBox1_MouseLeave);
@@ -177,12 +181,24 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(66, 453);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(380, 23);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Required: uppercase, lowercase letters and digits\r\n";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(440, 606);
+            this.ClientSize = new System.Drawing.Size(440, 569);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -194,9 +210,12 @@
             this.Controls.Add(this.username_textbox);
             this.Controls.Add(this.Registration_Button);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registration";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Registration_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -216,5 +235,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Label label2;
     }
 }

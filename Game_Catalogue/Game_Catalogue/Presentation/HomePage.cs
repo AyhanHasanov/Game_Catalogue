@@ -40,7 +40,7 @@ namespace Game_Catalogue.Presentation
         }
 
 
-        //  CLOSE AND MINIMIZE BUTTON ANIMATIONS 
+        //  HomePage Controls Animations
 
         /// <summary>
         /// Handles the Click event of the closeBox control.
@@ -92,7 +92,6 @@ namespace Game_Catalogue.Presentation
         }
 
 
-
         private void HomePage_Load(object sender, EventArgs e)
         {
             this.Draggable(true);
@@ -113,21 +112,24 @@ namespace Game_Catalogue.Presentation
                 }
             }
 
-            editNameMLBttn.Enabled = false;
+            /*editNameMLBttn.Enabled = false;
             editDescriptionMLBttn.Enabled = false;
             genresMLCombo.Enabled = false;
             planToPlayMLBttn.Enabled = false;
             playedMLButton.Enabled = false;
             playingMLButton.Enabled = false;
             updateBttn.Enabled = false;
-            deleteBttn.Enabled = false;
+            deleteBttn.Enabled = false;*/
 
             currentUser = users_Logic.GetUserFromTxtFile();
             LoadMyProfileInfo();
         }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToString("HH:mm:ss  dd/MM");
+        }
 
-
-        // Menu bttns and manipulation
+        // Sidebar menu buttons and manipulations
         private void myListBttn_Click(object sender, EventArgs e)
         {
 
@@ -153,12 +155,7 @@ namespace Game_Catalogue.Presentation
             LoadMyProfileInfo();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label2.Text = DateTime.Now.ToString("HH:mm:ss  dd/MM");
-        }
-
-
+        
         // My List Buttons
         private void updateBttn_Click(object sender, EventArgs e)
         {
@@ -172,12 +169,60 @@ namespace Game_Catalogue.Presentation
 
         private void addBttn_Click(object sender, EventArgs e)
         {
-
+            addGamePanel.Visible = true;
+            myProfilePanel.Visible = false;
+            myListPanel.Visible = false;
         }
 
+        // DataGrid Methods
+        private void LoadDataGridRecords()
+        {
+            SqlConnection conn = DataBase.GetConnection();
+            string query = "select Users_games.user_id, Games.name, Games.opinion, Genres.name, Games.state, Games.image";
+            query += " from [dbo].[Users_games] inner join [dbo].[Games] on Users_games.game_id = Games.id_game";
+            query += $" inner join [dbo].[Genres] on Games.id_game = Genres.id_genre where Users_games.user_id = {currentUser.Id}";
 
-        // Add Game Panel Methods
+            SqlCommand command = new SqlCommand(query, conn);
+            conn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable gamesList = new DataTable();
+            adapter.Fill(gamesList);
+            dataGridView1.DataSource = gamesList;
+            conn.Close();
+
+            ChangeDataGridDesign();
+        }
+
+        private void ChangeDataGridDesign()
+        {
+
+            // name1 = genreName
+            dataGridView1.Columns["user_id"].Visible = false;
+            dataGridView1.Columns["name"].HeaderText = "Game Name";
+            dataGridView1.Columns["opinion"].HeaderText = "Opinion / description";
+            dataGridView1.Columns["name1"].HeaderText = "Genre";
+            dataGridView1.Columns["state"].HeaderText = "State";
+            dataGridView1.Columns["image"].HeaderText = "Image";
+
+            dataGridView1.Columns["name"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns["opinion"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns["name1"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns["state"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns["image"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+       
+        // !!!!!!!!!!!!!!!
+        private void LoadMyProfileInfo()
+        {
+            myProfileName.Text = currentUser.Username;
+            myProfileJoined.Text = currentUser.CreatedAt.ToString();
+            int count = usersGame_Logic.GetAllGamesForCurrentUser(currentUser).Count;
+            myProfileCount.Text = count.ToString();
+        }
+
+        // Add Game Panel Methods and animations
         string imgLocation = "";
+
         private void addGameBttn_Click(object sender, EventArgs e)
         {
             try
@@ -236,74 +281,6 @@ namespace Game_Catalogue.Presentation
             }
         }
 
-        public void LoadDataGridRecords()
-        {
-            dataGridView1.AutoGenerateColumns = false;
-            using (GameCatalogueContext context = new GameCatalogueContext())
-            {
-
-                /*var gamesList = from userGames in context.UsersGames
-                                join games in context.Games on userGames.GameId equals games.IdGame
-                                join genre in context.Genres on games.IdGenre equals genre.IdGenre
-                                select new
-                                {
-                                    UserId = userGames.UserId,
-                                    Name = games.Name,
-                                    Opinion = games.Opinion,
-                                    Genre = genre.GenreName,
-                                    State = games.State,
-                                    Image = games.Image
-                                };
-
-                var list = gamesList.ToList().Where(u => u.UserId.Equals(currentUser.Id));
-                dataGridView1.DataSource = list;*/
-
-                var conn = DataBase.GetConnection();
-                conn.Open();
-                using (conn)
-                {
-                    /*SqlDataAdapter commmand = new SqlDataAdapter(
-                        $"SELECT Games.name, games.opinion, genres.name, games.state, games.image " +
-                        $"FROM Games " +
-                        $"JOIN Genres on games.id_genre = genres.id_genre " +
-                        $"Where Games.id_game IN(SELECT Users_games.game_id FROM Users_games Where Users_games.user_id = {this.currentUser.Id})", conn);
-                    
-                    DataTable gameTable = new DataTable();
-                    commmand.Fill(gameTable);
-                    dataGridView2.DataSource = gameTable;*/
-
-                    string sql = $"SELECT Users_games.user_id, Games.name, Games.opinion, Genres.name, Games.state, Games.image " +
-                                      $"FROM Users_games " +
-                                      $"JOIN Games on Users_games.game_id = Games.id_game " +
-                                      $"JOIN Genres on Games.id_genre = Genres.id_genre " +
-                                      $"WHERE Users_games.user_id = {this.currentUser.Id} ";
-
-                    SqlCommand command = new SqlCommand(sql, conn);
-                    SqlDataReader reader = command.ExecuteReader();
-                    using (reader)
-                    {
-                        int user_id = (int)reader["Id"];
-                        string game_name = (string)reader["Name"];
-                        string game_opinion = (string)reader["Opinion"];
-                        string genre = (string)reader["Name"];
-                        string state = (string)reader["State"];
-                        Image image = (Image)reader["Image"];
-
-                    }
-                }
-
-                //dataGridView1.DataSource = list;
-            }
-        }
-
-
-        public void LoadMyProfileInfo()
-        {
-            myProfileName.Text = currentUser.Username;
-            myProfileJoined.Text = currentUser.CreatedAt.ToString();
-            int count = usersGame_Logic.GetAllGamesForCurrentUser(currentUser).Count;
-            myProfileCount.Text = count.ToString();
-        }
         private void browsePic_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -322,7 +299,6 @@ namespace Game_Catalogue.Presentation
                 nameAGTxtBox.Text = "";
                 nameAGTxtBox.ForeColor = activeTextColor;
             }
-
         }
 
         private void nameAGTxtBox_Enter(object sender, EventArgs e)
@@ -333,7 +309,6 @@ namespace Game_Catalogue.Presentation
                 nameAGTxtBox.ForeColor = activeTextColor;
             }
             gamePanel.BackColor = activePanelColor;
-
         }
 
         private void nameAGTxtBox_Leave(object sender, EventArgs e)
@@ -344,7 +319,6 @@ namespace Game_Catalogue.Presentation
                 nameAGTxtBox.ForeColor = inactiveTextColor;
             }
             gamePanel.BackColor = inactivePanelColor;
-
         }
 
         private void nameAGTxtBox_MouseEnter(object sender, EventArgs e)
@@ -355,11 +329,11 @@ namespace Game_Catalogue.Presentation
         private void nameAGTxtBox_MouseLeave(object sender, EventArgs e)
         {
             gamePanel.BackColor = inactivePanelColor;
-
         }
 
 
-        // DESCRIPTION TEXT BOX
+        // Description text box animations
+
         private void descrpAGTxtBox_Click(object sender, EventArgs e)
         {
             if (descrpAGTxtBox.Text == "Description")
@@ -411,6 +385,7 @@ namespace Game_Catalogue.Presentation
             descrpPanel.BackColor = inactivePanelColor;
         }
 
+
         // Radio Buttons Animation on Add Game 
 
         private void planToPlayAGRadioBttn_CheckedChanged(object sender, EventArgs e)
@@ -438,7 +413,7 @@ namespace Game_Catalogue.Presentation
         }
 
 
-        //  My List Animations
+        //  My List Panel Animations
 
         private void editNameMLBttn_Click(object sender, EventArgs e)
         {

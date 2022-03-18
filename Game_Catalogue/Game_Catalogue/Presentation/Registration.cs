@@ -19,6 +19,11 @@ namespace Game_Catalogue.Presentation
 
         private void Registration_Button_Click(object sender, EventArgs e)
         {
+            Register();
+        }
+
+        private void Register()
+        {
             try
             {
                 string username = username_textbox.Text;
@@ -51,13 +56,10 @@ namespace Game_Catalogue.Presentation
             }
             catch (Exception ex)
             {
-                MessageBox.Show("You cannot leave fields empty or with their default " +
-                    "values (\"username\", \"email address\", \"password\")!",
-                    "Registration aborted :}",
+                MessageBox.Show(ex.Message, "Registration aborted :}",
                    MessageBoxButtons.OK,
                    MessageBoxIcon.Asterisk);
             }
-
         }
 
         private void CloseRegistrationFormAndOpenLoginForm()
@@ -67,20 +69,27 @@ namespace Game_Catalogue.Presentation
             this.Close();
             this.Dispose();
         }
-
-        private void password_textbox_TextChanged(object sender, EventArgs e)
+        
+        private void username_textbox_KeyDown(object sender, KeyEventArgs e)
         {
-            password_textbox.UseSystemPasswordChar = true;
+            if (e.KeyCode == Keys.Enter)
+                Register();
+        }
+        
+        private void email_textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                Register();
         }
 
-        private void password_textbox_Click(object sender, EventArgs e)
+        private void password_textbox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (password_textbox.Text == "Password")
-            {
-                password_textbox.Text = "";
-            }
+            if (e.KeyCode == Keys.Enter)
+                Register();
         }
 
+
+        // Animations
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
             if (password_textbox.UseSystemPasswordChar == true)
@@ -95,6 +104,7 @@ namespace Game_Catalogue.Presentation
             }
         }
 
+
         private void username_textbox_Click(object sender, EventArgs e)
         {
             if (username_textbox.Text == "Username")
@@ -103,15 +113,6 @@ namespace Game_Catalogue.Presentation
             }
         }
 
-        private void email_textBox1_Click(object sender, EventArgs e)
-        {
-            if (email_textBox1.Text == "Email Address")
-            {
-                email_textBox1.Text = "";
-            }
-        }
-
-        //animations
         private void username_textbox_MouseEnter(object sender, EventArgs e)
         {
             username_textbox.ForeColor = activeTextColor;
@@ -141,7 +142,16 @@ namespace Game_Catalogue.Presentation
                 username_textbox.ForeColor = inactiveTextColor;
             }
         }
+        
 
+        private void email_textBox1_Click(object sender, EventArgs e)
+        {
+            if (email_textBox1.Text == "Email Address")
+            {
+                email_textBox1.Text = "";
+            }
+        }
+        
         private void email_textBox1_MouseEnter(object sender, EventArgs e)
         {
             email_textBox1.ForeColor = activeTextColor;
@@ -171,7 +181,16 @@ namespace Game_Catalogue.Presentation
                 email_textBox1.ForeColor = inactiveTextColor;
             }
         }
+        
 
+        private void password_textbox_Click(object sender, EventArgs e)
+        {
+            if (password_textbox.Text == "Password")
+            {
+                password_textbox.Text = "";
+            }
+        }
+        
         private void password_textbox_MouseEnter(object sender, EventArgs e)
         {
             password_textbox.ForeColor = activeTextColor;
@@ -201,6 +220,16 @@ namespace Game_Catalogue.Presentation
                 password_textbox.ForeColor = inactiveTextColor;
             }
         }
+        
+        private void password_textbox_TextChanged(object sender, EventArgs e)
+        {
+            password_textbox.UseSystemPasswordChar = true;
+        }
 
+        private void Registration_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LogIn_Form Login = new LogIn_Form();
+            Login.Show();
+        }
     }
 }

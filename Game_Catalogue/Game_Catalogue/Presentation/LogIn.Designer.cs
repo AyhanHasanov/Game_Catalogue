@@ -56,7 +56,7 @@
             this.LogIn_Button.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.LogIn_Button.OnHoverTextColor = System.Drawing.Color.White;
             this.LogIn_Button.Size = new System.Drawing.Size(137, 44);
-            this.LogIn_Button.TabIndex = 7;
+            this.LogIn_Button.TabIndex = 3;
             this.LogIn_Button.Text = "LogIn";
             this.LogIn_Button.TextColor = System.Drawing.Color.White;
             this.LogIn_Button.UseVisualStyleBackColor = true;
@@ -85,10 +85,11 @@
             this.username_textbox.MaxLength = 255;
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.Size = new System.Drawing.Size(294, 30);
-            this.username_textbox.TabIndex = 9;
+            this.username_textbox.TabIndex = 1;
             this.username_textbox.Text = "Username";
             this.username_textbox.Click += new System.EventHandler(this.username_textbox_Click);
             this.username_textbox.Enter += new System.EventHandler(this.username_textbox_Enter);
+            this.username_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_textbox_KeyDown);
             this.username_textbox.Leave += new System.EventHandler(this.username_textbox_Leave);
             this.username_textbox.MouseEnter += new System.EventHandler(this.username_textbox_MouseEnter);
             this.username_textbox.MouseLeave += new System.EventHandler(this.username_textbox_MouseLeave);
@@ -104,11 +105,12 @@
             this.password_textbox.MaxLength = 255;
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.Size = new System.Drawing.Size(256, 30);
-            this.password_textbox.TabIndex = 10;
+            this.password_textbox.TabIndex = 2;
             this.password_textbox.Text = "Password";
             this.password_textbox.Click += new System.EventHandler(this.password_textbox_Click);
             this.password_textbox.TextChanged += new System.EventHandler(this.password_textbox_TextChanged);
             this.password_textbox.Enter += new System.EventHandler(this.password_textbox_Enter);
+            this.password_textbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_textbox_KeyDown);
             this.password_textbox.Leave += new System.EventHandler(this.password_textbox_Leave);
             this.password_textbox.MouseEnter += new System.EventHandler(this.password_textbox_MouseEnter);
             this.password_textbox.MouseLeave += new System.EventHandler(this.password_textbox_MouseLeave);
@@ -176,9 +178,11 @@
             this.Controls.Add(this.username_textbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LogIn_Button);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn_Form";
             this.Text = "LogIn";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogIn_Form_FormClosing);
             this.Load += new System.EventHandler(this.LogIn_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eyeBox)).EndInit();
