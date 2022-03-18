@@ -65,14 +65,14 @@ namespace Game_Catalogue.Presentation
                 }
             }
 
-            /*editNameMLBttn.Enabled = false;
-            editDescriptionMLBttn.Enabled = false;
-            genresMLCombo.Enabled = false;
-            planToPlayMLBttn.Enabled = false;
-            playedMLButton.Enabled = false;
-            playingMLButton.Enabled = false;
-            updateBttn.Enabled = false;
-            deleteBttn.Enabled = false;*/
+            editNameMLBttn.Visible = false;
+            editDescriptionMLBttn.Visible = false;
+            genresMLCombo.Visible = false;
+            planToPlayMLBttn.Visible = false;
+            playedMLButton.Visible = false;
+            playingMLButton.Visible = false;
+            updateBttn.Visible = false;
+            deleteBttn.Visible = false;
 
             //Gets the current user and loads user's profile information
             currentUser = users_Logic.GetUserFromTxtFile();
@@ -149,6 +149,7 @@ namespace Game_Catalogue.Presentation
             game.State = state;
             game.IdGenre = genreId;
             game_Logic.Update(game);
+
         }
 
         /// <summary>
@@ -307,35 +308,38 @@ namespace Game_Catalogue.Presentation
         /// </summary>
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows.Count != 0 || dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                var idGame = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
-                Selected_Index = (int)idGame;
-            }
-
-            editNameMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            editDescriptionMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            genresMLCombo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            string state = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-
             try
             {
+                if (dataGridView1.Rows.Count != 0 || dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    var idGame = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+                    Selected_Index = (int)idGame;
+                }
+
+                editNameMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                editDescriptionMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                genresMLCombo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string state = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+                imageStream = new MemoryStream();
                 imageStream = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[6].Value);
+
+
+                if (state == "Plan to play")
+                {
+                    planToPlayMLBttn.Checked = true;
+                }
+                else if (state == "Playing")
+                {
+                    playingMLButton.Checked = true;
+                }
+                else if (state == "Played")
+                {
+                    playedMLButton.Checked = true;
+                }
             }
             catch (Exception ex)
-            { }
-
-            if (state == "Plan to play")
-            {
-                planToPlayMLBttn.Checked = true;
-            }
-            else if (state == "Playing")
-            {
-                playingMLButton.Checked = true;
-            }
-            else if (state == "Played")
-            {
-                playedMLButton.Checked = true;
+            { 
             }
 
         }
@@ -615,6 +619,31 @@ namespace Game_Catalogue.Presentation
             descpPanel.BackColor = inactivePanelColor;
         }
 
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow.Index != -1)
+            {
+                editNameMLBttn.Visible = true;
+                editDescriptionMLBttn.Visible = true;
+                genresMLCombo.Visible = true;
+                planToPlayMLBttn.Visible = true;
+                playedMLButton.Visible = true;
+                playingMLButton.Visible = true;
+                updateBttn.Visible = true;
+                deleteBttn.Visible = true;
+            }
+            else
+            {
+                editNameMLBttn.Visible = false;
+                editDescriptionMLBttn.Visible = false;
+                genresMLCombo.Visible = false;
+                planToPlayMLBttn.Visible = false;
+                playedMLButton.Visible = false;
+                playingMLButton.Visible = false;
+                updateBttn.Visible = false;
+                deleteBttn.Visible = false;
+            }
+        }
     }
 }
 

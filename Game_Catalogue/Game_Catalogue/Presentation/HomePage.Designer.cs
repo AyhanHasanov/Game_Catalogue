@@ -47,6 +47,7 @@
             this.myProfilePanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.myProfileCount = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.myProfileJoined = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,6 +67,9 @@
             this.planToPlayAGRadioBttn = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.myListPanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.viewImageBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.RfrshButt1 = new Game_Catalogue.Presentation.Components.CustomButton();
             this.genresMLCombo = new Game_Catalogue.Presentation.Components.FlatCombo();
             this.deleteBttn = new Game_Catalogue.Presentation.Components.CustomButton();
@@ -78,7 +82,7 @@
             this.editNameMLBttn = new System.Windows.Forms.TextBox();
             this.updateBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.viewImageBttn = new Game_Catalogue.Presentation.Components.CustomButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -88,14 +92,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.myListPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // closeBox
             // 
             this.closeBox.Image = global::Game_Catalogue.Properties.Resources.icons8_final_state_52;
-            this.closeBox.Location = new System.Drawing.Point(1363, 9);
+            this.closeBox.Location = new System.Drawing.Point(1381, 9);
             this.closeBox.Name = "closeBox";
-            this.closeBox.Size = new System.Drawing.Size(25, 24);
+            this.closeBox.Size = new System.Drawing.Size(25, 25);
             this.closeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.closeBox.TabIndex = 0;
             this.closeBox.TabStop = false;
@@ -106,9 +111,9 @@
             // minimizeBox
             // 
             this.minimizeBox.Image = global::Game_Catalogue.Properties.Resources.icons8_final_state_52__2_;
-            this.minimizeBox.Location = new System.Drawing.Point(1331, 9);
+            this.minimizeBox.Location = new System.Drawing.Point(1349, 9);
             this.minimizeBox.Name = "minimizeBox";
-            this.minimizeBox.Size = new System.Drawing.Size(25, 24);
+            this.minimizeBox.Size = new System.Drawing.Size(25, 25);
             this.minimizeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.minimizeBox.TabIndex = 0;
             this.minimizeBox.TabStop = false;
@@ -126,7 +131,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(199, 678);
+            this.panel2.Size = new System.Drawing.Size(199, 714);
             this.panel2.TabIndex = 2;
             // 
             // label2
@@ -134,9 +139,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 630);
+            this.label2.Location = new System.Drawing.Point(12, 663);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 25);
+            this.label2.Size = new System.Drawing.Size(51, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "time";
             // 
@@ -149,9 +154,9 @@
             this.myProfileBttn.IconChar = FontAwesome.Sharp.IconChar.User;
             this.myProfileBttn.IconColor = System.Drawing.Color.White;
             this.myProfileBttn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.myProfileBttn.Location = new System.Drawing.Point(0, 376);
+            this.myProfileBttn.Location = new System.Drawing.Point(0, 396);
             this.myProfileBttn.Name = "myProfileBttn";
-            this.myProfileBttn.Size = new System.Drawing.Size(199, 84);
+            this.myProfileBttn.Size = new System.Drawing.Size(199, 88);
             this.myProfileBttn.TabIndex = 5;
             this.myProfileBttn.Text = "My profile";
             this.myProfileBttn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -167,9 +172,9 @@
             this.myListBttn.IconChar = FontAwesome.Sharp.IconChar.UserSecret;
             this.myListBttn.IconColor = System.Drawing.Color.White;
             this.myListBttn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.myListBttn.Location = new System.Drawing.Point(0, 262);
+            this.myListBttn.Location = new System.Drawing.Point(0, 276);
             this.myListBttn.Name = "myListBttn";
-            this.myListBttn.Size = new System.Drawing.Size(199, 84);
+            this.myListBttn.Size = new System.Drawing.Size(199, 88);
             this.myListBttn.TabIndex = 5;
             this.myListBttn.Text = "My List";
             this.myListBttn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -185,9 +190,9 @@
             this.addGamePageBttn.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.addGamePageBttn.IconColor = System.Drawing.Color.White;
             this.addGamePageBttn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.addGamePageBttn.Location = new System.Drawing.Point(0, 142);
+            this.addGamePageBttn.Location = new System.Drawing.Point(0, 149);
             this.addGamePageBttn.Name = "addGamePageBttn";
-            this.addGamePageBttn.Size = new System.Drawing.Size(199, 84);
+            this.addGamePageBttn.Size = new System.Drawing.Size(199, 88);
             this.addGamePageBttn.TabIndex = 4;
             this.addGamePageBttn.Text = "Add Game";
             this.addGamePageBttn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -201,7 +206,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(700, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 38);
+            this.label1.Size = new System.Drawing.Size(219, 41);
             this.label1.TabIndex = 4;
             this.label1.Text = "Sladuri Games";
             // 
@@ -216,23 +221,24 @@
             this.myProfilePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.myProfilePanel.Controls.Add(this.pictureBox1);
             this.myProfilePanel.Controls.Add(this.myProfileCount);
+            this.myProfilePanel.Controls.Add(this.label7);
             this.myProfilePanel.Controls.Add(this.label3);
             this.myProfilePanel.Controls.Add(this.myProfileJoined);
             this.myProfilePanel.Controls.Add(this.label4);
             this.myProfilePanel.Controls.Add(this.myProfileName);
             this.myProfilePanel.Controls.Add(this.label9);
-            this.myProfilePanel.Location = new System.Drawing.Point(544, 33);
+            this.myProfilePanel.Location = new System.Drawing.Point(544, 47);
             this.myProfilePanel.Name = "myProfilePanel";
-            this.myProfilePanel.Size = new System.Drawing.Size(556, 709);
+            this.myProfilePanel.Size = new System.Drawing.Size(556, 728);
             this.myProfilePanel.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Game_Catalogue.Properties.Resources.user_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(233, 49);
+            this.pictureBox1.Location = new System.Drawing.Point(233, 52);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -243,11 +249,23 @@
             this.myProfileCount.BackColor = System.Drawing.Color.Transparent;
             this.myProfileCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.myProfileCount.ForeColor = System.Drawing.Color.White;
-            this.myProfileCount.Location = new System.Drawing.Point(95, 407);
+            this.myProfileCount.Location = new System.Drawing.Point(95, 432);
             this.myProfileCount.Name = "myProfileCount";
-            this.myProfileCount.Size = new System.Drawing.Size(34, 25);
+            this.myProfileCount.Size = new System.Drawing.Size(36, 28);
             this.myProfileCount.TabIndex = 4;
             this.myProfileCount.Text = "00";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
+            this.label7.Location = new System.Drawing.Point(4, 616);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(549, 56);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Developed by Ayhan, Simona, Yuliana AKA THE SLADURI\r\n\r\n";
             // 
             // label3
             // 
@@ -255,9 +273,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.label3.Location = new System.Drawing.Point(95, 367);
+            this.label3.Location = new System.Drawing.Point(91, 384);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(347, 50);
+            this.label3.Size = new System.Drawing.Size(375, 56);
             this.label3.TabIndex = 5;
             this.label3.Text = "You have that many games in your list\r\n\r\n";
             // 
@@ -267,9 +285,9 @@
             this.myProfileJoined.BackColor = System.Drawing.Color.Transparent;
             this.myProfileJoined.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.myProfileJoined.ForeColor = System.Drawing.Color.White;
-            this.myProfileJoined.Location = new System.Drawing.Point(95, 315);
+            this.myProfileJoined.Location = new System.Drawing.Point(95, 332);
             this.myProfileJoined.Name = "myProfileJoined";
-            this.myProfileJoined.Size = new System.Drawing.Size(100, 25);
+            this.myProfileJoined.Size = new System.Drawing.Size(104, 28);
             this.myProfileJoined.TabIndex = 6;
             this.myProfileJoined.Text = "Joined on";
             // 
@@ -279,9 +297,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.label4.Location = new System.Drawing.Point(95, 276);
+            this.label4.Location = new System.Drawing.Point(95, 291);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 25);
+            this.label4.Size = new System.Drawing.Size(168, 28);
             this.label4.TabIndex = 7;
             this.label4.Text = "You joined us on";
             // 
@@ -291,9 +309,9 @@
             this.myProfileName.BackColor = System.Drawing.Color.Transparent;
             this.myProfileName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.myProfileName.ForeColor = System.Drawing.Color.White;
-            this.myProfileName.Location = new System.Drawing.Point(95, 229);
+            this.myProfileName.Location = new System.Drawing.Point(95, 241);
             this.myProfileName.Name = "myProfileName";
-            this.myProfileName.Size = new System.Drawing.Size(64, 25);
+            this.myProfileName.Size = new System.Drawing.Size(68, 28);
             this.myProfileName.TabIndex = 8;
             this.myProfileName.Text = "Name";
             // 
@@ -303,9 +321,9 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.label9.Location = new System.Drawing.Point(95, 195);
+            this.label9.Location = new System.Drawing.Point(95, 205);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(351, 25);
+            this.label9.Size = new System.Drawing.Size(371, 28);
             this.label9.TabIndex = 9;
             this.label9.Text = "We know you as: (aka your username)";
             // 
@@ -323,9 +341,9 @@
             this.addGamePanel.Controls.Add(this.playingAGRadioButton);
             this.addGamePanel.Controls.Add(this.planToPlayAGRadioBttn);
             this.addGamePanel.Controls.Add(this.pictureBox2);
-            this.addGamePanel.Location = new System.Drawing.Point(263, 89);
+            this.addGamePanel.Location = new System.Drawing.Point(263, 94);
             this.addGamePanel.Name = "addGamePanel";
-            this.addGamePanel.Size = new System.Drawing.Size(997, 567);
+            this.addGamePanel.Size = new System.Drawing.Size(997, 597);
             this.addGamePanel.TabIndex = 11;
             // 
             // browsePic
@@ -336,12 +354,12 @@
             this.browsePic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.browsePic.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.browsePic.ForeColor = System.Drawing.Color.White;
-            this.browsePic.Location = new System.Drawing.Point(888, 461);
+            this.browsePic.Location = new System.Drawing.Point(888, 485);
             this.browsePic.Name = "browsePic";
             this.browsePic.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.browsePic.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.browsePic.OnHoverTextColor = System.Drawing.Color.White;
-            this.browsePic.Size = new System.Drawing.Size(60, 56);
+            this.browsePic.Size = new System.Drawing.Size(60, 59);
             this.browsePic.TabIndex = 9;
             this.browsePic.Text = "...";
             this.browsePic.TextColor = System.Drawing.Color.White;
@@ -353,9 +371,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(391, 32);
+            this.label10.Location = new System.Drawing.Point(391, 34);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(171, 42);
+            this.label10.Size = new System.Drawing.Size(181, 45);
             this.label10.TabIndex = 0;
             this.label10.Text = "Add Game";
             // 
@@ -366,10 +384,10 @@
             this.nameAGTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nameAGTxtBox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nameAGTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.nameAGTxtBox.Location = new System.Drawing.Point(91, 142);
+            this.nameAGTxtBox.Location = new System.Drawing.Point(91, 149);
             this.nameAGTxtBox.MaxLength = 255;
             this.nameAGTxtBox.Name = "nameAGTxtBox";
-            this.nameAGTxtBox.Size = new System.Drawing.Size(375, 27);
+            this.nameAGTxtBox.Size = new System.Drawing.Size(375, 30);
             this.nameAGTxtBox.TabIndex = 1;
             this.nameAGTxtBox.Text = "Name of game";
             this.nameAGTxtBox.Click += new System.EventHandler(this.nameAGTxtBox_Click);
@@ -386,7 +404,7 @@
             this.genresAGCombo.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.genresAGCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             this.genresAGCombo.FormattingEnabled = true;
-            this.genresAGCombo.Location = new System.Drawing.Point(92, 322);
+            this.genresAGCombo.Location = new System.Drawing.Point(92, 339);
             this.genresAGCombo.Name = "genresAGCombo";
             this.genresAGCombo.Size = new System.Drawing.Size(376, 38);
             this.genresAGCombo.TabIndex = 7;
@@ -398,10 +416,10 @@
             this.descrpAGTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.descrpAGTxtBox.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.descrpAGTxtBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.descrpAGTxtBox.Location = new System.Drawing.Point(538, 142);
+            this.descrpAGTxtBox.Location = new System.Drawing.Point(538, 149);
             this.descrpAGTxtBox.Multiline = true;
             this.descrpAGTxtBox.Name = "descrpAGTxtBox";
-            this.descrpAGTxtBox.Size = new System.Drawing.Size(407, 130);
+            this.descrpAGTxtBox.Size = new System.Drawing.Size(407, 137);
             this.descrpAGTxtBox.TabIndex = 2;
             this.descrpAGTxtBox.Text = "Description";
             this.descrpAGTxtBox.Click += new System.EventHandler(this.descrpAGTxtBox_Click);
@@ -418,12 +436,12 @@
             this.addGameBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addGameBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addGameBttn.ForeColor = System.Drawing.Color.White;
-            this.addGameBttn.Location = new System.Drawing.Point(91, 446);
+            this.addGameBttn.Location = new System.Drawing.Point(91, 469);
             this.addGameBttn.Name = "addGameBttn";
             this.addGameBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.addGameBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.addGameBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.addGameBttn.Size = new System.Drawing.Size(168, 70);
+            this.addGameBttn.Size = new System.Drawing.Size(168, 74);
             this.addGameBttn.TabIndex = 6;
             this.addGameBttn.Text = "Add Game";
             this.addGameBttn.TextColor = System.Drawing.Color.White;
@@ -433,7 +451,7 @@
             // gamePanel
             // 
             this.gamePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.gamePanel.Location = new System.Drawing.Point(90, 174);
+            this.gamePanel.Location = new System.Drawing.Point(90, 183);
             this.gamePanel.Name = "gamePanel";
             this.gamePanel.Size = new System.Drawing.Size(376, 6);
             this.gamePanel.TabIndex = 3;
@@ -443,9 +461,9 @@
             this.playedAGRadioButton.AutoSize = true;
             this.playedAGRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playedAGRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playedAGRadioButton.Location = new System.Drawing.Point(353, 202);
+            this.playedAGRadioButton.Location = new System.Drawing.Point(353, 213);
             this.playedAGRadioButton.Name = "playedAGRadioButton";
-            this.playedAGRadioButton.Size = new System.Drawing.Size(92, 34);
+            this.playedAGRadioButton.Size = new System.Drawing.Size(98, 34);
             this.playedAGRadioButton.TabIndex = 5;
             this.playedAGRadioButton.TabStop = true;
             this.playedAGRadioButton.Text = "Played";
@@ -455,7 +473,7 @@
             // descrpPanel
             // 
             this.descrpPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.descrpPanel.Location = new System.Drawing.Point(541, 273);
+            this.descrpPanel.Location = new System.Drawing.Point(541, 287);
             this.descrpPanel.Name = "descrpPanel";
             this.descrpPanel.Size = new System.Drawing.Size(407, 6);
             this.descrpPanel.TabIndex = 3;
@@ -465,9 +483,9 @@
             this.playingAGRadioButton.AutoSize = true;
             this.playingAGRadioButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playingAGRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playingAGRadioButton.Location = new System.Drawing.Point(244, 202);
+            this.playingAGRadioButton.Location = new System.Drawing.Point(244, 213);
             this.playingAGRadioButton.Name = "playingAGRadioButton";
-            this.playingAGRadioButton.Size = new System.Drawing.Size(98, 34);
+            this.playingAGRadioButton.Size = new System.Drawing.Size(103, 34);
             this.playingAGRadioButton.TabIndex = 4;
             this.playingAGRadioButton.TabStop = true;
             this.playingAGRadioButton.Text = "Playing";
@@ -479,9 +497,9 @@
             this.planToPlayAGRadioBttn.AutoSize = true;
             this.planToPlayAGRadioBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.planToPlayAGRadioBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.planToPlayAGRadioBttn.Location = new System.Drawing.Point(92, 202);
+            this.planToPlayAGRadioBttn.Location = new System.Drawing.Point(92, 213);
             this.planToPlayAGRadioBttn.Name = "planToPlayAGRadioBttn";
-            this.planToPlayAGRadioBttn.Size = new System.Drawing.Size(140, 34);
+            this.planToPlayAGRadioBttn.Size = new System.Drawing.Size(146, 34);
             this.planToPlayAGRadioBttn.TabIndex = 3;
             this.planToPlayAGRadioBttn.TabStop = true;
             this.planToPlayAGRadioBttn.Text = "Plan to play";
@@ -491,15 +509,17 @@
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(541, 322);
+            this.pictureBox2.Location = new System.Drawing.Point(541, 339);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(404, 194);
+            this.pictureBox2.Size = new System.Drawing.Size(404, 204);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
             // myListPanel
             // 
+            this.myListPanel.Controls.Add(this.label6);
+            this.myListPanel.Controls.Add(this.label5);
             this.myListPanel.Controls.Add(this.viewImageBttn);
             this.myListPanel.Controls.Add(this.RfrshButt1);
             this.myListPanel.Controls.Add(this.genresMLCombo);
@@ -513,10 +533,53 @@
             this.myListPanel.Controls.Add(this.editNameMLBttn);
             this.myListPanel.Controls.Add(this.updateBttn);
             this.myListPanel.Controls.Add(this.dataGridView1);
-            this.myListPanel.Location = new System.Drawing.Point(212, 61);
+            this.myListPanel.Controls.Add(this.pictureBox3);
+            this.myListPanel.Location = new System.Drawing.Point(212, 64);
             this.myListPanel.Name = "myListPanel";
-            this.myListPanel.Size = new System.Drawing.Size(1176, 604);
+            this.myListPanel.Size = new System.Drawing.Size(1176, 636);
             this.myListPanel.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
+            this.label6.Location = new System.Drawing.Point(645, 605);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(528, 25);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "To view the image in full size click the specific row and then this button :)\r\n";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
+            this.label5.Location = new System.Drawing.Point(3, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(308, 25);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "To change data click on a specific row!\r\n\r\n";
+            // 
+            // viewImageBttn
+            // 
+            this.viewImageBttn.BorderColor = System.Drawing.Color.White;
+            this.viewImageBttn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.viewImageBttn.FlatAppearance.BorderSize = 0;
+            this.viewImageBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewImageBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.viewImageBttn.ForeColor = System.Drawing.Color.White;
+            this.viewImageBttn.Location = new System.Drawing.Point(977, 555);
+            this.viewImageBttn.Name = "viewImageBttn";
+            this.viewImageBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.viewImageBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
+            this.viewImageBttn.OnHoverTextColor = System.Drawing.Color.White;
+            this.viewImageBttn.Size = new System.Drawing.Size(196, 47);
+            this.viewImageBttn.TabIndex = 18;
+            this.viewImageBttn.Text = "View Image";
+            this.viewImageBttn.TextColor = System.Drawing.Color.White;
+            this.viewImageBttn.UseVisualStyleBackColor = true;
+            this.viewImageBttn.Click += new System.EventHandler(this.viewImageBttn_Click);
             // 
             // RfrshButt1
             // 
@@ -526,12 +589,12 @@
             this.RfrshButt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RfrshButt1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.RfrshButt1.ForeColor = System.Drawing.Color.White;
-            this.RfrshButt1.Location = new System.Drawing.Point(121, 477);
+            this.RfrshButt1.Location = new System.Drawing.Point(121, 502);
             this.RfrshButt1.Name = "RfrshButt1";
             this.RfrshButt1.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.RfrshButt1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.RfrshButt1.OnHoverTextColor = System.Drawing.Color.White;
-            this.RfrshButt1.Size = new System.Drawing.Size(112, 45);
+            this.RfrshButt1.Size = new System.Drawing.Size(112, 47);
             this.RfrshButt1.TabIndex = 17;
             this.RfrshButt1.Text = "Refresh";
             this.RfrshButt1.TextColor = System.Drawing.Color.White;
@@ -546,9 +609,9 @@
             this.genresMLCombo.Font = new System.Drawing.Font("Segoe UI", 13.09091F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.genresMLCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             this.genresMLCombo.FormattingEnabled = true;
-            this.genresMLCombo.Location = new System.Drawing.Point(17, 278);
+            this.genresMLCombo.Location = new System.Drawing.Point(17, 293);
             this.genresMLCombo.Name = "genresMLCombo";
-            this.genresMLCombo.Size = new System.Drawing.Size(216, 36);
+            this.genresMLCombo.Size = new System.Drawing.Size(216, 38);
             this.genresMLCombo.TabIndex = 16;
             // 
             // deleteBttn
@@ -559,12 +622,12 @@
             this.deleteBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.deleteBttn.ForeColor = System.Drawing.Color.White;
-            this.deleteBttn.Location = new System.Drawing.Point(3, 527);
+            this.deleteBttn.Location = new System.Drawing.Point(3, 555);
             this.deleteBttn.Name = "deleteBttn";
             this.deleteBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.deleteBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.deleteBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.deleteBttn.Size = new System.Drawing.Size(230, 45);
+            this.deleteBttn.Size = new System.Drawing.Size(230, 47);
             this.deleteBttn.TabIndex = 14;
             this.deleteBttn.Text = "Delete";
             this.deleteBttn.TextColor = System.Drawing.Color.White;
@@ -576,9 +639,9 @@
             this.playedMLButton.AutoSize = true;
             this.playedMLButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playedMLButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playedMLButton.Location = new System.Drawing.Point(17, 425);
+            this.playedMLButton.Location = new System.Drawing.Point(17, 447);
             this.playedMLButton.Name = "playedMLButton";
-            this.playedMLButton.Size = new System.Drawing.Size(92, 34);
+            this.playedMLButton.Size = new System.Drawing.Size(98, 34);
             this.playedMLButton.TabIndex = 13;
             this.playedMLButton.TabStop = true;
             this.playedMLButton.Text = "Played";
@@ -589,9 +652,9 @@
             this.playingMLButton.AutoSize = true;
             this.playingMLButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playingMLButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playingMLButton.Location = new System.Drawing.Point(17, 379);
+            this.playingMLButton.Location = new System.Drawing.Point(17, 399);
             this.playingMLButton.Name = "playingMLButton";
-            this.playingMLButton.Size = new System.Drawing.Size(98, 34);
+            this.playingMLButton.Size = new System.Drawing.Size(103, 34);
             this.playingMLButton.TabIndex = 12;
             this.playingMLButton.TabStop = true;
             this.playingMLButton.Text = "Playing";
@@ -602,9 +665,9 @@
             this.planToPlayMLBttn.AutoSize = true;
             this.planToPlayMLBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.planToPlayMLBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.planToPlayMLBttn.Location = new System.Drawing.Point(17, 336);
+            this.planToPlayMLBttn.Location = new System.Drawing.Point(17, 354);
             this.planToPlayMLBttn.Name = "planToPlayMLBttn";
-            this.planToPlayMLBttn.Size = new System.Drawing.Size(140, 34);
+            this.planToPlayMLBttn.Size = new System.Drawing.Size(146, 34);
             this.planToPlayMLBttn.TabIndex = 11;
             this.planToPlayMLBttn.TabStop = true;
             this.planToPlayMLBttn.Text = "Plan to play";
@@ -613,7 +676,7 @@
             // descpPanel
             // 
             this.descpPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.descpPanel.Location = new System.Drawing.Point(17, 241);
+            this.descpPanel.Location = new System.Drawing.Point(17, 254);
             this.descpPanel.Name = "descpPanel";
             this.descpPanel.Size = new System.Drawing.Size(216, 6);
             this.descpPanel.TabIndex = 10;
@@ -625,10 +688,10 @@
             this.editDescriptionMLBttn.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.editDescriptionMLBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editDescriptionMLBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.editDescriptionMLBttn.Location = new System.Drawing.Point(17, 116);
+            this.editDescriptionMLBttn.Location = new System.Drawing.Point(17, 122);
             this.editDescriptionMLBttn.Multiline = true;
             this.editDescriptionMLBttn.Name = "editDescriptionMLBttn";
-            this.editDescriptionMLBttn.Size = new System.Drawing.Size(216, 120);
+            this.editDescriptionMLBttn.Size = new System.Drawing.Size(216, 126);
             this.editDescriptionMLBttn.TabIndex = 10;
             this.editDescriptionMLBttn.Text = "Edit description";
             this.editDescriptionMLBttn.Click += new System.EventHandler(this.editDescriptionMLBttn_Click);
@@ -640,7 +703,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.panel4.Location = new System.Drawing.Point(17, 69);
+            this.panel4.Location = new System.Drawing.Point(17, 73);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(216, 6);
             this.panel4.TabIndex = 9;
@@ -652,10 +715,10 @@
             this.editNameMLBttn.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.editNameMLBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editNameMLBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.editNameMLBttn.Location = new System.Drawing.Point(17, 37);
+            this.editNameMLBttn.Location = new System.Drawing.Point(17, 39);
             this.editNameMLBttn.MaxLength = 255;
             this.editNameMLBttn.Name = "editNameMLBttn";
-            this.editNameMLBttn.Size = new System.Drawing.Size(216, 27);
+            this.editNameMLBttn.Size = new System.Drawing.Size(216, 30);
             this.editNameMLBttn.TabIndex = 8;
             this.editNameMLBttn.Text = "Edit name";
             this.editNameMLBttn.Click += new System.EventHandler(this.editNameMLBttn_Click);
@@ -672,12 +735,12 @@
             this.updateBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.updateBttn.ForeColor = System.Drawing.Color.White;
-            this.updateBttn.Location = new System.Drawing.Point(3, 477);
+            this.updateBttn.Location = new System.Drawing.Point(3, 502);
             this.updateBttn.Name = "updateBttn";
             this.updateBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.updateBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.updateBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.updateBttn.Size = new System.Drawing.Size(112, 45);
+            this.updateBttn.Size = new System.Drawing.Size(112, 47);
             this.updateBttn.TabIndex = 7;
             this.updateBttn.Text = "Update";
             this.updateBttn.TextColor = System.Drawing.Color.White;
@@ -687,12 +750,15 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowDrop = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -713,7 +779,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.dataGridView1.Location = new System.Drawing.Point(266, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(266, 34);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
@@ -730,42 +796,34 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(876, 540);
+            this.dataGridView1.Size = new System.Drawing.Size(876, 568);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
-            // viewImageBttn
+            // pictureBox3
             // 
-            this.viewImageBttn.BorderColor = System.Drawing.Color.White;
-            this.viewImageBttn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.viewImageBttn.FlatAppearance.BorderSize = 0;
-            this.viewImageBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewImageBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.viewImageBttn.ForeColor = System.Drawing.Color.White;
-            this.viewImageBttn.Location = new System.Drawing.Point(946, 527);
-            this.viewImageBttn.Name = "viewImageBttn";
-            this.viewImageBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.viewImageBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
-            this.viewImageBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.viewImageBttn.Size = new System.Drawing.Size(230, 45);
-            this.viewImageBttn.TabIndex = 18;
-            this.viewImageBttn.Text = "View Image";
-            this.viewImageBttn.TextColor = System.Drawing.Color.White;
-            this.viewImageBttn.UseVisualStyleBackColor = true;
-            this.viewImageBttn.Click += new System.EventHandler(this.viewImageBttn_Click);
+            this.pictureBox3.Image = global::Game_Catalogue.Properties.Resources.clickbait;
+            this.pictureBox3.Location = new System.Drawing.Point(2, 30);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(264, 580);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1425, 678);
+            this.ClientSize = new System.Drawing.Size(1425, 714);
+            this.Controls.Add(this.myProfilePanel);
             this.Controls.Add(this.myListPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.closeBox);
             this.Controls.Add(this.minimizeBox);
-            this.Controls.Add(this.myProfilePanel);
             this.Controls.Add(this.addGamePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -786,6 +844,7 @@
             this.myListPanel.ResumeLayout(false);
             this.myListPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -837,5 +896,9 @@
         private DataGridView dataGridView1;
         private Components.CustomButton RfrshButt1;
         private Components.CustomButton viewImageBttn;
+        private PictureBox pictureBox3;
+        private Label label5;
+        private Label label6;
+        private Label label7;
     }
 }
