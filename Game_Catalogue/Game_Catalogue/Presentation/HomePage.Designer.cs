@@ -67,7 +67,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.myListPanel = new System.Windows.Forms.Panel();
             this.genresMLCombo = new Game_Catalogue.Presentation.Components.FlatCombo();
-            this.addBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.deleteBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.playedMLButton = new System.Windows.Forms.RadioButton();
             this.playingMLButton = new System.Windows.Forms.RadioButton();
@@ -500,7 +499,6 @@
             // myListPanel
             // 
             this.myListPanel.Controls.Add(this.genresMLCombo);
-            this.myListPanel.Controls.Add(this.addBttn);
             this.myListPanel.Controls.Add(this.deleteBttn);
             this.myListPanel.Controls.Add(this.playedMLButton);
             this.myListPanel.Controls.Add(this.playingMLButton);
@@ -529,32 +527,10 @@
             this.genresMLCombo.Size = new System.Drawing.Size(216, 38);
             this.genresMLCombo.TabIndex = 16;
             // 
-            // addBttn
-            // 
-            this.addBttn.BorderColor = System.Drawing.Color.White;
-            this.addBttn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.addBttn.Enabled = false;
-            this.addBttn.FlatAppearance.BorderSize = 0;
-            this.addBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addBttn.ForeColor = System.Drawing.Color.White;
-            this.addBttn.Location = new System.Drawing.Point(121, 502);
-            this.addBttn.Name = "addBttn";
-            this.addBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.addBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
-            this.addBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.addBttn.Size = new System.Drawing.Size(112, 47);
-            this.addBttn.TabIndex = 15;
-            this.addBttn.Text = "Add";
-            this.addBttn.TextColor = System.Drawing.Color.White;
-            this.addBttn.UseVisualStyleBackColor = true;
-            this.addBttn.Click += new System.EventHandler(this.addBttn_Click);
-            // 
             // deleteBttn
             // 
             this.deleteBttn.BorderColor = System.Drawing.Color.White;
             this.deleteBttn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.deleteBttn.Enabled = false;
             this.deleteBttn.FlatAppearance.BorderSize = 0;
             this.deleteBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -668,7 +644,6 @@
             // 
             this.updateBttn.BorderColor = System.Drawing.Color.White;
             this.updateBttn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.updateBttn.Enabled = false;
             this.updateBttn.FlatAppearance.BorderSize = 0;
             this.updateBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -678,7 +653,7 @@
             this.updateBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.updateBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.updateBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.updateBttn.Size = new System.Drawing.Size(112, 47);
+            this.updateBttn.Size = new System.Drawing.Size(230, 47);
             this.updateBttn.TabIndex = 7;
             this.updateBttn.Text = "Update";
             this.updateBttn.TextColor = System.Drawing.Color.White;
@@ -733,6 +708,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(876, 568);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // HomePage
             // 
@@ -807,7 +783,6 @@
         private PictureBox pictureBox2;
         private Panel myListPanel;
         private Components.FlatCombo genresMLCombo;
-        private Components.CustomButton addBttn;
         private Components.CustomButton deleteBttn;
         private RadioButton playedMLButton;
         private RadioButton playingMLButton;

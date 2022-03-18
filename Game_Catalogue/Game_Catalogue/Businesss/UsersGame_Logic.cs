@@ -1,5 +1,6 @@
 ﻿using Data;
 using Data.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace Game_Catalogue.Business
 {
@@ -37,8 +38,19 @@ namespace Game_Catalogue.Business
             }
         }
 
-        public void Delete()
-        { }
+        public void Delete(UsersGame ug)
+        {
+            using (context = new GameCatalogueContext())
+            {
+                var entry = context.Entry(ug);
+                if(entry.State == EntityState.Detached)
+                {
+                    context.Attach(ug);
+                }
+                context.Remove(ug);
+                context.SaveChanges();
+            }
+        }
 
     }
 }

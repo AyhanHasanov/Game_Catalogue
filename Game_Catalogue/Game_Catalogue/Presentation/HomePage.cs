@@ -155,8 +155,11 @@ namespace Game_Catalogue.Presentation
             LoadMyProfileInfo();
         }
 
-        
+
         // My List Buttons
+
+        Game_Logic gameLogic = new Game_Logic();
+        private int Selected_Index;
         private void updateBttn_Click(object sender, EventArgs e)
         {
 
@@ -164,21 +167,15 @@ namespace Game_Catalogue.Presentation
 
         private void deleteBttn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void addBttn_Click(object sender, EventArgs e)
-        {
-            addGamePanel.Visible = true;
-            myProfilePanel.Visible = false;
-            myListPanel.Visible = false;
+            gameLogic.Delete(Selected_Index);
+            dataGridView1.Update();
         }
 
         // DataGrid Methods
         private void LoadDataGridRecords()
         {
             SqlConnection conn = DataBase.GetConnection();
-            string query = "select Users_games.user_id, Games.name, Games.opinion, Genres.name, Games.state, Games.image";
+            string query = "select Users_games.user_id, Games.id_game, Games.name, Games.opinion, Genres.name, Games.state, Games.image";
             query += " from [dbo].[Users_games] inner join [dbo].[Games] on Users_games.game_id = Games.id_game";
             query += $" inner join [dbo].[Genres] on Games.id_game = Genres.id_genre where Users_games.user_id = {currentUser.Id}";
 
@@ -197,6 +194,7 @@ namespace Game_Catalogue.Presentation
         {
 
             // name1 = genreName
+            dataGridView1.Columns["id_game"].Visible = false;
             dataGridView1.Columns["user_id"].Visible = false;
             dataGridView1.Columns["name"].HeaderText = "Game Name";
             dataGridView1.Columns["opinion"].HeaderText = "Opinion / description";
@@ -494,5 +492,10 @@ namespace Game_Catalogue.Presentation
             descpPanel.BackColor = inactivePanelColor;
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var idGame = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+            Selected_Index = (int)idGame;
+        }
     }
 }
