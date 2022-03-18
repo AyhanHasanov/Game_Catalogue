@@ -796,11 +796,9 @@
         private PictureBox closeBox;
         private PictureBox minimizeBox;
         private Panel panel2;
-        private UserControls.AddGameUserControl addGameUserControl1;
         private Label label1;
         private FontAwesome.Sharp.IconButton addGamePageBttn;
         private FontAwesome.Sharp.IconButton myListBttn;
-        private MyListUserControl myListUserControl1;
         private Label label2;
         private System.Windows.Forms.Timer timer1;
         private FontAwesome.Sharp.IconButton myProfileBttn;
