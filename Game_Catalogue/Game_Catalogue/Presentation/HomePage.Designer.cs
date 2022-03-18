@@ -66,6 +66,7 @@
             this.planToPlayAGRadioBttn = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.myListPanel = new System.Windows.Forms.Panel();
+            this.RfrshButt1 = new Game_Catalogue.Presentation.Components.CustomButton();
             this.genresMLCombo = new Game_Catalogue.Presentation.Components.FlatCombo();
             this.deleteBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.playedMLButton = new System.Windows.Forms.RadioButton();
@@ -77,7 +78,6 @@
             this.editNameMLBttn = new System.Windows.Forms.TextBox();
             this.updateBttn = new Game_Catalogue.Presentation.Components.CustomButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.RfrshButt1 = new Game_Catalogue.Presentation.Components.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.closeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimizeBox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -516,6 +516,26 @@
             this.myListPanel.Size = new System.Drawing.Size(1176, 636);
             this.myListPanel.TabIndex = 18;
             // 
+            // RfrshButt1
+            // 
+            this.RfrshButt1.BorderColor = System.Drawing.Color.White;
+            this.RfrshButt1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
+            this.RfrshButt1.FlatAppearance.BorderSize = 0;
+            this.RfrshButt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RfrshButt1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RfrshButt1.ForeColor = System.Drawing.Color.White;
+            this.RfrshButt1.Location = new System.Drawing.Point(121, 502);
+            this.RfrshButt1.Name = "RfrshButt1";
+            this.RfrshButt1.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.RfrshButt1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
+            this.RfrshButt1.OnHoverTextColor = System.Drawing.Color.White;
+            this.RfrshButt1.Size = new System.Drawing.Size(112, 47);
+            this.RfrshButt1.TabIndex = 17;
+            this.RfrshButt1.Text = "Refresh";
+            this.RfrshButt1.TextColor = System.Drawing.Color.White;
+            this.RfrshButt1.UseVisualStyleBackColor = true;
+            this.RfrshButt1.Click += new System.EventHandler(this.RfrshButt1_Click);
+            // 
             // genresMLCombo
             // 
             this.genresMLCombo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(41)))), ((int)(((byte)(64)))));
@@ -711,26 +731,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(876, 568);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // RfrshButt1
-            // 
-            this.RfrshButt1.BorderColor = System.Drawing.Color.White;
-            this.RfrshButt1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
-            this.RfrshButt1.FlatAppearance.BorderSize = 0;
-            this.RfrshButt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RfrshButt1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.RfrshButt1.ForeColor = System.Drawing.Color.White;
-            this.RfrshButt1.Location = new System.Drawing.Point(121, 502);
-            this.RfrshButt1.Name = "RfrshButt1";
-            this.RfrshButt1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.RfrshButt1.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
-            this.RfrshButt1.OnHoverTextColor = System.Drawing.Color.White;
-            this.RfrshButt1.Size = new System.Drawing.Size(112, 47);
-            this.RfrshButt1.TabIndex = 17;
-            this.RfrshButt1.Text = "Refresh";
-            this.RfrshButt1.TextColor = System.Drawing.Color.White;
-            this.RfrshButt1.UseVisualStyleBackColor = true;
-            this.RfrshButt1.Click += new System.EventHandler(this.RfrshButt1_Click);
             // 
             // HomePage
             // 

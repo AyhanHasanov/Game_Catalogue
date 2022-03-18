@@ -160,7 +160,23 @@ namespace Game_Catalogue.Presentation
         private int Selected_Index;
         private void updateBttn_Click(object sender, EventArgs e)
         {
-
+            int genreId = genresMLCombo.SelectedIndex + 1;
+            string name = editNameMLBttn.Text;
+            string description = editDescriptionMLBttn.Text;
+            string state;
+            if (planToPlayMLBttn.Checked == true)
+            {
+                state = "Plan to play";
+            }
+            else if (playingMLButton.Checked == true)
+            {
+                state = "Playing";
+            }
+            else if (playedMLButton.Checked == true)
+            {
+                state = "Played";
+            }
+            Game game = new Game();
         }
 
         private void deleteBttn_Click(object sender, EventArgs e)
@@ -267,7 +283,7 @@ namespace Game_Catalogue.Presentation
                 ug.GameId = game.IdGame;
                 usersGame_Logic.Add(ug);
 
-                MessageBox.Show("Added game successfuly! :)");
+                MessageBox.Show("Added game successfully! :)");
 
             }
             catch (Exception)
@@ -491,11 +507,28 @@ namespace Game_Catalogue.Presentation
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows.Count != 0)
+            if (dataGridView1.Rows.Count != 0 || dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 var idGame = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
                 Selected_Index = (int)idGame;
             }
+            editNameMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            editDescriptionMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            genresMLCombo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string state= dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            if (state == "Plan to play")
+            {
+                planToPlayMLBttn.Checked = true;
+            }
+            else if (state == "Playing")
+            {
+                playingMLButton.Checked = true;
+            }
+            else if (state == "Played")
+            {
+                playedMLButton.Checked = true;
+            }
+
         }
 
         private void RfrshButt1_Click(object sender, EventArgs e)
