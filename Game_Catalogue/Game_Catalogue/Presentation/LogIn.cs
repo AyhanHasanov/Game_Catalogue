@@ -4,12 +4,20 @@ using System.IO;
 
 namespace Game_Catalogue.Presentation
 {
+    /// <summary>
+    /// Form class LogIn_Form
+    /// </summary>
     public partial class LogIn_Form : Form
     {
+        /// <summary>
+        /// LogIn_Form constructor
+        /// </summary>
         public LogIn_Form()
         {
             InitializeComponent();
         }
+
+        // Colors needed for animation
         Color activePanelColor = Color.FromArgb(245, 87, 142);
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
@@ -18,7 +26,10 @@ namespace Game_Catalogue.Presentation
         private static LogIn_Form lg = new LogIn_Form();
         User_Logic user_Logic = new User_Logic();
 
-
+        /// <summary>
+        /// When the "Don't have an account?" label is clicked
+        /// the Registration form pops up
+        /// </summary>
         private void label1_Click(object sender, EventArgs e)
         {
             Registration Registration = new Registration();
@@ -26,22 +37,33 @@ namespace Game_Catalogue.Presentation
             this.Hide();
         }
 
+        /// <summary>
+        /// When the LogIn button is clicked, the LogIn method activates
+        /// </summary>
         private void LogIn_Button_Click(object sender, EventArgs e)
         {
             LogIn();
         }
+
+       
         private void username_textbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 LogIn();
         }
 
+        /// <summary>
+        /// When the enter key is pressed down the LogIn method activates
+        /// </summary>
         private void password_textbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 LogIn();
         }
 
+        /// <summary>
+        /// When the LogIn Form loads the genres are put into the database
+        /// </summary>
         private void LogIn_Form_Load(object sender, EventArgs e)
         {
             Genre_Logic controller = new Genre_Logic();
@@ -59,6 +81,10 @@ namespace Game_Catalogue.Presentation
                 }
             }
         }
+
+        /// <summary>
+        /// LogIn method
+        /// </summary>
         private void LogIn()
         {
             string username = username_textbox.Text;
@@ -83,6 +109,14 @@ namespace Game_Catalogue.Presentation
                 //MessageBox.Show(ex.Message + ex.InnerException);
                 MessageBox.Show("Username and password do not match!", "Login aborted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+        }
+
+        /// <summary>
+        /// Closes the LogIn form
+        /// </summary>
+        private void LogIn_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         // ANIMATIONS
@@ -184,9 +218,5 @@ namespace Game_Catalogue.Presentation
             }
         }
 
-        private void LogIn_Form_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Environment.Exit(0);
-        }
     }
 }

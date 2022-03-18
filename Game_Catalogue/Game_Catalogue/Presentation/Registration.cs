@@ -3,25 +3,39 @@ using Data.Model;
 
 namespace Game_Catalogue.Presentation
 {
+    /// <summary>
+    /// Form class Registration
+    /// </summary>
     public partial class Registration : Form
     {
         User_Logic loginControl = new User_Logic();
         User user;
+
+        // Colors needed for animation
         Color activePanelColor = Color.FromArgb(245, 87, 142);
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
         Color inactiveTextColor = Color.FromArgb(150, 142, 183);
 
+        /// <summary>
+        /// Registration Constructor
+        /// </summary>
         public Registration()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Activates the Register method once the register button is clicked
+        /// </summary>
         private void Registration_Button_Click(object sender, EventArgs e)
         {
             Register();
         }
 
+        /// <summary>
+        /// Registers the user into the database
+        /// </summary>
         private void Register()
         {
             try
@@ -36,6 +50,7 @@ namespace Game_Catalogue.Presentation
                 user.Email = email;
                 user.CreatedAt = DateTime.Now;
 
+                //Checks if the email is already in the database
                 if (loginControl.CheckIfUserExists(email))
                 {
                     MessageBox.Show("There already is an account registered for this email!",
@@ -43,6 +58,7 @@ namespace Game_Catalogue.Presentation
                 }
                 else
                 {
+                    //Creates a new user
                     loginControl.CreateNewUser(user);
 
                     MessageBox.Show("You have successfully registered your account! Have fun!",
@@ -62,6 +78,9 @@ namespace Game_Catalogue.Presentation
             }
         }
 
+        /// <summary>
+        /// A method to close the Registration form and go back to LogIn
+        /// </summary>
         private void CloseRegistrationFormAndOpenLoginForm()
         {
             LogIn_Form Login = new LogIn_Form();
@@ -69,19 +88,28 @@ namespace Game_Catalogue.Presentation
             this.Close();
             this.Dispose();
         }
-        
+
+        /// <summary>
+        /// When the enter key is pressed Register method is activated
+        /// </summary>
         private void username_textbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Register();
         }
-        
+
+        /// <summary>
+        /// When the enter key is pressed Register method is activated
+        /// </summary>
         private void email_textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
                 Register();
         }
 
+        /// <summary>
+        /// When the enter key is pressed Register method is activated
+        /// </summary>
         private void password_textbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -103,7 +131,6 @@ namespace Game_Catalogue.Presentation
                 pictureBox2.Image = Properties.Resources.icons8_eyelashes_2d_50;
             }
         }
-
 
         private void username_textbox_Click(object sender, EventArgs e)
         {
@@ -224,10 +251,6 @@ namespace Game_Catalogue.Presentation
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
             password_textbox.UseSystemPasswordChar = true;
-        }
-
-        private void Registration_FormClosing(object sender, FormClosingEventArgs e)
-        {
         }
     }
 }

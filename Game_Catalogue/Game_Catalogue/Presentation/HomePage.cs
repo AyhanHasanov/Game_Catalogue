@@ -3,12 +3,11 @@ using Data.Model;
 using Game_Catalogue.Business;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing.Imaging;
 
 namespace Game_Catalogue.Presentation
 {
     /// <summary>
-    /// UI
+    /// Form class HomePage
     /// </summary> />
     public partial class HomePage : Form
     {
@@ -18,6 +17,7 @@ namespace Game_Catalogue.Presentation
         /// </summary>
         private GameCatalogueContext games = new GameCatalogueContext();
 
+        // Colors needed for animation
         Color activePanelColor = Color.FromArgb(245, 87, 142);
         Color inactivePanelColor = Color.FromArgb(245, 167, 198);
         Color activeTextColor = Color.FromArgb(247, 247, 247);
@@ -32,21 +32,345 @@ namespace Game_Catalogue.Presentation
 
 
         /// <summary>
-        ///  Constructor
+        /// HomePage Constructor
         /// </summary>
         public HomePage()
         {
             InitializeComponent();
         }
+        
+        /// <summary>
+        /// HomePage form load method
+        /// </summary>
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+            this.Draggable(true);
 
+            // Prefixed visibility of panels
+            addGamePanel.Visible = false;
+            myProfilePanel.Visible = true;
+            myListPanel.Visible = false;
+            timer1.Start();
+
+            // Filling combo boxes with genres from database
+            Genre_Logic genre_Logic = new Genre_Logic();
+            int end = genre_Logic.GetCount();
+            for (int i = 1; i <= end; i++)
+            {
+                Genre genre = genre_Logic.GetGenre(i);
+                if (genre != null)
+                {
+                    genresAGCombo.Items.Add(genre.GenreName.ToString());
+                    genresMLCombo.Items.Add(genre.GenreName.ToString());
+                }
+            }
+
+            /*editNameMLBttn.Enabled = false;
+            editDescriptionMLBttn.Enabled = false;
+            genresMLCombo.Enabled = false;
+            planToPlayMLBttn.Enabled = false;
+            playedMLButton.Enabled = false;
+            playingMLButton.Enabled = false;
+            updateBttn.Enabled = false;
+            deleteBttn.Enabled = false;*/
+
+            //Gets the current user and loads user's profile information
+            currentUser = users_Logic.GetUserFromTxtFile();
+            LoadMyProfileInfo();
+        }
+
+        // Timer
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToString("HH:mm:ss  dd/MM");
+        }
+
+        // Sidebar menu buttons and manipulations
+        private void myListBttn_Click(object sender, EventArgs e)
+        {
+
+            addGamePanel.Visible = false;
+            myProfilePanel.Visible = false;
+            myListPanel.Visible = true;
+            LoadDataGridRecords();
+        }
+
+        private void addGamePageBttn_Click(object sender, EventArgs e)
+        {
+            addGamePanel.Visible = true;
+            myProfilePanel.Visible = false;
+            myListPanel.Visible = false;
+        }
+
+        private void myProfileBttn_Click(object sender, EventArgs e)
+        {
+            addGamePanel.Visible = false;
+            myProfilePanel.Visible = true;
+            myListPanel.Visible = false;
+            LoadMyProfileInfo();
+        }
+
+
+        // My List Buttons
+
+        private int Selected_Index;
+
+        /// <summary>
+        /// Updates the information about the user's selected game in the database
+        /// </summary>
+        private void updateBttn_Click(object sender, EventArgs e)
+        {
+            //Initializing the variables
+            string genre_name = this.genresMLCombo.GetItemText(genresMLCombo.SelectedItem);
+            int genreId = genre_Logic.GetGenreIdByName(genre_name);
+            string name = editNameMLBttn.Text;
+            string description = editDescriptionMLBttn.Text;
+            string state = "";
+
+            //Checks the state
+            if (planToPlayMLBttn.Checked == true)
+            {
+                state = "Plan to play";
+            }
+            else if (playingMLButton.Checked == true)
+            {
+                state = "Playing";
+            }
+            else if (playedMLButton.Checked == true)
+            {
+                state = "Played";
+            }
+
+            //Assigns the game's properties
+            Game game = new Game();
+            game.IdGame = Selected_Index;
+            game.Name = name;
+            game.Opinion = description;
+            game.State = state;
+            game.IdGenre = genreId;
+            game_Logic.Update(game);
+        }
+
+        /// <summary>
+        /// Deletes the selected game once the Delete button is clicked
+        /// </summary>
+        private void deleteBttn_Click(object sender, EventArgs e)
+        {
+            usersGame_Logic.Delete(currentUser.Id, Selected_Index);
+        }
+
+        // DataGrid Methods
+        private void LoadDataGridRecords()
+        {
+            // Establiching a connection to the database
+            SqlConnection conn = DataBase.GetConnection();
+
+            //Creating a query, joining UsersGame table with Game table and Genre table
+            string query = "select Users_games.user_id, Games.id_game, Games.name, Games.opinion, Genres.name, Games.state, Games.image";
+            query += " from [dbo].[Users_games] inner join [dbo].[Games] on Users_games.game_id = Games.id_game";
+            query += $" inner join [dbo].[Genres] on Games.id_genre = Genres.id_genre where Users_games.user_id = {currentUser.Id}";
+
+            SqlCommand command = new SqlCommand(query, conn);
+            conn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable gamesList = new DataTable();
+            adapter.Fill(gamesList);
+            dataGridView1.DataSource = gamesList;
+            conn.Close();
+
+            ChangeDataGridDesign();
+        }
+
+
+        /// <summary>
+        /// Fixes the DataGrid's design
+        /// </summary>
+        private void ChangeDataGridDesign()
+        {
+
+            // name1 = genreName
+            dataGridView1.Columns["id_game"].Visible = false;
+            dataGridView1.Columns["user_id"].Visible = false;
+            dataGridView1.Columns["name"].HeaderText = "Game Name";
+            dataGridView1.Columns["opinion"].HeaderText = "Opinion / description";
+            dataGridView1.Columns["name1"].HeaderText = "Genre";
+            dataGridView1.Columns["state"].HeaderText = "State";
+            dataGridView1.Columns["image"].HeaderText = "Image";
+
+            dataGridView1.Columns["name"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns["opinion"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns["name1"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns["state"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns["image"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
+        // Loads the user's profile info
+        private void LoadMyProfileInfo()
+        {
+            myProfileName.Text = currentUser.Username;
+            myProfileJoined.Text = currentUser.CreatedAt.ToString();
+            int count = usersGame_Logic.GetAllGamesForCurrentUser(currentUser).Count;
+            myProfileCount.Text = count.ToString();
+        }
+
+
+
+        // Add Game Panel Methods
+        string imgLocation = "";
+
+        /// <summary>
+        /// When clicking the Add Game button a game is added to the database
+        /// </summary>
+        private void addGameBttn_Click(object sender, EventArgs e)
+        {
+            //Check
+            try
+            {
+                byte[] images = null;
+
+                //Converts the image into a file stream and then reads the data
+                if (imgLocation != "")
+                {
+                    FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                    BinaryReader binaryReader = new BinaryReader(stream);
+                    images = binaryReader.ReadBytes((int)stream.Length);
+                }
+
+                string genre_name = this.genresAGCombo.GetItemText(genresAGCombo.SelectedItem);
+                int genreId = genre_Logic.GetGenreIdByName(genre_name);
+
+                Game game = new Game();
+
+                game.Name = nameAGTxtBox.Text;
+                game.Opinion = descrpAGTxtBox.Text;
+                game.IdGenre = genreId;
+
+                if (planToPlayAGRadioBttn.Checked == true)
+                {
+                    game.State = "Plan to play";
+                }
+                else if (playingAGRadioButton.Checked == true)
+                {
+                    game.State = "Playing";
+                }
+                else if (playedAGRadioButton.Checked == true)
+                {
+                    game.State = "Played";
+                }
+
+                game.Image = images;
+
+                
+                int userID = -1;
+                using (var reader = new StreamReader("username.txt"))
+                {
+                    string username = reader.ReadToEnd().Trim()
+                        .Replace("\r", "").Replace("\n", "").ToString();
+                    userID = users_Logic.GetUserByUsername(username).Id;
+                }
+
+                game_Logic.Add(game);
+
+                UsersGame ug = new UsersGame();
+                ug.UserId = userID;
+                ug.GameId = game.IdGame;
+                usersGame_Logic.Add(ug);
+
+                MessageBox.Show("Added game successfully! :)");
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Failed adding game! :(");
+            }
+        }
+
+        /// <summary>
+        /// When clicking the Browse Pic button the user can input an image
+        /// </summary>
+        private void browsePic_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                pictureBox2.ImageLocation = imgLocation;
+            }
+        }
+
+        Bitmap currentSelectedImage;
+        MemoryStream imageStream = new MemoryStream();
+
+        /// <summary>
+        /// Fills the textboxes, combobox and checks the radio buttons with the selected game's data
+        /// </summary>
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Rows.Count != 0 || dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                var idGame = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
+                Selected_Index = (int)idGame;
+            }
+
+            editNameMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            editDescriptionMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            genresMLCombo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string state = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+            try
+            {
+                imageStream = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[6].Value);
+            }
+            catch (Exception ex)
+            { }
+
+            if (state == "Plan to play")
+            {
+                planToPlayMLBttn.Checked = true;
+            }
+            else if (state == "Playing")
+            {
+                playingMLButton.Checked = true;
+            }
+            else if (state == "Played")
+            {
+                playedMLButton.Checked = true;
+            }
+
+        }
+
+        /// <summary>
+        /// Refreshes the DataGrid
+        /// </summary>
+        private void RfrshButt1_Click(object sender, EventArgs e)
+        {
+            LoadDataGridRecords();
+        }
+
+        /// <summary>
+        /// Views a game's image from a clicked cell
+        /// </summary>
+        private void viewImageBttn_Click(object sender, EventArgs e)
+        {
+            if (imageStream.Length != 0)
+            {
+                PictureVisualizer pV = new PictureVisualizer();
+                pV.image = currentSelectedImage;
+                pV.stream = imageStream;
+                pV.Show();
+            }
+            else
+            {
+                MessageBox.Show("There isn't any images added to this game!", "Sorry pal u have dumb :P");
+            }
+        }
 
         //  HomePage Controls Animations
 
         /// <summary>
-        /// Handles the Click event of the closeBox control.
+        /// Closes the form
         /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void closeBox_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
@@ -92,225 +416,7 @@ namespace Game_Catalogue.Presentation
         }
 
 
-        private void HomePage_Load(object sender, EventArgs e)
-        {
-            this.Draggable(true);
-            addGamePanel.Visible = false;
-            myProfilePanel.Visible = true;
-            myListPanel.Visible = false;
-            timer1.Start();
-
-            Genre_Logic genre_Logic = new Genre_Logic();
-            int end = genre_Logic.GetCount();
-            for (int i = 1; i <= end; i++)
-            {
-                Genre genre = genre_Logic.GetGenre(i);
-                if (genre != null)
-                {
-                    genresAGCombo.Items.Add(genre.GenreName.ToString());
-                    genresMLCombo.Items.Add(genre.GenreName.ToString());
-                }
-            }
-
-            /*editNameMLBttn.Enabled = false;
-            editDescriptionMLBttn.Enabled = false;
-            genresMLCombo.Enabled = false;
-            planToPlayMLBttn.Enabled = false;
-            playedMLButton.Enabled = false;
-            playingMLButton.Enabled = false;
-            updateBttn.Enabled = false;
-            deleteBttn.Enabled = false;*/
-
-            currentUser = users_Logic.GetUserFromTxtFile();
-            LoadMyProfileInfo();
-        }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            label2.Text = DateTime.Now.ToString("HH:mm:ss  dd/MM");
-        }
-
-        // Sidebar menu buttons and manipulations
-        private void myListBttn_Click(object sender, EventArgs e)
-        {
-
-            addGamePanel.Visible = false;
-            myProfilePanel.Visible = false;
-            myListPanel.Visible = true;
-            LoadDataGridRecords();
-        }
-
-        private void addGamePageBttn_Click(object sender, EventArgs e)
-        {
-            addGamePanel.Visible = true;
-            myProfilePanel.Visible = false;
-            myListPanel.Visible = false;
-        }
-
-        private void myProfileBttn_Click(object sender, EventArgs e)
-        {
-            addGamePanel.Visible = false;
-            myProfilePanel.Visible = true;
-            myListPanel.Visible = false;
-            LoadMyProfileInfo();
-        }
-
-
-        // My List Buttons
-
-        private int Selected_Index;
-        private void updateBttn_Click(object sender, EventArgs e)
-        {
-            string genre_name = this.genresMLCombo.GetItemText(genresMLCombo.SelectedItem);
-            int genreId = genre_Logic.GetGenreIdByName(genre_name);
-            string name = editNameMLBttn.Text;
-            string description = editDescriptionMLBttn.Text;
-            string state = "";
-            if (planToPlayMLBttn.Checked == true)
-            {
-                state = "Plan to play";
-            }
-            else if (playingMLButton.Checked == true)
-            {
-                state = "Playing";
-            }
-            else if (playedMLButton.Checked == true)
-            {
-                state = "Played";
-            }
-            Game game = new Game();
-            game.IdGame = Selected_Index;
-            game.Name = name;
-            game.Opinion = description;
-            game.State = state;
-            game.IdGenre = genreId;
-            game_Logic.Update(game);
-        }
-
-        private void deleteBttn_Click(object sender, EventArgs e)
-        {
-            usersGame_Logic.Delete(currentUser.Id, Selected_Index);
-        }
-
-        // DataGrid Methods
-        private void LoadDataGridRecords()
-        {
-            SqlConnection conn = DataBase.GetConnection();
-            string query = "select Users_games.user_id, Games.id_game, Games.name, Games.opinion, Genres.name, Games.state, Games.image";
-            query += " from [dbo].[Users_games] inner join [dbo].[Games] on Users_games.game_id = Games.id_game";
-            query += $" inner join [dbo].[Genres] on Games.id_genre = Genres.id_genre where Users_games.user_id = {currentUser.Id}";
-
-            SqlCommand command = new SqlCommand(query, conn);
-            conn.Open();
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable gamesList = new DataTable();
-            adapter.Fill(gamesList);
-            dataGridView1.DataSource = gamesList;
-            conn.Close();
-
-            ChangeDataGridDesign();
-        }
-
-        private void ChangeDataGridDesign()
-        {
-
-            // name1 = genreName
-            dataGridView1.Columns["id_game"].Visible = false;
-            dataGridView1.Columns["user_id"].Visible = false;
-            dataGridView1.Columns["name"].HeaderText = "Game Name";
-            dataGridView1.Columns["opinion"].HeaderText = "Opinion / description";
-            dataGridView1.Columns["name1"].HeaderText = "Genre";
-            dataGridView1.Columns["state"].HeaderText = "State";
-            dataGridView1.Columns["image"].HeaderText = "Image";
-
-            dataGridView1.Columns["name"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["opinion"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["name1"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["state"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.Columns["image"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-        }
-
-        // !!!!!!!!!!!!!!!
-        private void LoadMyProfileInfo()
-        {
-            myProfileName.Text = currentUser.Username;
-            myProfileJoined.Text = currentUser.CreatedAt.ToString();
-            int count = usersGame_Logic.GetAllGamesForCurrentUser(currentUser).Count;
-            myProfileCount.Text = count.ToString();
-        }
-
-        // Add Game Panel Methods and animations
-        string imgLocation = "";
-
-        private void addGameBttn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                byte[] images = null;
-                if (imgLocation != "")
-                {
-                    FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                    BinaryReader binaryReader = new BinaryReader(stream);
-                    images = binaryReader.ReadBytes((int)stream.Length);
-                }
-
-                string genre_name = this.genresAGCombo.GetItemText(genresAGCombo.SelectedItem);
-                int genreId = genre_Logic.GetGenreIdByName(genre_name);
-                Game game = new Game();
-
-                game.Name = nameAGTxtBox.Text;
-                game.Opinion = descrpAGTxtBox.Text;
-                game.IdGenre = genreId;
-
-                if (planToPlayAGRadioBttn.Checked == true)
-                {
-                    game.State = "Plan to play";
-                }
-                else if (playingAGRadioButton.Checked == true)
-                {
-                    game.State = "Playing";
-                }
-                else if (playedAGRadioButton.Checked == true)
-                {
-                    game.State = "Played";
-                }
-
-                game.Image = images;
-
-                int userID = -1;
-                using (var reader = new StreamReader("username.txt"))
-                {
-                    string username = reader.ReadToEnd().Trim()
-                        .Replace("\r", "").Replace("\n", "").ToString();
-                    userID = users_Logic.GetUserByUsername(username).Id;
-                }
-
-                game_Logic.Add(game);
-
-                UsersGame ug = new UsersGame();
-                ug.UserId = userID;
-                ug.GameId = game.IdGame;
-                usersGame_Logic.Add(ug);
-
-                MessageBox.Show("Added game successfully! :)");
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Failed adding game! :(");
-            }
-        }
-
-        private void browsePic_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                imgLocation = dialog.FileName.ToString();
-                pictureBox2.ImageLocation = imgLocation;
-            }
-        }
-
+        // Add Game Panel Animations
         private void nameAGTxtBox_Click(object sender, EventArgs e)
         {
             if (nameAGTxtBox.Text == "Name of game")
@@ -350,8 +456,6 @@ namespace Game_Catalogue.Presentation
             gamePanel.BackColor = inactivePanelColor;
         }
 
-
-        // Description text box animations
 
         private void descrpAGTxtBox_Click(object sender, EventArgs e)
         {
@@ -404,8 +508,6 @@ namespace Game_Catalogue.Presentation
             descrpPanel.BackColor = inactivePanelColor;
         }
 
-
-        // Radio Buttons Animation on Add Game 
 
         private void planToPlayAGRadioBttn_CheckedChanged(object sender, EventArgs e)
         {
@@ -513,62 +615,6 @@ namespace Game_Catalogue.Presentation
             descpPanel.BackColor = inactivePanelColor;
         }
 
-        Bitmap currentSelectedImage;
-        MemoryStream imageStream = new MemoryStream();
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.Rows.Count != 0 || dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                var idGame = dataGridView1.Rows[e.RowIndex].Cells[1].Value;
-                Selected_Index = (int)idGame;
-            }
-            editNameMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            editDescriptionMLBttn.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            genresMLCombo.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            string state = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-
-            try
-            {
-                imageStream = new MemoryStream((byte[])dataGridView1.CurrentRow.Cells[6].Value);
-            }
-            catch (Exception ex)
-            { }
-
-            if (state == "Plan to play")
-            {
-                planToPlayMLBttn.Checked = true;
-            }
-            else if (state == "Playing")
-            {
-                playingMLButton.Checked = true;
-            }
-            else if (state == "Played")
-            {
-                playedMLButton.Checked = true;
-            }
-
-        }
-
-        private void RfrshButt1_Click(object sender, EventArgs e)
-        {
-            LoadDataGridRecords();
-        }
-
-        private void viewImageBttn_Click(object sender, EventArgs e)
-        {
-            if (imageStream.Length != 0)
-            {
-                PictureVisualizer pV = new PictureVisualizer();
-                pV.image = currentSelectedImage;
-                pV.stream = imageStream;
-                pV.Show();
-            }
-            else
-            {
-                MessageBox.Show("There isn't any images added to this game!", "Sorry pal u have dumb :P");
-            }
-        }
     }
 }
 

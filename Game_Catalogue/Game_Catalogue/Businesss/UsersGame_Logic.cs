@@ -12,9 +12,8 @@ namespace Game_Catalogue.Business
         GameCatalogueContext context;
 
         /// <summary>
-        /// Adds
+        /// Adds pbject from UserGame type to database
         /// </summary>
-        /// <param name="ug"></param>
         public void Add(UsersGame ug)
         {
             using (context = new GameCatalogueContext())
@@ -25,7 +24,7 @@ namespace Game_Catalogue.Business
         }
 
         /// <summary>
-        /// 
+        /// Gets the whole list of UsersGame
         /// </summary>
         /// <returns></returns>
         public List<UsersGame> GetAll()

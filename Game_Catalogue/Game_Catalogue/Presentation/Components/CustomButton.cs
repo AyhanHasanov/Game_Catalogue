@@ -1,9 +1,8 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-
-namespace Game_Catalogue.Presentation.Components
+﻿namespace Game_Catalogue.Presentation.Components
 {
+    /// <summary>
+    /// Class CustomButton
+    /// </summary>
     public class CustomButton : Button
     {
         private Color _borderColor = Color.Silver;
@@ -17,7 +16,9 @@ namespace Game_Catalogue.Presentation.Components
         private int _borderThickness = 0;
         private int _borderThicknessByTwo = 0;
 
-
+        /// <summary>
+        /// CustomButton constructor
+        /// </summary>
         public CustomButton()
         {
             DoubleBuffered = true;
@@ -33,7 +34,9 @@ namespace Game_Catalogue.Presentation.Components
             };
         }
 
-
+        /// <summary>
+        /// A method to draw the visual components of the button
+        /// </summary>
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -65,7 +68,9 @@ namespace Game_Catalogue.Presentation.Components
             g.DrawString(Text, Font, brush, (Width - stringSize.Width) / 2, (Height - stringSize.Height) / 2);
         }
 
-
+        /// <summary>
+        /// Sets or gets the color of the border
+        /// </summary>
         public Color BorderColor
         {
             get => _borderColor;
@@ -76,6 +81,9 @@ namespace Game_Catalogue.Presentation.Components
             }
         }
 
+        /// <summary>
+        /// Gets or sets the color of the border once hovered over
+        /// </summary>
         public Color OnHoverBorderColor
         {
             get => _onHoverBorderColor;
@@ -86,6 +94,9 @@ namespace Game_Catalogue.Presentation.Components
             }
         }
 
+        /// <summary>
+        /// Gets or sets the button color
+        /// </summary>
         public Color ButtonColor
         {
             get => _buttonColor;
@@ -96,6 +107,9 @@ namespace Game_Catalogue.Presentation.Components
             }
         }
 
+        /// <summary>
+        /// Gets or sets the hovered on button color 
+        /// </summary>
         public Color OnHoverButtonColor
         {
             get => _onHoverButtonColor;
@@ -106,6 +120,9 @@ namespace Game_Catalogue.Presentation.Components
             }
         }
 
+        /// <summary>
+        /// Gets or sets the text color
+        /// </summary>
         public Color TextColor
         {
             get => _textColor;
@@ -116,6 +133,9 @@ namespace Game_Catalogue.Presentation.Components
             }
         }
 
+        /// <summary>
+        /// Gets or sets the on hover text color
+        /// </summary>
         public Color OnHoverTextColor
         {
             get => _onHoverTextColor;
