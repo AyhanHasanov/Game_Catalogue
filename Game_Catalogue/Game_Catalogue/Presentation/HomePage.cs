@@ -163,7 +163,7 @@ namespace Game_Catalogue.Presentation
             int genreId = genresMLCombo.SelectedIndex + 1;
             string name = editNameMLBttn.Text;
             string description = editDescriptionMLBttn.Text;
-            string state;
+            string state = "";
             if (planToPlayMLBttn.Checked == true)
             {
                 state = "Plan to play";
@@ -177,6 +177,12 @@ namespace Game_Catalogue.Presentation
                 state = "Played";
             }
             Game game = new Game();
+            game.IdGame = Selected_Index;
+            game.Name = name;
+            game.Opinion = description;
+            game.State = state;
+            game.IdGenre = genreId;
+            game_Logic.Update(game);
         }
 
         private void deleteBttn_Click(object sender, EventArgs e)

@@ -228,8 +228,6 @@ namespace Game_Catalogue.Presentation
 
         private void Registration_FormClosing(object sender, FormClosingEventArgs e)
         {
-            LogIn_Form Login = new LogIn_Form();
-            Login.Show();
         }
     }
 }
