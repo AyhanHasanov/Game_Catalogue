@@ -113,7 +113,6 @@ C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Cat
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game_Catalogue.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game_Catalogue.pdb
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Humanizer.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -138,18 +137,11 @@ C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Cat
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.csproj.AssemblyReference.cache
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.HomePage.resources
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.csproj.GenerateResource.cache
@@ -301,8 +293,6 @@ C:\Users\julia\source\Game Catalogue\AyhanHasanov\Game_Catalogue\Game_Catalogue\
 C:\Users\julia\source\Game Catalogue\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\ref\Game_Catalogue.dll
 C:\Users\Monnie\source\it's fine\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.MyListUserControl.resources
 C:\Users\Monnie\source\it's fine\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.UserControls.MyProfile.resources
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game.Data.dll
-C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Game.Data.pdb
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.LogIn_Form.resources
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.Registration.resources
 C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\obj\Debug\net6.0-windows\Game_Catalogue.Presentation.UserControls.AddGameUserControl.resources
@@ -439,3 +429,14 @@ C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Cata
 C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Data.dll
 C:\Users\julia\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Data.pdb
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.Bcl.HashCode.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Data.dll
+C:\Users\Monnie\Source\Repos\AyhanHasanov\Game_Catalogue\Game_Catalogue\Game_Catalogue\bin\Debug\net6.0-windows\Data.pdb

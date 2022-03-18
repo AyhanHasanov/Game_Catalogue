@@ -198,11 +198,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(673, 9);
+            this.label1.Location = new System.Drawing.Point(700, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(270, 41);
+            this.label1.Size = new System.Drawing.Size(219, 41);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Sladuri games idk";
+            this.label1.Text = "Sladuri Games";
             // 
             // timer1
             // 
@@ -524,9 +524,9 @@
             this.genresMLCombo.Font = new System.Drawing.Font("Segoe UI", 13.09091F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.genresMLCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
             this.genresMLCombo.FormattingEnabled = true;
-            this.genresMLCombo.Location = new System.Drawing.Point(17, 291);
+            this.genresMLCombo.Location = new System.Drawing.Point(17, 293);
             this.genresMLCombo.Name = "genresMLCombo";
-            this.genresMLCombo.Size = new System.Drawing.Size(200, 38);
+            this.genresMLCombo.Size = new System.Drawing.Size(216, 38);
             this.genresMLCombo.TabIndex = 16;
             // 
             // addBttn
@@ -538,12 +538,12 @@
             this.addBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBttn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addBttn.ForeColor = System.Drawing.Color.White;
-            this.addBttn.Location = new System.Drawing.Point(99, 502);
+            this.addBttn.Location = new System.Drawing.Point(121, 502);
             this.addBttn.Name = "addBttn";
             this.addBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.addBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.addBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.addBttn.Size = new System.Drawing.Size(90, 47);
+            this.addBttn.Size = new System.Drawing.Size(112, 47);
             this.addBttn.TabIndex = 15;
             this.addBttn.Text = "Add";
             this.addBttn.TextColor = System.Drawing.Color.White;
@@ -564,7 +564,7 @@
             this.deleteBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.deleteBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.deleteBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.deleteBttn.Size = new System.Drawing.Size(90, 47);
+            this.deleteBttn.Size = new System.Drawing.Size(230, 47);
             this.deleteBttn.TabIndex = 14;
             this.deleteBttn.Text = "Delete";
             this.deleteBttn.TextColor = System.Drawing.Color.White;
@@ -576,7 +576,7 @@
             this.playedMLButton.AutoSize = true;
             this.playedMLButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playedMLButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playedMLButton.Location = new System.Drawing.Point(17, 428);
+            this.playedMLButton.Location = new System.Drawing.Point(17, 447);
             this.playedMLButton.Name = "playedMLButton";
             this.playedMLButton.Size = new System.Drawing.Size(98, 34);
             this.playedMLButton.TabIndex = 13;
@@ -589,7 +589,7 @@
             this.playingMLButton.AutoSize = true;
             this.playingMLButton.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.playingMLButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.playingMLButton.Location = new System.Drawing.Point(17, 386);
+            this.playingMLButton.Location = new System.Drawing.Point(17, 399);
             this.playingMLButton.Name = "playingMLButton";
             this.playingMLButton.Size = new System.Drawing.Size(103, 34);
             this.playingMLButton.TabIndex = 12;
@@ -602,7 +602,7 @@
             this.planToPlayMLBttn.AutoSize = true;
             this.planToPlayMLBttn.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.planToPlayMLBttn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(142)))), ((int)(((byte)(183)))));
-            this.planToPlayMLBttn.Location = new System.Drawing.Point(17, 344);
+            this.planToPlayMLBttn.Location = new System.Drawing.Point(17, 354);
             this.planToPlayMLBttn.Name = "planToPlayMLBttn";
             this.planToPlayMLBttn.Size = new System.Drawing.Size(146, 34);
             this.planToPlayMLBttn.TabIndex = 11;
@@ -615,7 +615,7 @@
             this.descpPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
             this.descpPanel.Location = new System.Drawing.Point(17, 254);
             this.descpPanel.Name = "descpPanel";
-            this.descpPanel.Size = new System.Drawing.Size(201, 6);
+            this.descpPanel.Size = new System.Drawing.Size(216, 6);
             this.descpPanel.TabIndex = 10;
             // 
             // editDescriptionMLBttn
@@ -628,7 +628,7 @@
             this.editDescriptionMLBttn.Location = new System.Drawing.Point(17, 122);
             this.editDescriptionMLBttn.Multiline = true;
             this.editDescriptionMLBttn.Name = "editDescriptionMLBttn";
-            this.editDescriptionMLBttn.Size = new System.Drawing.Size(201, 126);
+            this.editDescriptionMLBttn.Size = new System.Drawing.Size(216, 126);
             this.editDescriptionMLBttn.TabIndex = 10;
             this.editDescriptionMLBttn.Text = "Edit description";
             this.editDescriptionMLBttn.Click += new System.EventHandler(this.editDescriptionMLBttn_Click);
@@ -642,7 +642,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(167)))), ((int)(((byte)(198)))));
             this.panel4.Location = new System.Drawing.Point(17, 73);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(201, 6);
+            this.panel4.Size = new System.Drawing.Size(216, 6);
             this.panel4.TabIndex = 9;
             // 
             // editNameMLBttn
@@ -655,7 +655,7 @@
             this.editNameMLBttn.Location = new System.Drawing.Point(17, 39);
             this.editNameMLBttn.MaxLength = 255;
             this.editNameMLBttn.Name = "editNameMLBttn";
-            this.editNameMLBttn.Size = new System.Drawing.Size(200, 30);
+            this.editNameMLBttn.Size = new System.Drawing.Size(216, 30);
             this.editNameMLBttn.TabIndex = 8;
             this.editNameMLBttn.Text = "Edit name";
             this.editNameMLBttn.Click += new System.EventHandler(this.editNameMLBttn_Click);
@@ -678,7 +678,7 @@
             this.updateBttn.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.updateBttn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(87)))), ((int)(((byte)(142)))));
             this.updateBttn.OnHoverTextColor = System.Drawing.Color.White;
-            this.updateBttn.Size = new System.Drawing.Size(90, 47);
+            this.updateBttn.Size = new System.Drawing.Size(112, 47);
             this.updateBttn.TabIndex = 7;
             this.updateBttn.Text = "Update";
             this.updateBttn.TextColor = System.Drawing.Color.White;
