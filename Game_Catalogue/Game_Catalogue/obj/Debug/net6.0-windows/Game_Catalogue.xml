@@ -1,0 +1,570 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Game_Catalogue</name>
+    </assembly>
+    <members>
+        <member name="T:Game_Catalogue.Business.Game_Logic">
+            <summary>
+            Class Game_Logic
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Business.Game_Logic.GetAll">
+            <summary>
+            Gets all games.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Game_Catalogue.Business.Game_Logic.Get(System.Int32)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Game_Catalogue.Business.Game_Logic.Add(Data.Model.Game)">
+            <summary>
+            Adds the specified game.
+            </summary>
+            <param name="game">The game.</param>
+        </member>
+        <member name="M:Game_Catalogue.Business.Game_Logic.Update(Data.Model.Game)">
+            <summary>
+            Updates the specified game.
+            </summary>
+            <param name="game">The game.</param>
+        </member>
+        <member name="M:Game_Catalogue.Business.Game_Logic.GetGenre(System.Int32)">
+            <summary>
+            Gets the genre of the game
+            </summary>
+            <param name="id">The name</param>
+            <returns></returns>
+        </member>
+        <member name="T:Game_Catalogue.Business.Genre_Logic">
+            <summary>
+            Class Genre_Logic
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Business.Genre_Logic.Add(Data.Model.Genre)">
+            <summary>
+            Adds the genre
+            </summary>
+            <param name="genre"></param>
+        </member>
+        <member name="M:Game_Catalogue.Business.Genre_Logic.GetCount">
+            <summary>
+            Gets the count of genres
+            </summary>
+            <returns>The count</returns>
+        </member>
+        <member name="M:Game_Catalogue.Business.Genre_Logic.GetGenre(System.Int32)">
+            <summary>
+            Gets the genre
+            </summary>
+            <param name="id">Genre's id</param>
+            <returns>The genre</returns>
+        </member>
+        <member name="M:Game_Catalogue.Business.Genre_Logic.GetGenreIdByName(System.String)">
+            <summary>
+            Gets the genre's id by it's name
+            </summary>
+            <param name="genreName">The genre name</param>
+            <returns>The genre's id</returns>
+        </member>
+        <member name="T:Game_Catalogue.Business.UsersGame_Logic">
+            <summary>
+            Class UsersGame_Logic
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Business.UsersGame_Logic.Add(Data.Model.UsersGame)">
+            <summary>
+            Adds pbject from UserGame type to database
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Business.UsersGame_Logic.GetAll">
+            <summary>
+            Gets the whole list of UsersGame
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Game_Catalogue.Business.UsersGame_Logic.GetAllGamesForCurrentUser(Data.Model.User)">
+            <summary>
+            Gets all the current user's games
+            </summary>
+            <param name="user">The user</param>
+            <returns>A list of all games</returns>
+        </member>
+        <member name="M:Game_Catalogue.Business.UsersGame_Logic.Delete(System.Int32,System.Int32)">
+            <summary>
+            Deletes a game from user's list
+            </summary>
+            <param name="userId">The user id</param>
+            <param name="gameId">The game id</param>
+            <exception cref="T:System.ArgumentException">Game does not exist</exception>
+        </member>
+        <member name="T:Game_Catalogue.Business.User_Logic">
+            <summary>
+            Class User_Logic
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Business.User_Logic.CreateNewUser(Data.Model.User)">
+            <summary>
+            Creates a new user
+            </summary>
+            <param name="user">The user</param>
+        </member>
+        <member name="M:Game_Catalogue.Business.User_Logic.CheckIfUserExists(System.String)">
+            <summary>
+            Check if the user exists in the database
+            </summary>
+            <param name="email">The email</param>
+            <returns>True or false</returns>
+        </member>
+        <member name="M:Game_Catalogue.Business.User_Logic.GetUserByUsername(System.String)">
+            <summary>
+            Gets the user by username
+            </summary>
+            <param name="username">The username</param>
+            <returns>The user</returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Game_Catalogue.Business.User_Logic.GetUserFromTxtFile">
+            <summary>
+            Gets the user from a .txt file
+            </summary>
+            <returns>The user</returns>
+        </member>
+        <member name="M:Game_Catalogue.Business.User_Logic.CheckPassword(System.String,System.String)">
+            <summary>
+            Checks if the password is correct
+            </summary>
+            <param name="username">The username</param>
+            <param name="password">The password</param>
+            <returns>True or false</returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:Game_Catalogue.Presentation.Components.CustomButton">
+            <summary>
+            Class CustomButton
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Components.CustomButton.#ctor">
+            <summary>
+            CustomButton constructor
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Components.CustomButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            A method to draw the visual components of the button
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.Components.CustomButton.BorderColor">
+            <summary>
+            Sets or gets the color of the border
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.Components.CustomButton.OnHoverBorderColor">
+            <summary>
+            Gets or sets the color of the border once hovered over
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.Components.CustomButton.ButtonColor">
+            <summary>
+            Gets or sets the button color
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.Components.CustomButton.OnHoverButtonColor">
+            <summary>
+            Gets or sets the hovered on button color 
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.Components.CustomButton.TextColor">
+            <summary>
+            Gets or sets the text color
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.Components.CustomButton.OnHoverTextColor">
+            <summary>
+            Gets or sets the on hover text color
+            </summary>
+        </member>
+        <member name="T:Game_Catalogue.Presentation.Components.FlatCombo">
+            <summary>
+            Class FlatCombo
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.Components.FlatCombo.BorderColor">
+            <summary>
+            Gets or sets the border color
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Components.FlatCombo.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Drawing the border color
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.ControlExtension.Draggable(System.Windows.Forms.Control,System.Boolean)">
+            <summary>
+            Enabling/disabling dragging for control
+            </summary>
+        </member>
+        <member name="T:Game_Catalogue.Presentation.HomePage">
+            <summary>
+            Form class HomePage
+            </summary> />
+        </member>
+        <member name="F:Game_Catalogue.Presentation.HomePage.games">
+            <summary>
+            Database Context
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.#ctor">
+            <summary>
+            HomePage Constructor
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.HomePage_Load(System.Object,System.EventArgs)">
+            <summary>
+            HomePage form load method
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.updateBttn_Click(System.Object,System.EventArgs)">
+            <summary>
+            Updates the information about the user's selected game in the database
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.deleteBttn_Click(System.Object,System.EventArgs)">
+            <summary>
+            Deletes the selected game once the Delete button is clicked
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.ChangeDataGridDesign">
+            <summary>
+            Fixes the DataGrid's design
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.addGameBttn_Click(System.Object,System.EventArgs)">
+            <summary>
+            When clicking the Add Game button a game is added to the database
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.browsePic_Click(System.Object,System.EventArgs)">
+            <summary>
+            When clicking the Browse Pic button the user can input an image
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.dataGridView1_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Fills the textboxes, combobox and checks the radio buttons with the selected game's data
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.RfrshButt1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Refreshes the DataGrid
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.viewImageBttn_Click(System.Object,System.EventArgs)">
+            <summary>
+            Views a game's image from a clicked cell
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.closeBox_Click(System.Object,System.EventArgs)">
+            <summary>
+            Closes the form
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.dataGridView1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the dataGridView1 control.
+            Fills up all the edit boxes with information from dataGridView1
+            </summary>
+        </member>
+        <member name="F:Game_Catalogue.Presentation.HomePage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.HomePage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Game_Catalogue.Presentation.LogIn_Form">
+            <summary>
+            Form class LogIn_Form
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.#ctor">
+            <summary>
+            LogIn_Form constructor
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.label1_Click(System.Object,System.EventArgs)">
+            <summary>
+            When the "Don't have an account?" label is clicked
+            the Registration form pops up
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.LogIn_Button_Click(System.Object,System.EventArgs)">
+            <summary>
+            When the LogIn button is clicked, the LogIn method activates
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.password_textbox_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            When the enter key is pressed down the LogIn method activates
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.LogIn_Form_Load(System.Object,System.EventArgs)">
+            <summary>
+            When the LogIn Form loads the genres are put into the database
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.LogIn">
+            <summary>
+            LogIn method
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.LogIn_Form_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Closes the LogIn form
+            </summary>
+        </member>
+        <member name="F:Game_Catalogue.Presentation.LogIn_Form.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.LogIn_Form.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Game_Catalogue.Presentation.PictureVisualizer">
+            <summary>
+            Form class PictureVisualizer
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.PictureVisualizer.#ctor">
+            <summary>
+            PictureVisualizer constrictor
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.PictureVisualizer.image">
+            <summary>
+            Gets or sets the image
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Presentation.PictureVisualizer.stream">
+            <summary>
+            Gets or sets the memory stream
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.PictureVisualizer.PictureVisualizer_Load_1(System.Object,System.EventArgs)">
+            <summary>
+            Changes to the picture box when the form loads
+            </summary>
+        </member>
+        <member name="F:Game_Catalogue.Presentation.PictureVisualizer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.PictureVisualizer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.PictureVisualizer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Game_Catalogue.Presentation.Registration">
+            <summary>
+            Form class Registration
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.#ctor">
+            <summary>
+            Registration Constructor
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.Registration_Button_Click(System.Object,System.EventArgs)">
+            <summary>
+            Activates the Register method once the register button is clicked
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.Register">
+            <summary>
+            Registers the user into the database
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.CloseRegistrationFormAndOpenLoginForm">
+            <summary>
+            A method to close the Registration form and go back to LogIn
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.username_textbox_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            When the enter key is pressed Register method is activated
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.email_textBox1_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            When the enter key is pressed Register method is activated
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.password_textbox_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            When the enter key is pressed Register method is activated
+            </summary>
+        </member>
+        <member name="F:Game_Catalogue.Presentation.Registration.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Game_Catalogue.Presentation.Registration.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Game_Catalogue.Program">
+            <summary>
+            Class Program
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.Program.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Game_Catalogue.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.Artboard_4">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.Artboard_4_copy">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.Artboard_4_copy_2">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.Artboard_4_copy_2___whitened_for_the_background">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.Artboard_4_copy_3">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.Artboard_4_copy_4">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.clickbait">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.icons8_eyelashes_2d_50">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.icons8_final_state_52">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.icons8_final_state_52__1_">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.icons8_final_state_52__2_">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.icons8_uchiha_eyes_50">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:Game_Catalogue.Properties.Resources.user_icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:Game_Catalogue.ApplicationConfiguration">
+            <summary>
+             Bootstrap the application configuration.
+            </summary>
+        </member>
+        <member name="M:Game_Catalogue.ApplicationConfiguration.Initialize">
+            <summary>
+             Bootstrap the application as follows:
+             <code>
+             Application.EnableVisualStyles();
+             Application.SetCompatibleTextRenderingDefault(false);
+             Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            </code>
+            </summary>
+        </member>
+    </members>
+</doc>

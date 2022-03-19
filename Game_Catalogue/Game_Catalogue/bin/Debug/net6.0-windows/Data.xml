@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Data</name>
+    </assembly>
+    <members>
+        <member name="T:Data.DataBase">
+            <summary>
+            Microsoft SQL Server Database Connection Class
+            </summary>
+        </member>
+        <member name="T:Data.GameCatalogueContext">
+            <summary>
+            Class GameCaralogueContext
+            </summary>
+        </member>
+        <member name="M:Data.GameCatalogueContext.#ctor">
+            <summary>
+            GameCatalogueContext constructor
+            </summary>
+        </member>
+        <member name="M:Data.GameCatalogueContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Data.GameCatalogueContext})">
+            <summary>
+            GameCatalogueContext constructor
+            </summary>
+        </member>
+        <member name="P:Data.GameCatalogueContext.Games">
+            <summary>
+            Games table
+            </summary>
+        </member>
+        <member name="P:Data.GameCatalogueContext.Genres">
+            <summary>
+            Genres table
+            </summary>
+        </member>
+        <member name="P:Data.GameCatalogueContext.Users">
+            <summary>
+            Users table
+            </summary>
+        </member>
+        <member name="P:Data.GameCatalogueContext.UsersGames">
+            <summary>
+            UsersGames table
+            </summary>
+        </member>
+        <member name="M:Data.GameCatalogueContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Configuring Sql Server connection string
+            </summary>
+            <param name="optionsBuilder"></param>
+        </member>
+        <member name="T:Data.Model.Game">
+            <summary>
+            Class Game
+            </summary>
+        </member>
+        <member name="M:Data.Model.Game.#ctor">
+            <summary>
+            Game constructor
+            </summary>
+        </member>
+        <member name="P:Data.Model.Game.IdGame">
+            <summary>
+            Sets ot gets the game's id
+            </summary>
+        </member>
+        <member name="P:Data.Model.Game.Name">
+            <summary>
+            Sets or gets the game's name
+            </summary>
+        </member>
+        <member name="P:Data.Model.Game.Opinion">
+            <summary>
+            Sets or gets the user's opinion/description of the game
+            </summary>
+        </member>
+        <member name="P:Data.Model.Game.State">
+            <summary>
+            Sets or gets the state of the game 
+            For example: Playing, Plan To Play, Played
+            </summary>
+        </member>
+        <member name="P:Data.Model.Game.IdGenre">
+            <summary>
+            Sets or gets the genre's id
+            </summary>
+        </member>
+        <member name="P:Data.Model.Game.Image">
+            <summary>
+            Gets or sets the image
+            </summary>
+        </member>
+        <member name="P:Data.Model.Game.IdGenreNavigation">
+            <summary>
+            Id Genre Navigation
+            </summary>
+        </member>
+        <member name="P:Data.Model.Game.UsersGames">
+            <summary>
+            Collection of UsersGames
+            </summary>
+        </member>
+        <member name="T:Data.Model.Genre">
+            <summary>
+            Class Genre
+            </summary>
+        </member>
+        <member name="M:Data.Model.Genre.#ctor">
+            <summary>
+            Genre constructor
+            </summary>
+        </member>
+        <member name="P:Data.Model.Genre.IdGenre">
+            <summary>
+            Gets or sets the genre's id
+            </summary>
+        </member>
+        <member name="P:Data.Model.Genre.GenreName">
+            <summary>
+            Gets or sets the genre's name
+            </summary>
+        </member>
+        <member name="P:Data.Model.Genre.Games">
+            <summary>
+            A collection of the games
+            </summary>
+        </member>
+        <member name="T:Data.Model.User">
+            <summary>
+            Class User
+            </summary>
+        </member>
+        <member name="M:Data.Model.User.#ctor">
+            <summary>
+            User constructor
+            </summary>
+        </member>
+        <member name="P:Data.Model.User.Id">
+            <summary>
+            Gets or sets the user's id
+            </summary>
+        </member>
+        <member name="P:Data.Model.User.Email">
+            <summary>
+            Gets or sets the user's email
+            </summary>
+        </member>
+        <member name="P:Data.Model.User.Username">
+            <summary>
+            Gets or sets the user's username
+            </summary>
+        </member>
+        <member name="P:Data.Model.User.Password">
+            <summary>
+            Gets or sets the user's password
+            </summary>
+        </member>
+        <member name="P:Data.Model.User.CreatedAt">
+            <summary>
+            Gets or sets the date and time when the user's account was created
+            </summary>
+        </member>
+        <member name="P:Data.Model.User.UsersGames">
+            <summary>
+            Collection UsersGames
+            </summary>
+        </member>
+        <member name="T:Data.Model.UsersGame">
+            <summary>
+            Class UsersGame
+            </summary>
+        </member>
+        <member name="P:Data.Model.UsersGame.Id">
+            <summary>
+            Gets or sets the id of the table
+            Primary key
+            </summary>
+        </member>
+        <member name="P:Data.Model.UsersGame.UserId">
+            <summary>
+            Gets or sets the user's id
+            </summary>
+        </member>
+        <member name="P:Data.Model.UsersGame.GameId">
+            <summary>
+            Gets or sets the game's id
+            </summary>
+        </member>
+    </members>
+</doc>

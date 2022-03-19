@@ -54,7 +54,7 @@ namespace Game_Catalogue.Presentation
                 if (loginControl.CheckIfUserExists(email))
                 {
                     MessageBox.Show("There already is an account registered for this email!",
-                        "Registration aborted!");
+                        "Registration failed!");
                 }
                 else
                 {
@@ -72,7 +72,7 @@ namespace Game_Catalogue.Presentation
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Registration aborted :}",
+                MessageBox.Show(ex.Message, "Registration failed :}",
                    MessageBoxButtons.OK,
                    MessageBoxIcon.Asterisk);
             }

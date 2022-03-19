@@ -44,6 +44,7 @@ namespace Game_Catalogue.Presentation
         {
             LogIn();
         }
+
         private void username_textbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -104,7 +105,6 @@ namespace Game_Catalogue.Presentation
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message + ex.InnerException);
                 MessageBox.Show("Username and password do not match!", "Login aborted", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
@@ -126,11 +126,13 @@ namespace Game_Catalogue.Presentation
             gamePanel.BackColor = activePanelColor;
 
         }
+
         private void username_textbox_MouseLeave(object sender, EventArgs e)
         {
             username_textbox.ForeColor = inactiveTextColor;
             gamePanel.BackColor = inactivePanelColor;
         }
+
         private void username_textbox_Enter(object sender, EventArgs e)
         {
             if (username_textbox.Text == "Username")
@@ -140,6 +142,7 @@ namespace Game_Catalogue.Presentation
             }
 
         }
+
         private void username_textbox_Leave(object sender, EventArgs e)
         {
             if (username_textbox.Text == "")
@@ -148,6 +151,7 @@ namespace Game_Catalogue.Presentation
                 username_textbox.ForeColor = inactiveTextColor;
             }
         }
+
         private void username_textbox_Click(object sender, EventArgs e)
         {
             if (username_textbox.Text == "Username")
@@ -155,17 +159,20 @@ namespace Game_Catalogue.Presentation
                 username_textbox.Text = "";
             }
         }
+
         //password textbox animations
         private void password_textbox_MouseEnter(object sender, EventArgs e)
         {
             password_textbox.ForeColor = activeTextColor;
             panel1.BackColor = activePanelColor;
         }
+
         private void password_textbox_MouseLeave(object sender, EventArgs e)
         {
             password_textbox.ForeColor = inactiveTextColor;
             panel1.BackColor = inactivePanelColor;
         }
+
         private void password_textbox_Enter(object sender, EventArgs e)
         {
             if (password_textbox.Text == "Password")
@@ -174,6 +181,7 @@ namespace Game_Catalogue.Presentation
                 password_textbox.ForeColor = activeTextColor;
             }
         }
+
         private void password_textbox_Leave(object sender, EventArgs e)
         {
             if (password_textbox.Text == "")
@@ -182,10 +190,12 @@ namespace Game_Catalogue.Presentation
                 password_textbox.ForeColor = inactiveTextColor;
             }
         }
+
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
             password_textbox.UseSystemPasswordChar = true;
         }
+
         private void password_textbox_Click(object sender, EventArgs e)
         {
             if (password_textbox.Text == "Password")
@@ -193,6 +203,7 @@ namespace Game_Catalogue.Presentation
                 password_textbox.Text = "";
             }
         }
+
         //eyebox animations
         private void eyeBox_Click(object sender, EventArgs e)
         {
