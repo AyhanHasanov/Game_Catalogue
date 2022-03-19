@@ -3,6 +3,8 @@ using Data.Model;
 using Game_Catalogue.Business;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
 
 namespace Game_Catalogue.Presentation
 {
@@ -72,6 +74,7 @@ namespace Game_Catalogue.Presentation
             playingMLButton.Visible = false;
             updateBttn.Visible = false;
             deleteBttn.Visible = false;
+            RfrshButt1.Visible = false;
 
             //Gets the current user and loads user's profile information
             currentUser = users_Logic.GetUserFromTxtFile();
@@ -139,12 +142,14 @@ namespace Game_Catalogue.Presentation
             }
 
             //Assigns the game's properties
+            byte[] currentImage = (byte[])dataGridView1.CurrentRow.Cells[6].Value;
             Game game = new Game();
             game.IdGame = Selected_Index;
             game.Name = name;
             game.Opinion = description;
             game.State = state;
             game.IdGenre = genreId;
+            game.Image = currentImage;
             game_Logic.Update(game);
 
         }
@@ -605,6 +610,7 @@ namespace Game_Catalogue.Presentation
                 playingMLButton.Visible = true;
                 updateBttn.Visible = true;
                 deleteBttn.Visible = true;
+                RfrshButt1.Visible = true;
             }
             else
             {
@@ -616,6 +622,7 @@ namespace Game_Catalogue.Presentation
                 playingMLButton.Visible = false;
                 updateBttn.Visible = false;
                 deleteBttn.Visible = false;
+                RfrshButt1.Visible = false;
             }
         }
     }

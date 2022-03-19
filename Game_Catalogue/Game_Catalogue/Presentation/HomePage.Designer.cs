@@ -810,7 +810,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
             // 
             // HomePage
             // 
