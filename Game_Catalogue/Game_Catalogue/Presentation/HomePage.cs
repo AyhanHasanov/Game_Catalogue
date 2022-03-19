@@ -101,6 +101,16 @@ namespace Game_Catalogue.Presentation
             addGamePanel.Visible = true;
             myProfilePanel.Visible = false;
             myListPanel.Visible = false;
+
+            nameAGTxtBox.Text = "Name of game";
+            nameAGTxtBox.ForeColor = inactiveTextColor;
+            planToPlayAGRadioBttn.Checked = false;
+            playingAGRadioButton.Checked = false;
+            playedAGRadioButton.Checked = false;
+            genresAGCombo.Text = "";
+            descrpAGTxtBox.Text = "Description";
+            descrpAGTxtBox.ForeColor = inactiveTextColor;
+            pictureBox2.Image = null;
         }
         private void myProfileBttn_Click(object sender, EventArgs e)
         {
