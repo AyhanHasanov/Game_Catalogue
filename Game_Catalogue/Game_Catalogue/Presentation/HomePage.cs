@@ -30,7 +30,6 @@ namespace Game_Catalogue.Presentation
         User currentUser = new User();
         Genre_Logic genre_Logic = new Genre_Logic();
 
-
         /// <summary>
         /// HomePage Constructor
         /// </summary>
@@ -94,14 +93,12 @@ namespace Game_Catalogue.Presentation
             myListPanel.Visible = true;
             LoadDataGridRecords();
         }
-
         private void addGamePageBttn_Click(object sender, EventArgs e)
         {
             addGamePanel.Visible = true;
             myProfilePanel.Visible = false;
             myListPanel.Visible = false;
         }
-
         private void myProfileBttn_Click(object sender, EventArgs e)
         {
             addGamePanel.Visible = false;
@@ -379,39 +376,32 @@ namespace Game_Catalogue.Presentation
         {
             Environment.Exit(0);
         }
-
         private void closeBox_MouseEnter(object sender, EventArgs e)
         {
             IncreasePictureBoxSize(closeBox);
         }
-
         private void closeBox_MouseLeave(object sender, EventArgs e)
         {
             DecreasePictureBoxSize(closeBox);
         }
-
         private void minimizeBox_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void minimizeBox_MouseEnter(object sender, EventArgs e)
         {
             IncreasePictureBoxSize(minimizeBox);
         }
-
         private void minimizeBox_MouseLeave(object sender, EventArgs e)
         {
             DecreasePictureBoxSize(minimizeBox);
         }
-
         private void IncreasePictureBoxSize(PictureBox pB)
         {
             pB.Height = 30;
             pB.Width = 30;
             pB.Location = new Point(pB.Location.X - 5, pB.Location.Y - 5);
         }
-
         private void DecreasePictureBoxSize(PictureBox pB)
         {
             pB.Height = 25;
@@ -421,6 +411,8 @@ namespace Game_Catalogue.Presentation
 
 
         // Add Game Panel Animations
+
+        //name textbox animations
         private void nameAGTxtBox_Click(object sender, EventArgs e)
         {
             if (nameAGTxtBox.Text == "Name of game")
@@ -429,7 +421,6 @@ namespace Game_Catalogue.Presentation
                 nameAGTxtBox.ForeColor = activeTextColor;
             }
         }
-
         private void nameAGTxtBox_Enter(object sender, EventArgs e)
         {
             if (nameAGTxtBox.Text == "Name of game")
@@ -439,7 +430,6 @@ namespace Game_Catalogue.Presentation
             }
             gamePanel.BackColor = activePanelColor;
         }
-
         private void nameAGTxtBox_Leave(object sender, EventArgs e)
         {
             if (nameAGTxtBox.Text == "")
@@ -449,18 +439,15 @@ namespace Game_Catalogue.Presentation
             }
             gamePanel.BackColor = inactivePanelColor;
         }
-
         private void nameAGTxtBox_MouseEnter(object sender, EventArgs e)
         {
             gamePanel.BackColor = activePanelColor;
         }
-
         private void nameAGTxtBox_MouseLeave(object sender, EventArgs e)
         {
             gamePanel.BackColor = inactivePanelColor;
         }
-
-
+        //descr text box animations
         private void descrpAGTxtBox_Click(object sender, EventArgs e)
         {
             if (descrpAGTxtBox.Text == "Description")
@@ -469,7 +456,6 @@ namespace Game_Catalogue.Presentation
                 descrpAGTxtBox.ForeColor = activeTextColor;
             }
         }
-
         private void descrpAGTxtBox_Enter(object sender, EventArgs e)
         {
             if (descrpAGTxtBox.Text == "Description")
@@ -479,7 +465,6 @@ namespace Game_Catalogue.Presentation
             }
             descrpPanel.BackColor = activePanelColor;
         }
-
         private void descrpAGTxtBox_Leave(object sender, EventArgs e)
         {
             if (descrpAGTxtBox.Text == "")
@@ -489,30 +474,25 @@ namespace Game_Catalogue.Presentation
             }
             descrpPanel.BackColor = inactivePanelColor;
         }
-
         private void descrpAGTxtBox_MouseEnter(object sender, EventArgs e)
         {
 
             descrpPanel.BackColor = activePanelColor;
         }
-
         private void descrpAGTxtBox_MouseLeave(object sender, EventArgs e)
         {
             descrpPanel.BackColor = inactivePanelColor;
 
         }
-
         private void descrpTxtBox_MouseEnter(object sender, EventArgs e)
         {
             descrpPanel.BackColor = activePanelColor;
         }
-
         private void descrpTxtBox_MouseLeave(object sender, EventArgs e)
         {
             descrpPanel.BackColor = inactivePanelColor;
         }
-
-
+        //radio buttons animations
         private void planToPlayAGRadioBttn_CheckedChanged(object sender, EventArgs e)
         {
             if (planToPlayAGRadioBttn.Checked)
@@ -520,7 +500,6 @@ namespace Game_Catalogue.Presentation
             else
                 planToPlayAGRadioBttn.ForeColor = inactiveTextColor;
         }
-
         private void playingAGRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (playingAGRadioButton.Checked)
@@ -528,7 +507,6 @@ namespace Game_Catalogue.Presentation
             else
                 playingAGRadioButton.ForeColor = inactiveTextColor;
         }
-
         private void playedAGRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (playedAGRadioButton.Checked)
@@ -540,6 +518,7 @@ namespace Game_Catalogue.Presentation
 
         //  My List Panel Animations
 
+        //edit name animations
         private void editNameMLBttn_Click(object sender, EventArgs e)
         {
             if (editNameMLBttn.Text == "Edit name")
@@ -548,7 +527,6 @@ namespace Game_Catalogue.Presentation
                 editNameMLBttn.ForeColor = activeTextColor;
             }
         }
-
         private void editNameMLBttn_Enter(object sender, EventArgs e)
         {
 
@@ -559,7 +537,6 @@ namespace Game_Catalogue.Presentation
             }
             panel4.BackColor = activePanelColor;
         }
-
         private void editNameMLBttn_Leave(object sender, EventArgs e)
         {
             if (editNameMLBttn.Text == "")
@@ -569,17 +546,15 @@ namespace Game_Catalogue.Presentation
             }
             panel4.BackColor = inactivePanelColor;
         }
-
         private void editNameMLBttn_MouseEnter(object sender, EventArgs e)
         {
             panel4.BackColor = activePanelColor;
         }
-
         private void editNameMLBttn_MouseLeave(object sender, EventArgs e)
         {
             panel4.BackColor = inactivePanelColor;
         }
-
+        //edit descr animations
         private void editDescriptionMLBttn_Click(object sender, EventArgs e)
         {
             if (editDescriptionMLBttn.Text == "Edit descriptoin")
@@ -588,7 +563,6 @@ namespace Game_Catalogue.Presentation
                 editDescriptionMLBttn.Text = "";
             }
         }
-
         private void editDescriptionMLBttn_Enter(object sender, EventArgs e)
         {
             if (editDescriptionMLBttn.Text == "Edit description")
@@ -598,7 +572,6 @@ namespace Game_Catalogue.Presentation
             }
             descpPanel.BackColor = activePanelColor;
         }
-
         private void editDescriptionMLBttn_Leave(object sender, EventArgs e)
         {
             if (editDescriptionMLBttn.Text == "")
@@ -608,17 +581,18 @@ namespace Game_Catalogue.Presentation
             }
             descpPanel.BackColor = activePanelColor;
         }
-
         private void editDescriptionMLBttn_MouseEnter(object sender, EventArgs e)
         {
             descpPanel.BackColor = activePanelColor;
         }
-
         private void editDescriptionMLBttn_MouseLeave(object sender, EventArgs e)
         {
             descpPanel.BackColor = inactivePanelColor;
         }
-
+        /// <summary>
+        /// Handles the Click event of the dataGridView1 control.
+        /// Fills up all the edit boxes with information from dataGridView1
+        /// </summary>
         private void dataGridView1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow.Index != -1)

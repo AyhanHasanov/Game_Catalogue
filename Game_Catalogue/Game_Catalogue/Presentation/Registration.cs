@@ -116,8 +116,9 @@ namespace Game_Catalogue.Presentation
                 Register();
         }
 
-
         // Animations
+
+        //picture animations
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
             if (password_textbox.UseSystemPasswordChar == true)
@@ -131,7 +132,7 @@ namespace Game_Catalogue.Presentation
                 pictureBox2.Image = Properties.Resources.icons8_eyelashes_2d_50;
             }
         }
-
+        //username textbox animations
         private void username_textbox_Click(object sender, EventArgs e)
         {
             if (username_textbox.Text == "Username")
@@ -139,19 +140,16 @@ namespace Game_Catalogue.Presentation
                 username_textbox.Text = "";
             }
         }
-
         private void username_textbox_MouseEnter(object sender, EventArgs e)
         {
             username_textbox.ForeColor = activeTextColor;
             gamePanel.BackColor = activePanelColor;
         }
-
         private void username_textbox_MouseLeave(object sender, EventArgs e)
         {
             username_textbox.ForeColor = inactiveTextColor;
             gamePanel.BackColor = inactivePanelColor;
         }
-
         private void username_textbox_Enter(object sender, EventArgs e)
         {
             if (username_textbox.Text == "Username")
@@ -160,7 +158,6 @@ namespace Game_Catalogue.Presentation
                 username_textbox.ForeColor = activeTextColor;
             }
         }
-
         private void username_textbox_Leave(object sender, EventArgs e)
         {
             if (username_textbox.Text == "")
@@ -168,29 +165,25 @@ namespace Game_Catalogue.Presentation
                 username_textbox.Text = "Username";
                 username_textbox.ForeColor = inactiveTextColor;
             }
-        }
-        
-
+        }     
+        //email textbox animations
         private void email_textBox1_Click(object sender, EventArgs e)
         {
             if (email_textBox1.Text == "Email Address")
             {
                 email_textBox1.Text = "";
             }
-        }
-        
+        }    
         private void email_textBox1_MouseEnter(object sender, EventArgs e)
         {
             email_textBox1.ForeColor = activeTextColor;
             panel2.BackColor = activePanelColor;
         }
-
         private void email_textBox1_MouseLeave(object sender, EventArgs e)
         {
             email_textBox1.ForeColor = inactiveTextColor;
             panel2.BackColor = inactivePanelColor;
         }
-
         private void email_textBox1_Enter(object sender, EventArgs e)
         {
             if (email_textBox1.Text == "Email Address")
@@ -199,7 +192,6 @@ namespace Game_Catalogue.Presentation
                 email_textBox1.ForeColor = activeTextColor;
             }
         }
-
         private void email_textBox1_Leave(object sender, EventArgs e)
         {
             if (email_textBox1.Text == "")
@@ -207,29 +199,25 @@ namespace Game_Catalogue.Presentation
                 email_textBox1.Text = "Email Address";
                 email_textBox1.ForeColor = inactiveTextColor;
             }
-        }
-        
-
+        }     
+        //password textbox animations
         private void password_textbox_Click(object sender, EventArgs e)
         {
             if (password_textbox.Text == "Password")
             {
                 password_textbox.Text = "";
             }
-        }
-        
+        }       
         private void password_textbox_MouseEnter(object sender, EventArgs e)
         {
             password_textbox.ForeColor = activeTextColor;
             panel1.BackColor = activePanelColor;
         }
-
         private void password_textbox_MouseLeave(object sender, EventArgs e)
         {
             password_textbox.ForeColor = inactiveTextColor;
             panel1.BackColor = inactivePanelColor;
         }
-
         private void password_textbox_Enter(object sender, EventArgs e)
         {
             if (password_textbox.Text == "Password")
@@ -238,7 +226,6 @@ namespace Game_Catalogue.Presentation
                 password_textbox.ForeColor = activeTextColor;
             }
         }
-
         private void password_textbox_Leave(object sender, EventArgs e)
         {
             if (password_textbox.Text == "")
@@ -246,8 +233,7 @@ namespace Game_Catalogue.Presentation
                 password_textbox.Text = "Password";
                 password_textbox.ForeColor = inactiveTextColor;
             }
-        }
-        
+        }      
         private void password_textbox_TextChanged(object sender, EventArgs e)
         {
             password_textbox.UseSystemPasswordChar = true;
